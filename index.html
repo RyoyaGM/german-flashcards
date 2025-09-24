@@ -45,21 +45,70 @@
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
+        /* スクロールバーのスタイル */
+        #word-list-container::-webkit-scrollbar {
+            width: 8px;
+        }
+        #word-list-container::-webkit-scrollbar-track {
+            background: #f1f5f9; /* gray-100 */
+        }
+        .dark #word-list-container::-webkit-scrollbar-track {
+            background: #374151; /* gray-700 */
+        }
+        #word-list-container::-webkit-scrollbar-thumb {
+            background: #60a5fa; /* blue-400 */
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 flex items-center justify-center min-h-screen p-4">
 
     <div id="app" class="w-full max-w-2xl mx-auto">
+
+        <div id="start-screen" class="screen text-center p-8 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
+            <h1 class="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">ドイツ語単語学習</h1>
+            <p class="text-gray-500 dark:text-gray-400 mb-8">総合学術単語</p>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-4">
+                <button id="start-quiz-btn" class="btn w-full md:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg shadow-md text-lg">クイズをする</button>
+                <button id="view-list-btn" class="btn w-full md:w-auto bg-gray-500 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded-lg shadow-md text-lg">単語を一覧する</button>
+            </div>
+            <p id="resume-text" class="text-sm text-gray-500 dark:text-gray-400 mt-6 hidden">
+                前回の学習データがあります。<a href="#" id="resume-quiz-btn" class="text-blue-600 dark:text-blue-400 hover:underline">ここから再開</a>
+            </p>
+        </div>
+
+        <div id="word-list-screen" class="hidden screen p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-bold text-blue-600 dark:text-blue-400">単語一覧</h2>
+                <button id="back-to-start-btn" class="btn bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 font-bold py-2 px-4 rounded-lg">戻る</button>
+            </div>
+            <input type="text" id="search-word-input" placeholder="検索..." class="w-full p-2 mb-4 border rounded-md bg-gray-50 dark:bg-gray-700 border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none">
+            <div id="word-list-container" class="max-h-[60vh] overflow-y-auto pr-2">
+                <table class="w-full text-left">
+                    <thead class="sticky top-0 bg-gray-100 dark:bg-gray-800">
+                        <tr>
+                            <th class="p-2">ドイツ語</th>
+                            <th class="p-2">日本語</th>
+                        </tr>
+                    </thead>
+                    <tbody id="word-list-tbody">
+                        </tbody>
+                </table>
+            </div>
+        </div>
         
-        <div id="learning-screen" class="screen">
-            <header class="text-center mb-4">
-                <h1 id="learning-title" class="text-2xl md:text-3xl font-bold text-blue-600 dark:text-blue-400">ドイツ語単語学習</h1>
-                <p class="text-gray-500 dark:text-gray-400">総合学術単語</p>
-                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 mt-4">
-                    <div id="progress-bar" class="bg-blue-600 h-2.5 rounded-full" style="width: 0%"></div>
+        <div id="learning-screen" class="hidden screen">
+            <header class="text-center mb-4 flex justify-between items-center">
+                <button id="back-to-start-btn-from-quiz" class="btn bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 font-bold py-1 px-3 rounded-lg text-sm">戻る</button>
+                <div class="flex-grow">
+                    <h1 id="learning-title" class="text-2xl md:text-3xl font-bold text-blue-600 dark:text-blue-400">ドイツ語単語学習</h1>
+                    <p class="text-gray-500 dark:text-gray-400">総合学術単語</p>
                 </div>
-                <div id="progress-text" class="text-sm text-gray-600 dark:text-gray-300 mt-2"></div>
-            </header>
+                 <div class="w-10"></div> </header>
+             <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 my-4">
+                <div id="progress-bar" class="bg-blue-600 h-2.5 rounded-full" style="width: 0%"></div>
+            </div>
+            <div id="progress-text" class="text-sm text-gray-600 dark:text-gray-300 mb-2 text-center"></div>
 
             <main>
                 <div id="flip-card" class="flip-card w-full h-72 md:h-80 perspective-[1000px]">
@@ -98,13 +147,19 @@
             <div class="mt-8 flex flex-col md:flex-row justify-center items-center gap-4">
                 <button id="restart-btn" class="btn w-full md:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md">もう一度学習する</button>
                 <button id="review-quiz-btn" class="btn w-full md:w-auto bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg shadow-md hidden">苦手な単語を復習</button>
+                <button id="back-to-start-from-result-btn" class="btn w-full md:w-auto bg-gray-500 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg shadow-md">スタート画面へ</button>
             </div>
         </div>
-
     </div>
 
     <script>
-        // 要素の取得
+        // DOM Elements
+        const screens = {
+            start: document.getElementById('start-screen'),
+            learning: document.getElementById('learning-screen'),
+            result: document.getElementById('result-screen'),
+            wordList: document.getElementById('word-list-screen'),
+        };
         const japaneseDisplay = document.getElementById('japanese-display');
         const wordDisplay = document.getElementById('word-display');
         const checkMeaningBtn = document.getElementById('check-meaning-btn');
@@ -113,27 +168,44 @@
         const flipCard = document.getElementById('flip-card');
         const progressText = document.getElementById('progress-text');
         const progressBar = document.getElementById('progress-bar');
-        const learningScreen = document.getElementById('learning-screen');
         const learningTitle = document.getElementById('learning-title');
-        const resultScreen = document.getElementById('result-screen');
+        
+        // Buttons
+        const startQuizBtn = document.getElementById('start-quiz-btn');
+        const viewListBtn = document.getElementById('view-list-btn');
+        const backToStartBtn = document.getElementById('back-to-start-btn');
+        const backToStartBtnFromQuiz = document.getElementById('back-to-start-btn-from-quiz');
+        const backToStartFromResultBtn = document.getElementById('back-to-start-from-result-btn');
         const restartBtn = document.getElementById('restart-btn');
         const reviewQuizBtn = document.getElementById('review-quiz-btn');
+        const resumeQuizBtn = document.getElementById('resume-quiz-btn');
+        const resumeText = document.getElementById('resume-text');
+
+        // Word List Elements
+        const wordListTbody = document.getElementById('word-list-tbody');
+        const searchWordInput = document.getElementById('search-word-input');
 
         const STORAGE_KEY = 'germanFlashcardProgress';
-
         let allWords = [];
         let words = [];
         let currentIndex = 0;
         let stats = {};
-        let currentMode = 'learning'; // 'learning' or 'review'
+        let currentMode = 'learning';
 
+        // --- Utility Functions ---
         function shuffleArray(array) {
             for (let i = array.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
                 [array[i], array[j]] = [array[j], array[i]];
             }
         }
+        
+        function showScreen(screenName) {
+            Object.values(screens).forEach(screen => screen.classList.add('hidden'));
+            screens[screenName].classList.remove('hidden');
+        }
 
+        // --- Progress Management ---
         function saveProgress() {
             if (currentMode !== 'learning') return;
             const progress = { words, currentIndex, stats };
@@ -143,9 +215,8 @@
         function loadProgress() {
             const savedProgress = localStorage.getItem(STORAGE_KEY);
             if (savedProgress) {
-                try {
-                    return JSON.parse(savedProgress);
-                } catch (e) {
+                try { return JSON.parse(savedProgress); }
+                catch (e) {
                     console.error("Failed to parse progress:", e);
                     localStorage.removeItem(STORAGE_KEY);
                     return null;
@@ -158,6 +229,7 @@
             localStorage.removeItem(STORAGE_KEY);
         }
         
+        // --- Quiz Logic ---
         function prepareNextWord() {
             if (currentIndex >= words.length) { 
                 showResults(); 
@@ -180,8 +252,7 @@
         }
 
         function showResults() {
-            learningScreen.classList.add('hidden');
-            resultScreen.classList.remove('hidden');
+            showScreen('result');
             const categories = { remembered: { countEl: 'remembered-count', listEl: 'remembered-list', words: stats.remembered }, fuzzy: { countEl: 'fuzzy-count', listEl: 'fuzzy-list', words: stats.fuzzy }, forgotten: { countEl: 'forgotten-count', listEl: 'forgotten-list', words: stats.forgotten }, wrong: { countEl: 'wrong-count', listEl: 'wrong-list', words: stats.wrong } };
             let reviewWords = [...stats.fuzzy, ...stats.forgotten, ...stats.wrong];
             
@@ -208,51 +279,62 @@
             }
             clearProgress();
         }
-
-        function startSession(wordList, title, mode = 'learning') {
-            words = [...wordList];
-            currentMode = mode;
-            if (mode === 'learning') {
-                shuffleArray(words);
-            }
-            currentIndex = 0;
-            stats = { remembered: [], fuzzy: [], forgotten: [], wrong: [] };
+        
+        function startSession({ wordList, title, mode = 'learning', resume = false }) {
+            showScreen('learning');
             
-            resultScreen.classList.add('hidden');
-            learningScreen.classList.remove('hidden');
+            if (resume) {
+                const progress = loadProgress();
+                if (progress) {
+                    words = progress.words;
+                    currentIndex = progress.currentIndex;
+                    stats = progress.stats;
+                }
+            } else {
+                words = [...wordList];
+                currentMode = mode;
+                if (mode === 'learning') {
+                    shuffleArray(words);
+                }
+                currentIndex = 0;
+                stats = { remembered: [], fuzzy: [], forgotten: [], wrong: [] };
+            }
+            
             learningTitle.textContent = title;
             flipCard.classList.remove('flipped');
-            
             prepareNextWord();
-            if (mode === 'learning') {
-                saveProgress();
-            }
+            if (mode === 'learning') saveProgress();
         }
-        
+
+        // --- Word List Logic ---
+        function displayWordList(filter = '') {
+            wordListTbody.innerHTML = '';
+            const filteredWords = allWords.filter(word => 
+                word.word.toLowerCase().includes(filter.toLowerCase()) || 
+                word.japanese.toLowerCase().includes(filter.toLowerCase())
+            );
+
+            filteredWords.forEach(word => {
+                const tr = document.createElement('tr');
+                tr.className = 'border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700';
+                tr.innerHTML = `
+                    <td class="p-2 font-medium">${word.word}</td>
+                    <td class="p-2">${word.japanese}</td>
+                `;
+                wordListTbody.appendChild(tr);
+            });
+        }
+
+        // --- Initialization ---
         async function initializeApp() {
             try {
-                // 外部のJSONファイルを読み込む
                 const response = await fetch('words.json');
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                 allWords = await response.json();
-
+                
+                showScreen('start');
                 const savedProgress = loadProgress();
-                if (savedProgress && savedProgress.words && savedProgress.words.length > 0) {
-                    words = savedProgress.words;
-                    currentIndex = savedProgress.currentIndex;
-                    stats = savedProgress.stats;
-                    currentMode = 'learning';
-
-                    resultScreen.classList.add('hidden');
-                    learningScreen.classList.remove('hidden');
-                    learningTitle.textContent = "ドイツ語単語学習 (続きから)";
-                    flipCard.classList.remove('flipped');
-                    prepareNextWord();
-                } else {
-                    startSession(allWords, "ドイツ語単語学習", 'learning');
-                }
+                resumeText.classList.toggle('hidden', !savedProgress);
             } catch (error) {
                 console.error("単語データの読み込みに失敗しました:", error);
                 document.getElementById('app').innerHTML = `<p class="text-red-500 text-center font-bold">エラー: words.jsonの読み込みに失敗しました。<br>ファイルが同じフォルダに存在するか確認してください。</p>`;
@@ -260,6 +342,33 @@
         }
 
         // --- Event Listeners ---
+        startQuizBtn.addEventListener('click', () => {
+            clearProgress();
+            startSession({wordList: allWords, title: "ドイツ語単語学習", mode: 'learning'});
+        });
+        
+        resumeQuizBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            startSession({title: "ドイツ語単語学習 (続きから)", mode: 'learning', resume: true});
+        });
+
+        viewListBtn.addEventListener('click', () => {
+            displayWordList();
+            showScreen('wordList');
+        });
+        
+        searchWordInput.addEventListener('input', (e) => {
+            displayWordList(e.target.value);
+        });
+
+        [backToStartBtn, backToStartBtnFromQuiz, backToStartFromResultBtn].forEach(btn => {
+            btn.addEventListener('click', () => {
+                showScreen('start');
+                const savedProgress = loadProgress();
+                resumeText.classList.toggle('hidden', !savedProgress);
+            });
+        });
+
         checkMeaningBtn.addEventListener('click', () => {
             flipCard.classList.add('flipped');
             checkMeaningBtn.classList.add('hidden');
@@ -280,13 +389,12 @@
         });
         
         restartBtn.addEventListener('click', () => {
-            clearProgress();
-            startSession(allWords, "ドイツ語単語学習", 'learning');
+            startSession({wordList: allWords, title: "ドイツ語単語学習", mode: 'learning'});
         });
         
         reviewQuizBtn.addEventListener('click', () => {
              const reviewWords = [...stats.fuzzy, ...stats.forgotten, ...stats.wrong];
-             startSession(reviewWords, "苦手単語の復習", 'review');
+             startSession({wordList: reviewWords, title: "苦手単語の復習", mode: 'review'});
         });
         
         // --- Application Start ---
