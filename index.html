@@ -34,9 +34,10 @@
             <h1 class="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">ドイツ語単語学習</h1>
             <p class="text-gray-500 dark:text-gray-400 mb-8">総合学術単語</p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <button id="start-quiz-btn" class="btn w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md text-lg">全単語でクイズ</button>
-                <button id="start-review-quiz-btn" class="btn w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg shadow-md text-lg" disabled>不安な単語をクイズ</button>
-                <button id="view-list-btn" class="btn w-full md:col-span-2 bg-gray-500 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg shadow-md text-lg">単語を一覧する</button>
+                <button id="start-quiz-btn" class="btn w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md text-lg">全単語クイズ</button>
+                <button id="random-10-quiz-btn" class="btn w-full bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-6 rounded-lg shadow-md text-lg">ランダム10問クイズ</button>
+                <button id="start-review-quiz-btn" class="btn w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg shadow-md text-lg" disabled>不安な単語クイズ</button>
+                <button id="view-list-btn" class="btn w-full bg-gray-500 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg shadow-md text-lg">単語を一覧する</button>
             </div>
             <p id="review-info" class="text-xs text-gray-400 mt-2 hidden">`review_words.json`が見つからないため無効です。</p>
             <p id="resume-text" class="text-sm text-gray-500 dark:text-gray-400 mt-6 hidden">
@@ -118,29 +119,35 @@
 
     <script>
         // --- Audio Setup ---
-        const sounds = { click: new Audio('https://cdn.jsdelivr.net/gh/kristopolous/music/sounds/button-2.mp3'), flip: new Audio('https://cdn.jsdelivr.net/gh/kristopolous/music/sounds/button-1.mp3') };
-        let audioUnlocked = false;
-        function unlockAudio() {
-            if (audioUnlocked) return;
-            Object.values(sounds).forEach(sound => {
-                sound.play().catch(() => {});
-                sound.pause();
-                sound.currentTime = 0;
-            });
-            audioUnlocked = true;
-            document.body.removeEventListener('click', unlockAudio);
+        const sounds = {
+            click: new Audio('https://cdn.jsdelivr.net/gh/kristopolous/music/sounds/button-2.mp3'),
+            flip: new Audio('https://cdn.jsdelivr.net/gh/kristopolous/music/sounds/button-1.mp3')
+        };
+        let audioContextUnlocked = false;
+        function unlockAudioContext() {
+            if (audioContextUnlocked) return;
+            const context = new (window.AudioContext || window.webkitAudioContext)();
+            if (context.state === 'suspended') {
+                context.resume();
+            }
+            audioContextUnlocked = true;
+            document.body.removeEventListener('click', unlockAudioContext);
         }
-        document.body.addEventListener('click', unlockAudio);
+        document.body.addEventListener('click', unlockAudioContext, { once: true });
+        
         function playSound(sound) {
-            if (!audioUnlocked) return;
+            if (!audioContextUnlocked) {
+                 // Try to unlock again if the initial one failed
+                unlockAudioContext();
+            }
             sound.currentTime = 0;
-            sound.play().catch(e => console.error("Sound play failed:", e));
+            sound.play().catch(e => {}); // Ignore errors if not ready
         }
 
         // DOM Elements
         const screens = { start: document.getElementById('start-screen'), learning: document.getElementById('learning-screen'), result: document.getElementById('result-screen'), wordList: document.getElementById('word-list-screen') };
         const japaneseDisplay = document.getElementById('japanese-display'), wordDisplay = document.getElementById('word-display'), checkMeaningBtn = document.getElementById('check-meaning-btn'), checkMeaningBtnContainer = document.getElementById('check-meaning-btn-container'), assessmentContainer = document.getElementById('assessment-container'), assessmentButtons = document.querySelectorAll('.assessment-btn'), flipCard = document.getElementById('flip-card'), progressText = document.getElementById('progress-text'), progressBar = document.getElementById('progress-bar'), learningTitle = document.getElementById('learning-title'), relatedWordsContainer = document.getElementById('related-words-container'), relatedWordsDisplay = document.getElementById('related-words-display');
-        const startQuizBtn = document.getElementById('start-quiz-btn'), startReviewQuizBtn = document.getElementById('start-review-quiz-btn'), viewListBtn = document.getElementById('view-list-btn'), backToStartBtn = document.getElementById('back-to-start-btn'), backToStartBtnFromQuiz = document.getElementById('back-to-start-btn-from-quiz'), backToStartFromResultBtn = document.getElementById('back-to-start-from-result-btn'), restartBtn = document.getElementById('restart-btn'), reviewQuizBtn = document.getElementById('review-quiz-btn'), resumeQuizBtn = document.getElementById('resume-quiz-btn'), resumeText = document.getElementById('resume-text'), exportJsonBtn = document.getElementById('export-json-btn'), reviewInfo = document.getElementById('review-info'), prevWordBtn = document.getElementById('prev-word-btn');
+        const startQuizBtn = document.getElementById('start-quiz-btn'), startReviewQuizBtn = document.getElementById('start-review-quiz-btn'), random10QuizBtn = document.getElementById('random-10-quiz-btn'), viewListBtn = document.getElementById('view-list-btn'), backToStartBtn = document.getElementById('back-to-start-btn'), backToStartBtnFromQuiz = document.getElementById('back-to-start-btn-from-quiz'), backToStartFromResultBtn = document.getElementById('back-to-start-from-result-btn'), restartBtn = document.getElementById('restart-btn'), reviewQuizBtn = document.getElementById('review-quiz-btn'), resumeQuizBtn = document.getElementById('resume-quiz-btn'), resumeText = document.getElementById('resume-text'), exportJsonBtn = document.getElementById('export-json-btn'), reviewInfo = document.getElementById('review-info'), prevWordBtn = document.getElementById('prev-word-btn');
         const wordListTbody = document.getElementById('word-list-tbody'), searchWordInput = document.getElementById('search-word-input');
         const STORAGE_KEY = 'germanFlashcardProgress';
         let allWords = [], reviewWords = [], words = [], currentIndex = 0, stats = {}, currentMode = 'learning';
@@ -192,7 +199,7 @@
                 if (progress) { ({ words, currentIndex, stats } = progress); }
             } else {
                 words = [...wordList];
-                shuffleArray(words); // Always shuffle a new session
+                shuffleArray(words);
                 currentIndex = 0;
                 stats = { remembered: [], fuzzy: [], forgotten: [], wrong: [] };
             }
@@ -253,6 +260,7 @@
             button.addEventListener('click', () => { if (button.id !== 'check-meaning-btn') playSound(sounds.click); });
         });
         startQuizBtn.addEventListener('click', () => { clearProgress(); startSession({wordList: allWords, title: "全単語クイズ", mode: 'learning'}); });
+        random10QuizBtn.addEventListener('click', () => { const quizWords = [...allWords]; shuffleArray(quizWords); startSession({wordList: quizWords.slice(0, 10), title: "ランダム10問クイズ", mode: 'random_quiz'}); });
         startReviewQuizBtn.addEventListener('click', () => { startSession({wordList: reviewWords, title: "不安な単語の復習", mode: 'fixed_review'}); });
         resumeQuizBtn.addEventListener('click', (e) => { e.preventDefault(); startSession({title: "学習の続きから", mode: 'learning', resume: true}); });
         viewListBtn.addEventListener('click', () => { displayWordList(); showScreen('wordList'); });
