@@ -85,12 +85,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="mt-6 flex justify-center"><button id="check-meaning-btn" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg shadow-md">意味を確認</button></div>
-                <div id="assessment-buttons" class="hidden mt-6 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-                    <button data-status="remembered" class="btn assessment-btn bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-4 rounded-lg shadow-md">即答</button>
-                    <button data-status="fuzzy" class="btn assessment-btn bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-4 rounded-lg shadow-md">思い出す</button>
-                    <button data-status="forgotten" class="btn assessment-btn bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-4 rounded-lg shadow-md">分からない</button>
-                    <button data-status="wrong" class="btn assessment-btn bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-4 rounded-lg shadow-md">誤答</button>
+                <div id="check-meaning-btn-container" class="mt-6 flex justify-center">
+                    <button id="check-meaning-btn" class="btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg shadow-md">意味を確認</button>
+                </div>
+                <div id="assessment-container" class="hidden mt-6 flex justify-center items-center gap-2">
+                    <button id="prev-word-btn" class="btn bg-gray-500 hover:bg-gray-600 text-white font-bold p-3 rounded-lg shadow-md flex-shrink-0">&lt; 前へ</button>
+                    <div id="assessment-buttons" class="grid grid-cols-2 sm:grid-cols-4 gap-2 flex-grow">
+                        <button data-status="remembered" class="btn assessment-btn bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-4 rounded-lg shadow-md">即答</button>
+                        <button data-status="fuzzy" class="btn assessment-btn bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-4 rounded-lg shadow-md">推測</button>
+                        <button data-status="forgotten" class="btn assessment-btn bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-4 rounded-lg shadow-md">曖昧</button>
+                        <button data-status="wrong" class="btn assessment-btn bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-4 rounded-lg shadow-md">誤答</button>
+                    </div>
                 </div>
             </main>
         </div>
@@ -101,7 +106,7 @@
             <div class="space-y-3 text-left w-full max-w-md mx-auto">
                 <details class="bg-green-100 dark:bg-green-900/50 rounded-lg overflow-hidden"><summary class="flex justify-between items-center p-3 font-semibold cursor-pointer list-none"><span>即答</span><span id="remembered-count" class="font-bold text-lg text-green-600 dark:text-green-400 bg-white/50 dark:bg-black/20 px-2 rounded-md">0</span></summary><ul id="remembered-list" class="p-4 pt-0 space-y-2 border-t border-green-200 dark:border-green-800"></ul></details>
                 <details class="bg-yellow-100 dark:bg-yellow-900/50 rounded-lg overflow-hidden"><summary class="flex justify-between items-center p-3 font-semibold cursor-pointer list-none"><span>思い出す</span><span id="fuzzy-count" class="font-bold text-lg text-yellow-600 dark:text-yellow-400 bg-white/50 dark:bg-black/20 px-2 rounded-md">0</span></summary><ul id="fuzzy-list" class="p-4 pt-0 space-y-2 border-t border-yellow-200 dark:border-yellow-800"></ul></details>
-                <details class="bg-orange-100 dark:bg-orange-900/50 rounded-lg overflow-hidden"><summary class="flex justify-between items-center p-3 font-semibold cursor-pointer list-none"><span>分からない</span><span id="forgotten-count" class="font-bold text-lg text-orange-600 dark:text-orange-400 bg-white/50 dark:bg-black/20 px-2 rounded-md">0</span></summary><ul id="forgotten-list" class="p-4 pt-0 space-y-2 border-t border-orange-200 dark:border-orange-800"></ul></details>
+                <details class="bg-orange-100 dark:bg-orange-900/50 rounded-lg overflow-hidden"><summary class="flex justify-between items-center p-3 font-semibold cursor-pointer list-none"><span>曖昧</span><span id="forgotten-count" class="font-bold text-lg text-orange-600 dark:text-orange-400 bg-white/50 dark:bg-black/20 px-2 rounded-md">0</span></summary><ul id="forgotten-list" class="p-4 pt-0 space-y-2 border-t border-orange-200 dark:border-orange-800"></ul></details>
                 <details class="bg-red-100 dark:bg-red-900/50 rounded-lg overflow-hidden"><summary class="flex justify-between items-center p-3 font-semibold cursor-pointer list-none"><span>誤答</span><span id="wrong-count" class="font-bold text-lg text-red-600 dark:text-red-400 bg-white/50 dark:bg-black/20 px-2 rounded-md">0</span></summary><ul id="wrong-list" class="p-4 pt-0 space-y-2 border-t border-red-200 dark:border-red-800"></ul></details>
             </div>
             <div class="mt-8 flex flex-col justify-center items-center gap-4">
@@ -112,11 +117,16 @@
     </div>
 
     <script>
+        // --- Audio Setup ---
+        const sounds = { click: new Audio('https://cdn.jsdelivr.net/gh/kristopolous/music/sounds/button-2.mp3'), flip: new Audio('https://cdn.jsdelivr.net/gh/kristopolous/music/sounds/button-1.mp3') };
+        Object.values(sounds).forEach(sound => sound.preload = 'auto');
+        function playSound(sound) { sound.currentTime = 0; sound.play().catch(e => console.error("Sound play failed:", e)); }
+
         // DOM Elements
         const screens = { start: document.getElementById('start-screen'), learning: document.getElementById('learning-screen'), result: document.getElementById('result-screen'), wordList: document.getElementById('word-list-screen') };
-        const japaneseDisplay = document.getElementById('japanese-display'), wordDisplay = document.getElementById('word-display'), checkMeaningBtn = document.getElementById('check-meaning-btn'), assessmentButtonsContainer = document.getElementById('assessment-buttons'), assessmentButtons = document.querySelectorAll('.assessment-btn'), flipCard = document.getElementById('flip-card'), progressText = document.getElementById('progress-text'), progressBar = document.getElementById('progress-bar'), learningTitle = document.getElementById('learning-title'), relatedWordsContainer = document.getElementById('related-words-container'), relatedWordsDisplay = document.getElementById('related-words-display');
+        const japaneseDisplay = document.getElementById('japanese-display'), wordDisplay = document.getElementById('word-display'), checkMeaningBtn = document.getElementById('check-meaning-btn'), checkMeaningBtnContainer = document.getElementById('check-meaning-btn-container'), assessmentContainer = document.getElementById('assessment-container'), assessmentButtons = document.querySelectorAll('.assessment-btn'), flipCard = document.getElementById('flip-card'), progressText = document.getElementById('progress-text'), progressBar = document.getElementById('progress-bar'), learningTitle = document.getElementById('learning-title'), relatedWordsContainer = document.getElementById('related-words-container'), relatedWordsDisplay = document.getElementById('related-words-display');
         // Buttons
-        const startQuizBtn = document.getElementById('start-quiz-btn'), startReviewQuizBtn = document.getElementById('start-review-quiz-btn'), viewListBtn = document.getElementById('view-list-btn'), backToStartBtn = document.getElementById('back-to-start-btn'), backToStartBtnFromQuiz = document.getElementById('back-to-start-btn-from-quiz'), backToStartFromResultBtn = document.getElementById('back-to-start-from-result-btn'), restartBtn = document.getElementById('restart-btn'), reviewQuizBtn = document.getElementById('review-quiz-btn'), resumeQuizBtn = document.getElementById('resume-quiz-btn'), resumeText = document.getElementById('resume-text'), exportJsonBtn = document.getElementById('export-json-btn'), reviewInfo = document.getElementById('review-info');
+        const startQuizBtn = document.getElementById('start-quiz-btn'), startReviewQuizBtn = document.getElementById('start-review-quiz-btn'), viewListBtn = document.getElementById('view-list-btn'), backToStartBtn = document.getElementById('back-to-start-btn'), backToStartBtnFromQuiz = document.getElementById('back-to-start-btn-from-quiz'), backToStartFromResultBtn = document.getElementById('back-to-start-from-result-btn'), restartBtn = document.getElementById('restart-btn'), reviewQuizBtn = document.getElementById('review-quiz-btn'), resumeQuizBtn = document.getElementById('resume-quiz-btn'), resumeText = document.getElementById('resume-text'), exportJsonBtn = document.getElementById('export-json-btn'), reviewInfo = document.getElementById('review-info'), prevWordBtn = document.getElementById('prev-word-btn');
         // Word List Elements
         const wordListTbody = document.getElementById('word-list-tbody'), searchWordInput = document.getElementById('search-word-input');
         const STORAGE_KEY = 'germanFlashcardProgress';
@@ -134,8 +144,8 @@
         // --- Quiz Logic ---
         function prepareNextWord() {
             if (currentIndex >= words.length) { showResults(); return; }
-            assessmentButtonsContainer.classList.add('hidden');
-            checkMeaningBtn.classList.remove('hidden');
+            assessmentContainer.classList.add('hidden');
+            checkMeaningBtnContainer.classList.remove('hidden');
             const currentWord = words[currentIndex];
             wordDisplay.textContent = currentWord.word;
             japaneseDisplay.textContent = currentWord.japanese;
@@ -232,15 +242,40 @@
             }
         }
 
-        // --- Event Listeners ---
+        // --- Event Listeners with Sound ---
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', () => {
+                // Only play sound if the button is not the 'check-meaning' button, which has its own sound
+                if (button.id !== 'check-meaning-btn') {
+                    playSound(sounds.click);
+                }
+            });
+        });
+
         startQuizBtn.addEventListener('click', () => { clearProgress(); startSession({wordList: allWords, title: "全単語クイズ", mode: 'learning'}); });
         startReviewQuizBtn.addEventListener('click', () => { startSession({wordList: reviewWords, title: "不安な単語の復習", mode: 'fixed_review'}); });
         resumeQuizBtn.addEventListener('click', (e) => { e.preventDefault(); startSession({title: "学習の続きから", mode: 'learning', resume: true}); });
         viewListBtn.addEventListener('click', () => { displayWordList(); showScreen('wordList'); });
         searchWordInput.addEventListener('input', (e) => displayWordList(e.target.value));
         [backToStartBtn, backToStartBtnFromQuiz, backToStartFromResultBtn].forEach(btn => btn.addEventListener('click', () => { showScreen('start'); initializeApp(); }));
-        checkMeaningBtn.addEventListener('click', () => { flipCard.classList.add('flipped'); checkMeaningBtn.classList.add('hidden'); assessmentButtonsContainer.classList.remove('hidden'); });
+        checkMeaningBtn.addEventListener('click', () => { playSound(sounds.flip); flipCard.classList.add('flipped'); checkMeaningBtnContainer.classList.add('hidden'); assessmentContainer.classList.remove('hidden'); prevWordBtn.disabled = currentIndex === 0; });
         assessmentButtons.forEach(button => { button.addEventListener('click', (e) => { const status = e.target.dataset.status; stats[status].push(words[currentIndex]); currentIndex++; saveProgress(); flipCard.classList.remove('flipped'); setTimeout(prepareNextWord, 300); }); });
+        prevWordBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                const lastWord = words[currentIndex - 1];
+                for (const key in stats) {
+                    const categoryArray = stats[key];
+                    if (categoryArray.length > 0 && categoryArray[categoryArray.length - 1] === lastWord) {
+                        categoryArray.pop();
+                        break;
+                    }
+                }
+                currentIndex--;
+                saveProgress();
+                flipCard.classList.remove('flipped');
+                setTimeout(prepareNextWord, 150);
+            }
+        });
         restartBtn.addEventListener('click', () => { startSession({wordList: words, title: learningTitle.textContent, mode: currentMode}); });
         reviewQuizBtn.addEventListener('click', () => { const wordsForReview = [...stats.fuzzy, ...stats.forgotten, ...stats.wrong]; startSession({wordList: wordsForReview, title: "苦手単語の復習", mode: 'review'}); });
         exportJsonBtn.addEventListener('click', exportReviewWordsAsJson);
@@ -248,5 +283,4 @@
         initializeApp();
     </script>
 </body>
-
 </html>
