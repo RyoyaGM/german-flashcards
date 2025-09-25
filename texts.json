@@ -774,7 +774,154 @@
         "japanese": "物自体の性格は――それは現象の未知の原因なのだが――、我々によって決して肯定的に規定されえない。なぜなら、我々のカテゴリー的な概念網の全体は、もっぱら、空間と時間のうちに与えられた多様性を、経験可能な、秩序づけられた自然へと統合することに奉仕するからである。",
         "explanation": "主語`Der Charakter`を関係詞節`der...ist`が修飾。理由を示す`weil`節の中で、`dazu dient, ... zu synthetisieren`という`zu`不定詞句の構文が使われています。"
     }
+    {
+        "german": "Die Aporie, die sich am Ende einer tiefschürfenden philosophischen Untersuchung oft als unumgänglich erweist, bezeichnet jenen Zustand intellektueller Ratlosigkeit, in dem sich jede denkbare Lösung als logisch unhaltbar oder in neue Widersprüche verwickelt erweist.",
+        "japanese": "アポリアは――それは深遠な哲学的探求の終わりにしばしば不可避であると判明するのだが――、知的な途方に暮れたあの状態を指し、その状態においては、考えうるあらゆる解決策が論理的に支持不可能であるか、あるいは新たな矛盾に陥ることが明らかになるのである。",
+        "explanation": "主語`Die Aporie`を関係詞節`die sich...erweist`が修飾し、述語`bezeichnet`の目的語`jenen Zustand`をさらに`in dem sich...erweist`という関係詞節が修飾する二重の修飾構造になっています。"
+    },
+    {
+        "german": "Der in der Hermeneutik beschriebene Zirkel des Verstehens postuliert, dass das Verständnis eines Ganzen immer schon ein Vorverständnis seiner Teile voraussetzt, deren jeweilige Bedeutung sich jedoch wiederum nur aus dem Kontext des Ganzen erschließt.",
+        "japanese": "解釈学において記述される理解の循環は、全体の理解は常にすでにその部分の予備理解を前提とし、しかしながらその各々の部分の意味は、逆また、全体の文脈からのみ解明される、ということを要請する。",
+        "explanation": "`postuliert, dass...`という構造です。`dass`節の目的語`ein Vorverständnis seiner Teile`を、所有格の関係代名詞`deren`で始まる関係詞節が修飾しています。"
+    },
+    {
+        "german": "Während die Immanenzphilosophie darauf beharrt, dass alle erklärenden Prinzipien innerhalb der erfahrbaren Welt zu finden sind, behauptet eine auf Transzendenz ausgerichtete Metaphysik die Notwendigkeit, eine die Sinnenwelt übersteigende, letzte Wirklichkeit anzunehmen.",
+        "japanese": "内在哲学が、すべての説明原理は経験可能な世界のうちに見出されるべきであると主張するのに対して、超越へと方向づけられた形而上学は、感覚世界を超越する究極的な実在性を想定する必要性を主張するのである。",
+        "explanation": "`Während`で始まる長い対比の副文が文頭に置かれています。主文の目的語`die Notwendigkeit`を、`eine...Wirklichkeit anzunehmen`という`zu`不定詞句が修飾しています。"
+    },
+    {
+        "german": "Die phänomenologische Reduktion (Epoché) stellt den methodischen Versuch dar, alle naiven Vorurteile über die Existenz der Außenwelt einzuklammern, um den Blick auf die reinen, sich im Bewusstsein zeigenden Phänomenen in ihrer unmittelbaren Gegebenheit freizulegen.",
+        "japanese": "現象学的還元（エポケー）は、外的世界の存在に関するあらゆる素朴な先入見を括弧に入れ、それによって、意識のうちに現れる純粋な現象への眼差しを、その直接的な所与性のうちに解き放つための、方法論的な試みなのである。",
+        "explanation": "分離動詞`stellt ... dar`が文を枠で囲んでいます。目的語`den methodischen Versuch`を、`einzuklammern`と`freizulegen`という二つの動詞を持つ`um...zu`不定詞句が修飾しています。"
+    },
+    {
+        "german": "Die Dialektik, die nicht bloß als eine rhetorische Kunst der Widerlegung, sondern als die immanente Logik des Werdens selbst verstanden wird, treibt den Begriff durch den Widerspruch zu einer immer reicheren und konkreteren Bestimmung seiner selbst fort.",
+        "japanese": "弁証法は――それは単なる反駁の修辞学的な技術としてではなく、むしろ生成それ自体の内在的論理として理解されるのだが――、矛盾を通じて概念を、それ自身のますます豊かで具体的な規定へと駆り立てていくのである。",
+        "explanation": "主語`Die Dialektik`が、`nicht bloß als..., sondern als...`という対比構造を含む関係詞節によって修飾されています。分離動詞`treibt ... fort`が文の骨格です。"
+    },
+    {
+        "german": "Die ontologische Differenz, deren Beachtung für ein angemessenes Verständnis des Seinsproblems unerlässlich ist, bezeichnet den fundamentalen Unterschied zwischen dem Sein als solchem und dem einzelnen Seienden, das am Sein partizipiert.",
+        "japanese": "存在論的差異は――その遵守は存在問題の適切な理解にとって不可欠なのだが――、存在それ自体と、存在に参与する個々の存在者との間の根源的な差異を指す。",
+        "explanation": "主語`Die ontologische Differenz`と述語`bezeichnet`が、所有格の関係代名詞`deren`で始まる関係詞節によって分離されています。"
+    },
+    {
+        "german": "Eine dekonstruktivistische Lektüre eines philosophischen Textes zielt darauf ab, die in ihm verborgenen, hierarchischen Oppositionen aufzudecken und zu destabilisieren, um so jene unterdrückten Bedeutungsspuren freizulegen, die die vermeintliche Einheit des Textes untergraben.",
+        "japanese": "ある哲学的テクストの脱構築的読解は、そのうちに隠された階層的な対立を暴き出し、不安定化させ、そうしてテクストの偽りの統一性を突き崩すような、あの抑圧された意味の痕跡を解き放つことを目指す。",
+        "explanation": "`zielt darauf ab, ... aufzudecken und zu destabilisieren, um so ... freizulegen`という、目的を示す`um...zu`句を含む複雑な`zu`不定詞の構造です。"
+    },
+    {
+        "german": "Die Teleologie, also die Lehre von der Zweckmäßigkeit, sieht die Natur und die Geschichte so an, als ob sie auf ein bestimmtes Ziel (Telos) hin geordnet wären, eine Annahme, die von einer rein kausal-mechanistischen Naturerklärung in Frage gestellt wird.",
+        "japanese": "目的論、すなわち合目的性の教説は、自然と歴史を、あたかもそれらがある特定の目標（テロス）に向かって秩序づけられているかのように見なす。そしてこれは、純粋に因果的・機械論的な自然説明によって疑問視される想定なのである。",
+        "explanation": "`sieht ... so an, als ob ...`（あたかも…かのように見なす）という非現実話法の構文です。文末の`eine Annahme`は、主文全体の内容を同格で受けており、それをさらに`die...wird`という関係詞節が修飾しています。"
+    },
+    {
+        "german": "Die epistemologische Frage nach der Möglichkeit synthetischer Urteile a priori untersucht, wie wir zu Erkenntnissen gelangen können, die sowohl gehaltserweiternd (synthetisch) als auch von aller Erfahrung unabhängig (a priori) gültig sind.",
+        "japanese": "ア・プリオリな総合判断の可能性をめぐる認識論的な問いは、我々が、内容を拡張し（総合的）、かつ、あらゆる経験から独立して（ア・プリオリに）妥当するような認識へと、いかにして到達しうるかを探求するものである。",
+        "explanation": "動詞`untersucht`の目的語が、`wie...können`という間接疑問文になっています。その中の`Erkenntnissen`（認識）を、`sowohl ... als auch ...`（…でもあり…でもある）という相関構文を含む関係詞節が修飾しています。"
+    },
+    {
+        "german": "Der Begriff der Kontingenz bezeichnet die Nicht-Notwendigkeit des Daseins eines Seienden, das zwar existiert, aber ebenso gut auch nicht existieren oder anders sein könnte, im Gegensatz zum notwendigen Sein, dessen Essenz seine Existenz impliziert.",
+        "japanese": "偶然性という概念は、ある存在者の現存在の非必然性を指す。その存在者は、なるほど存在するが、同様によく存在しないことも、あるいは別様であることもありえたのであり、それは、その本質が現存在を含意するような必然的存在とは対照的である。",
+        "explanation": "目的語`die Nicht-Notwendigkeit`を、`das zwar..., aber...könnte`という`zwar/aber`構文を含む関係詞節が修飾しています。`im Gegensatz zum...`以下が対比を示し、`notwendigen Sein`を`dessen`で始まる関係詞節が修飾しています。"
+    },
+    {
+        "german": "Die Unterscheidung zwischen der reinen Form eines Begriffs und seinem empirischen Inhalt ist für jede Erkenntnistheorie von grundlegender Bedeutung, die nicht im bloßen Sensualismus oder im leeren Formalismus verharren will.",
+        "japanese": "ある概念の純粋な形式とその経験的な内容との区別は、単なる感覚論や空虚な形式主義のうちに留まることを望まない、いかなる認識論にとっても根源的な重要性を持つ。",
+        "explanation": "`jede Erkenntnistheorie`を`die nicht ... will`という関係詞節が修飾しています。"
+    },
+    {
+        "german": "Eine ethische Theorie, die den unbedingten Sollen-Anspruch einer moralischen Norm zu begründen versucht, muss sich dem Humeschen Gesetz stellen, demzufolge aus reinen Seins-Aussagen (deskriptiven Sätzen) niemals logisch zwingend eine Sollens-Aussage (ein normativer Satz) abgeleitet werden kann.",
+        "japanese": "ある道徳規範の無制約的な当為の要求を基礎づけようと試みる倫理学理論は、ヒュームの法則に直面しなければならない。それによれば、純粋な存在命題（記述的命題）から、論理的に必然的な仕方で当為命題（規範的命題）が導出されることは、決してありえないのである。",
+        "explanation": "主語`Eine ethische Theorie`を関係詞節`die...versucht`が修飾。`dem Humeschen Gesetz`を、`demzufolge`で始まる関係詞節が同格的に説明しています。"
+    },
+    {
+        "german": "Der Diskurs, verstanden als ein System von regelgeleiteten sprachlichen Praktiken, konstituiert nicht nur die Objekte, über die er spricht, sondern auch die Subjektpositionen, von denen aus sinnvoll gesprochen werden kann.",
+        "japanese": "言説は、規則に則った言語的実践の体系として理解されるが、それは、自らが語る対象を構成するだけでなく、そこから出発して有意味に語ることが可能となるような主体の位置をも構成するのである。",
+        "explanation": "`nicht nur ..., sondern auch ...`の対比構造。それぞれの要素が`über die...`と`von denen aus...`という関係詞節によって修飾されています。"
+    },
+    {
+        "german": "Die ästhetische Erfahrung, in der das Subjekt von der zweckrationalen Einstellung des Alltags Abstand nimmt, eröffnet einen Raum, in dem die formale Beschaffenheit eines Objekts ein Gefühl des Wohlgefallens oder der Erhabenheit hervorrufen kann.",
+        "japanese": "美的経験は、その中で主体が日常の目的合理的な態度から距離を置くのだが、ある空間を開く。そしてその空間において、ある対象の形式的な性質が、満足あるいは崇高の感情を呼び起こしうるのである。",
+        "explanation": "主語`Die ästhetische Erfahrung`を`in der...`の関係詞節が、目的語`einen Raum`を`in dem...`の関係詞節が修飾する二重の関係詞節構造です。"
+    },
+    {
+        "german": "Die Kausalität, die in der klassischen Metaphysik als ein reales Band zwischen Ursache und Wirkung galt, wird im radikalen Empirismus auf eine bloße, durch Gewohnheit erzeugte Assoziation von Ideen reduziert.",
+        "japanese": "因果性は、古典形而上学において原因と結果の間の実在的な絆と見なされていたが、急進的な経験論においては、単なる、習慣によって生み出された観念の連合へと還元される。",
+        "explanation": "主語`Die Kausalität`を`die...galt`という関係詞節が修飾した、`wird ... reduziert`という受動態の文です。"
+    },
+    {
+        "german": "Der Solipsismus, jene radikale erkenntnistheoretische Position, die behauptet, dass nur das eigene Ich und seine Bewusstseinszustände mit Gewissheit existieren, stellt eine fundamentale Herausforderung für jede Philosophie dar, die den Anspruch auf intersubjektive Gültigkeit erhebt.",
+        "japanese": "唯我論、すなわち、ただ自己自身の自我とその意識状態のみが確実性をもって存在すると主張する、かの急進的な認識論的立場は、間主観的な妥当性を要求するあらゆる哲学にとって、根源的な挑戦となる。",
+        "explanation": "主語`Der Solipsismus`を、同格の`jene...Position`と、それをさらに修飾する関係詞節`die behauptet, dass...`が説明しています。"
+    },
+    {
+        "german": "Die Substanz, die traditionell als das beharrende, in sich selbst seiende und seinen Akzidenzien zugrunde liegende Substrat definiert wird, wurde in der modernen Philosophie einer radikalen Kritik unterzogen, die sie als eine bloße Fiktion der Sprache entlarven will.",
+        "japanese": "実体は――伝統的には、恒存し、自己自身のうちにあり、その偶有性の根底にある基体として定義されるのだが――、近代哲学においてラディカルな批判にさらされた。そしてその批判は、実体を単なる言語の虚構として暴露しようと望むものである。",
+        "explanation": "主語`Die Substanz`を長い関係詞節`die...wird`が修飾。`einer radikalen Kritik`をさらに`die...will`という関係詞節が修飾しています。"
+    },
+    {
+        "german": "Das Konzept der Intersubjektivität versucht, die Dichotomie von isoliertem Subjekt und fremder Außenwelt zu überwinden, indem es zeigt, wie die Konstitution des eigenen Ichs immer schon auf die Anerkennung durch ein anderes Subjekt verwiesen ist.",
+        "japanese": "間主観性という構想は、孤立した主体と疎遠な外的世界という二分法を、次のように示すことによって克服しようと試みる。すなわち、自己自身の自我の構成は、常にすでにして他の主体による承認へと差し向けられている、と。",
+        "explanation": "手段を示す`indem es zeigt`の後に、`zeigt`の目的語として`wie...ist`という間接疑問文が続いています。"
+    },
+    {
+        "german": "Die Axiologie ist jene philosophische Disziplin, die sich mit der Natur, den Arten und der Hierarchie von Werten befasst und danach fragt, ob Werte objektive Qualitäten sind oder bloße subjektive Präferenzen zum Ausdruck bringen.",
+        "japanese": "価値論は、価値の自然本性、種別、そして階層を取り扱い、そして、価値が客観的な性質であるのか、あるいは単なる主観的な好みを表現するのかを問う、かの哲学的な学問分野である。",
+        "explanation": "`die sich...befasst und...fragt`という、二つの動詞を持つ関係詞節が`Disziplin`を修飾しています。`fragt`の目的語は`ob...sind oder...bringen`という間接疑問文です。"
+    },
+    {
+        "german": "Das Paradox der Willensfreiheit besteht in dem scheinbar unauflöslichen Konflikt zwischen der kausalen Determiniertheit allen Weltgeschehens und der für die Moral vorauszusetzenden Fähigkeit des Menschen, sich frei für oder gegen eine Handlungsweise zu entscheiden.",
+        "japanese": "意志の自由のパラドックスは、あらゆる世界の出来事の因果的な決定性と、道徳にとって前提とされねばならない、ある行為様式に賛成するか反対するかを自由に決定する人間の能力との間の、見たところ解決不可能な対立のうちに存する。",
+        "explanation": "`zwischen...und...`のそれぞれの要素が非常に長くなっています。特に後者の`der...Fähigkeit`を、`sich...zu entscheiden`という`zu`不定詞句が修飾しています。"
+    },
+    {
+        "german": "Die Mimesis, die in der antiken Ästhetik als Nachahmung der Natur verstanden wurde, bezeichnet einen komplexen Prozess der künstlerischen Repräsentation, der die Wirklichkeit nicht einfach abbildet, sondern sie zugleich interpretiert und umformt.",
+        "japanese": "ミメーシスは、古代の美学において自然の模倣として理解されていたが、芸術的再現の複雑なプロセスを指し、それは現実を単に写し取るのではなく、同時にそれを解釈し、変形するのである。",
+        "explanation": "主語`Die Mimesis`を関係詞節`die...wurde`が修飾。目的語`einen komplexen Prozess`を、`nicht..., sondern...`の対比構造を含む関係詞節`der...`が修飾しています。"
+    },
+    {
+        "german": "Die Analogie, als ein Schlussverfahren, das von der Ähnlichkeit bekannter Fälle auf die Beschaffenheit eines unbekannten Falles schließt, besitzt zwar eine heuristische Funktion, entbehrt aber jener logischen Zwingendheit, die den deduktiven Beweis auszeichnet.",
+        "japanese": "類推は、既知の事例の類似性から未知の事例の性質を推論する推論手続きとして、なるほど発見的な機能を持つが、しかし演繹的証明を特徴づけるかの論理的必然性を欠いている。",
+        "explanation": "`zwar ..., aber ...`の対比構造です。主語`Die Analogie`を`als ein Schlussverfahren, das...`という同格と関係詞節が修飾しています。"
+    },
+    {
+        "german": "Die Heuristik, im Gegensatz zu einem strengen Algorithmus, der garantiert zur Lösung führt, bezeichnet eine informelle Problemlösungsstrategie oder Faustregel, die oft hilft, den Lösungsweg abzukürzen, ohne jedoch eine Erfolgsgarantie zu bieten.",
+        "japanese": "発見術は、解決へと至ることを保証する厳密なアルゴリズムとは対照的に、非公式な問題解決戦略、あるいは経験則を指し、それはしばしば、しかしながら成功の保証を提供することなく、解決への道を短縮する助けとなる。",
+        "explanation": "主語`Die Heuristik`を`im Gegensatz zu...`という挿入句が修飾。目的語`eine...Strategie oder Faustregel`を`die...hilft`という関係詞節が修飾し、その中に`ohne...zu bieten`という不定詞句が含まれています。"
+    },
+    {
+        "german": "Der Nihilismus, der in seiner radikalsten Form die Ungültigkeit aller Werte, Wahrheiten und Seinsordnungen behauptet, kann als die letzte Konsequenz einer Metaphysik verstanden werden, die den Sinn der Welt in einem transzendenten Bereich verortet hat, dessen Glaubwürdigkeit schwindet.",
+        "japanese": "ニヒリズムは、その最も急進的な形態においてあらゆる価値、真理、そして存在秩序の無効性を主張するが、世界の意味を超越的な領域のうちに位置づけてきた形而上学の、最後の帰結として理解されうる。そしてその領域の信憑性は、消え失せていくのである。",
+        "explanation": "主語`Der Nihilismus`を関係詞節`der...behauptet`が修飾。`einer Metaphysik`を関係詞節`die...hat`が修飾し、さらに`einem transzendenten Bereich`を関係詞節`dessen...schwindet`が修飾する、三重の修飾構造です。"
+    },
+    {
+        "german": "Die Intentionalität, als das grundlegende Merkmal des Bewusstseins, bezeichnet dessen wesentliche Gerichtetheit auf einen Gegenstand, sodass jeder Denk-, Wahrnehmungs- oder Willensakt immer schon ein Bewusstsein von etwas ist.",
+        "japanese": "志向性は、意識の根源的な特徴として、その対象への本質的な方向づけを指し、その結果、あらゆる思惟、知覚、あるいは意志の働きは、常にすでにして、何かについての意識なのである。",
+        "explanation": "結果を示す`sodass`で始まる副文が、主文の内容を結論づけています。"
+    },
+    {
+        "german": "Der Positivismus ist eine philosophische Richtung, die jeden Anspruch auf metaphysische Erkenntnis zurückweist und die Gültigkeit von Wissen ausschließlich auf das empirisch Gegebene und dessen logische Analyse beschränken will.",
+        "japanese": "実証主義は、形而上学的な認識へのいかなる要求をも退け、知識の妥当性を、もっぱら経験的に与えられたものと、その論理的分析に限定しようと望む、ひとつの哲学的な方向である。",
+        "explanation": "`Richtung`（方向）を、`zurückweist`と`beschränken will`という二つの動詞を持つ関係詞節が修飾しています。"
+    },
+    {
+        "german": "Die Genealogie, als eine von Nietzsche inspirierte historische Methode, fragt nicht nach dem zeitlosen Wesen oder dem Ursprung eines Begriffs, sondern untersucht die diskontinuierlichen, von Machtverhältnissen durchzogenen Bedingungen seiner Entstehung und Wandlung.",
+        "japanese": "系譜学は、ニーチェに霊感を受けた歴史的な方法として、ある概念の時間なき本質や起源を問うのではなく、むしろ、その生成と変転の、権力関係によって貫かれた非連続的な諸条件を探求するのである。",
+        "explanation": "`fragt nicht nach ..., sondern untersucht ...`という対比構造です。"
+    },
+    {
+        "german": "Ein performativer Sprechakt, wie etwa ein Versprechen oder eine Taufe, beschreibt nicht einfach einen Sachverhalt, sondern vollzieht eine Handlung, deren Gelingen von der Einhaltung bestimmter, konventionell festgelegter Bedingungen abhängt.",
+        "japanese": "遂行的言語行為は、例えば約束や洗礼のようなものだが、単に事態を記述するのではなく、ある行為を遂行するものであり、その成功は、慣習的に定められた特定の条件の遵守に依存している。",
+        "explanation": "`beschreibt nicht ..., sondern vollzieht ...`という対比構造です。`eine Handlung`を所有格の関係代名詞`deren`で始まる関係詞節が修飾しています。"
+    },
+    {
+        "german": "Die Antinomie bezeichnet einen Widerspruch zwischen zwei Lehrsätzen, die beide gleichermaßen gut begründet zu sein scheinen, was darauf hindeutet, dass die Vernunft die Grenzen ihrer legitimen Anwendung überschritten hat.",
+        "japanese": "アンチノミーは、二つの定立の間の矛盾を指し、それらは両方とも等しくよく基礎づけられているように思われる。そしてこのことは、理性がその正当な適用の限界を超えてしまったことを示唆している。",
+        "explanation": "目的語`einen Widerspruch`を、`die...scheinen`という関係詞節が修飾し、さらに`was`で始まる関係詞節が、前の文全体の内容を受けて結論を導いています。"
+    },
+    {
+        "german": "Das Apriori, das sich auf Erkenntnisse bezieht, die von aller Erfahrung unabhängig sind, muss streng vom Angeborenen unterschieden werden, da es nicht eine psychologische, sondern eine erkenntnistheoretische Geltungsquelle bezeichnet, die in den Strukturen der Vernunft selbst liegt.",
+        "japanese": "ア・プリオリは――それはあらゆる経験から独立した認識に関わるのだが――、生得的なものとは厳密に区別されねばならない。なぜなら、それは心理学的な妥当性の源泉ではなく、むしろ、理性それ自体の構造のうちに存する認識論的な妥当性の源泉を指し示すからである。",
+        "explanation": "理由を示す`da`節の中が`nicht eine ..., sondern eine ... Geltungsquelle`という対比構造になっており、後者をさらに`die...liegt`という関係詞節が修飾しています。"
+    }
 ]
-
-
-
