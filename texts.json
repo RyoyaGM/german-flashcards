@@ -324,4 +324,155 @@
         "japanese": "キュニコス派のディオゲネスは――伝承によれば、あらゆる社会的慣習や物質的欲求からの彼のラディカルな独立を誇示するために、樽の中で生活したのだが――、自足的な善としての徳のソクラテス的な強調を、極点にまで推し進めた。",
         "explanation": "主語`Der Zyniker Diogenes`が、`der...lebte`という関係詞節によって修飾されています。この関係詞節の中には、目的を示す`um...zu demonstrieren`という長い不定詞句が含まれています。"
     }
+    {
+        "german": "Die augustinische Lehre von der göttlichen Prädestination, derzufolge die Errettung der Seele nicht durch menschliches Verdienst, sondern einzig durch die unerforschliche Gnade Gottes im Voraus bestimmt ist, stellt die menschliche Willensfreiheit vor eine aporische Grenze.",
+        "japanese": "アウグスティヌスの神の予定説は――それによれば、魂の救済は人間の功績によってではなく、ただ神の測り知れない恩寵によってのみあらかじめ定められているのだが――、人間の意志の自由をアポリア的な限界の前に立たせる。",
+        "explanation": "主語`Die...Lehre`が、関係代名詞`derzufolge`で始まる非常に長い関係詞節によって説明され、述語`stellt`と分離されている。この関係詞節内には`nicht durch..., sondern einzig durch...`の対比構造が含まれている。"
+    },
+    {
+        "german": "Anselms von Canterbury ontologischer Gottesbeweis im 'Proslogion' versucht, aus der reinen begrifflichen Definition Gottes als jenes Wesen, über das hinaus Größeres nicht gedacht werden kann, zwingend dessen reale Existenz abzuleiten, ein Argument, dessen logische Gültigkeit die Philosophiegeschichte nachhaltig beschäftigt hat.",
+        "japanese": "カンタベリーのアンセルムスの『プロスロギオン』における存在論的神証明は、神を「それ以上偉大なものが思考されえない存在」という純粋な概念的定義から、その現実的な存在を必然的に導出しようと試みるものであり、それはその論理的妥当性が哲学史を持続的に悩ませてきた一個の議論である。",
+        "explanation": "`versucht, ... abzuleiten`という`zu`不定詞句の構造。`abzuleiten`の目的語`dessen reale Existenz`が先行し、`aus...`で始まる句が非常に長い。文末の`ein Argument`は主文全体を同格で説明し、さらに`dessen`で始まる関係詞節が続く。"
+    },
+    {
+        "german": "Thomas von Aquin schuf in seiner 'Summa Theologiae' eine monumentale Synthese, indem er die aristotelische Philosophie, insbesondere deren Metaphysik und Ethik, in den Dienst der christlichen Theologie stellte, um so die Harmonie von Glauben und Vernunft zu erweisen.",
+        "japanese": "トマス・アクィナスは、その『神学大全』において、アリストテレス哲学、特にその形而上学と倫理学をキリスト教神学の奉仕のもとに置くことによって、そうして信仰と理性の調和を証明するために、記念碑的な統合を創造した。",
+        "explanation": "`indem`節が手段・方法を示し、その中にさらに`um ... zu erweisen`という目的を示す不定詞句が続く構造。"
+    },
+    {
+        "german": "Der mittelalterliche Universalienstreit, der sich an der Frage entzündete, welcher Seinsstatus den Allgemeinbegriffen zukomme, spaltete die Denker in Realisten, die ihnen eine eigenständige Existenz zusprachen, und Nominalisten, für die sie bloße Namen (flatus vocis) waren.",
+        "japanese": "中世の普遍論争は――それは、普遍概念にいかなる存在身分が与えられるかという問いをめぐって燃え上がったのだが――、思想家たちを、普遍概念に固有の存在を認める実在論者と、彼らにとって普遍概念が単なる名前（音声の響き）であった唯名論者とに分裂させた。",
+        "explanation": "主語`Der ... Universalienstreit`を`der`で始まる関係詞節が修飾し、さらに`Realisten`と`Nominalisten`をそれぞれ`die`と`für die`で始まる関係詞節が説明している。"
+    },
+    {
+        "german": "Das Übel wird in der von Augustinus geprägten neuplatonischen Tradition nicht als eine eigenständige Substanz, sondern als ein Mangel am Guten (privatio boni) verstanden, wodurch das Problem der Theodizee, also die Rechtfertigung eines allgütigen Gottes angesichts des Leidens in der Welt, entschärft werden sollte.",
+        "japanese": "悪は、アウグスティヌスによって特徴づけられた新プラトン主義の伝統において、固有の実体としてではなく、善の欠如（privatio boni）として理解され、それによって、神義論の問題、すなわち世界における苦しみを前にして全き善である神を義認するという問題は、緩和されるべきものであった。",
+        "explanation": "`nicht als ..., sondern als ... verstanden`という受動態の対比構造。文末の`wodurch`で始まる関係詞節が、前の文全体の結果・帰結を示している。"
+    },
+    {
+        "german": "Boethius' Werk 'Der Trost der Philosophie', das er in Erwartung seiner Hinrichtung verfasste, ringt um die Vereinbarkeit der göttlichen Vorsehung, die alles im Voraus zu wissen scheint, mit der kontingenten Freiheit des menschlichen Willens.",
+        "japanese": "ボエティウスの著作『哲学の慰め』は――彼はそれを自らの処刑を予期して執筆したのだが――、万事をあらかじめ知っているように思われる神の摂理と、人間意志の偶然的な自由との両立可能性をめぐって格闘するものである。",
+        "explanation": "主語`Boethius' Werk`が関係詞節`das er...verfasste`によって修飾されている。`Vereinbarkeit`（両立可能性）という名詞が、`der göttlichen Vorsehung`と`mit der kontingenten Freiheit`という二つの長い名詞句を支配している。"
+    },
+    {
+        "german": "Die von Averroes und seinen lateinischen Anhängern vertretene Lehre von der doppelten Wahrheit, die besagt, dass eine Aussage in der Philosophie wahr und zugleich in der Theologie falsch sein kann, wurde von der Kirche als eine gefährliche Untergrabung der Einheit der Wahrheit verurteilt.",
+        "japanese": "アヴェロエスとそのラテン語圏の支持者たちによって主張された二重真理説は――それは、ある命題が哲学においては真であり、同時に神学においては偽でありうる、と述べるものだが――、教会によって、真理の統一性に対する危険な侵害として断罪された。",
+        "explanation": "主語である`Die ... Lehre`が、`von Averroes...vertretene`という過去分詞句と、`die besagt, dass...`という関係詞節の両方によって修飾されている。"
+    },
+    {
+        "german": "Die fünf Wege (quinque viae), auf denen Thomas von Aquin in aposteriorischen Argumenten von der beobachtbaren Welt auf die Existenz Gottes schließt, basieren auf aristotelischen Prinzipien wie der Bewegung, der Wirkursächlichkeit und den Stufen der Vollkommenheit.",
+        "japanese": "トマス・アクィナスが経験論的な論証において、観察可能な世界から神の存在を推論する五つの道（quinque viae）は、運動、作用因果性、そして完全性の段階といったアリストテレス的な諸原理に基づいている。",
+        "explanation": "主語`Die fünf Wege`を、`auf denen ... schließt`という非常に長い関係詞節が修飾し、主語と述語`basieren`を分離している。"
+    },
+    {
+        "german": "Wilhelm von Ockhams berühmtes Sparsamkeitsprinzip, bekannt als 'Ockhams Rasiermesser', besagt, dass die pluralitas non est ponenda sine necessitate, was bedeutet, dass zur Erklärung eines Sachverhalts keine überflüssigen Entitäten angenommen werden sollen.",
+        "japanese": "オッカムのヴィルヘルムの有名な節約の原理は、「オッカムの剃刀」として知られているが、それは`pluralitas non est ponenda sine necessitate`（複数は必要なしに置かれるべきではない）と述べ、このことは、ある事態を説明するために不必要な実体は想定されるべきではない、ということを意味する。",
+        "explanation": "文の構造は`besagt, dass ..., was bedeutet, dass ...`という入れ子状の節構造になっている。"
+    },
+    {
+        "german": "Die deutsche Mystik, deren prominentester Vertreter Meister Eckhart ist, strebt eine unmittelbare, erfahrungsbasierte Vereinigung der Seele mit Gott an, indem sie in den 'Seelengrund' hinabsteigt, jenen ungeschaffenen Funken, in dem Gott und Seele eins sind.",
+        "japanese": "ドイツ神秘主義は――その最も卓越した代表者はマイスター・エックハルトであるが――、魂が「魂の根底」、すなわち神と魂が一つであるかの創造されざる火花へと降りていくことによって、魂と神との直接的で経験に基づいた合一を目指す。",
+        "explanation": "主語`Die deutsche Mystik`を所有格の関係代名詞`deren`で始まる節が修飾。手段を示す`indem`節の目的語`jenen ... Funken`を、さらに`in dem`で始まる関係詞節が修飾している。"
+    },
+    {
+        "german": "Duns Scotus' Lehre von der Haecceitas ('Diesheit') postuliert ein individuelles Formprinzip, das jedem Einzelding seine unverwechselbare Einzigartigkeit verleiht, jenseits seiner allgemeinen Art- und Gattungszugehörigkeit.",
+        "japanese": "ドゥンス・スコトゥスのヘクエイタス（「此の物性」）の教えは、個物的な形相原理を要請する。それは、各々の個物が持つ一般的な種や類への所属を超えて、それにその紛うことなき唯一性を与えるものである。",
+        "explanation": "目的語`ein individuelles Formprinzip`を`das...verleiht`という関係詞節が修飾し、その後に`jenseits`で始まる前置詞句が続く。"
+    },
+    {
+        "german": "Die scholastische Methode, die in den mittelalterlichen Universitäten zur Blüte gelangte, zeichnet sich durch ein streng logisches Verfahren von Quaestio, Disputatio und Determinatio aus, das darauf abzielt, durch die Abwägung von Pro- und Contra-Argumenten zu einer begründeten Entscheidung zu gelangen.",
+        "japanese": "スコラ学の方法は――それは中世の大学において隆盛を極めたのだが――、問い(Quaestio)、討論(Disputatio)、そして決定(Determinatio)という厳密な論理的手続きによって特徴づけられ、その手続きは、賛成・反対の議論の考量を通じて、根拠ある決定へと至ることを目指すものである。",
+        "explanation": "主語`Die scholastische Methode`を関係詞節`die...gelangte`が修飾。`Verfahren`（手続き）を、`das darauf abzielt, ... zu gelangen`という`zu`不定詞句を含む関係詞節が修飾している。"
+    },
+    {
+        "german": "Augustins Analyse der Zeit in den 'Confessiones' kommt zu dem Schluss, dass Vergangenheit und Zukunft keine eigenständige Realität besitzen, sondern nur als Modi der Gegenwart in der Seele existieren: die Vergangenheit als Erinnerung und die Zukunft als Erwartung.",
+        "japanese": "アウグスティヌスの『告白』における時間の分析は、過去と未来は固有の実在性を持たず、ただ現在という様態として魂のうちに、すなわち過去は記憶として、未来は期待として存在するのみである、という結論に至る。",
+        "explanation": "`kommt zu dem Schluss, dass...`という構造。`dass`節内が`nicht ..., sondern nur ...`の対比になっており、コロン（:）以下が同格による補足説明となっている。"
+    },
+    {
+        "german": "Die Lichtmetaphysik, die besonders von Robert Grosseteste entwickelt wurde, betrachtet das Licht (lux) als das erste körperliche Formprinzip und als diejenige ontologische Realität, deren Ausbreitung die Dimensionen des gesamten Universums konstituiert.",
+        "japanese": "特にロバート・グロステストによって展開された光の形而上学は、光（ルクス）を第一の物体的な形相原理として、そして、その広がりが全宇宙の次元を構成するような、かの存在論的な実在性として見なす。",
+        "explanation": "主語`Die Lichtmetaphysik`を関係詞節`die...wurde`が修飾。動詞`betrachtet`が`als das ... Formprinzip`と`als diejenige ... Realität`という二つの`als`句を目的格補語として取る。後者の`Realität`は`deren`で始まる関係詞節に修飾されている。"
+    },
+    {
+        "german": "Im Gegensatz zu Anselms ontologischem apriorischem Beweis, argumentiert Thomas von Aquin, dass die menschliche Vernunft, die nach dem Sündenfall geschwächt ist, Gottes Existenz nicht aus seinem bloßen Begriff, sondern nur aus seinen Wirkungen in der Schöpfung erkennen kann.",
+        "japanese": "アンセルムスの存在論的なア・プリオリな証明とは対照的に、トマス・アクィナスは、人間の理性は――それは原罪の後に弱められているのだが――、神の存在をその単なる概念からではなく、被造物におけるその働きからのみ認識しうると論じる。",
+        "explanation": "`argumentiert, dass...`という構造。`dass`節の主語`die menschliche Vernunft`が関係詞節`die...ist`によって修飾され、`nicht aus..., sondern nur aus...erkennen kann`という対比構造の枠組みになっている。"
+    },
+    {
+        "german": "Der radikale Nominalismus Ockhams, der die Existenz von Universalien außerhalb des Geistes und der Sprache bestreitet, hatte weitreichende Konsequenzen, da er die traditionelle Metaphysik untergrub und den Weg für eine empirisch orientierte Naturphilosophie ebnete.",
+        "japanese": "オッカムの急進的な唯名論は――それは精神と言語の外にある普遍の存在を否定するものであるが――、広範囲にわたる帰結をもたらした。なぜなら、それは伝統的な形而上学を突き崩し、経験主義的に方向づけられた自然哲学への道を開いたからである。",
+        "explanation": "主語`Der radikale Nominalismus Ockhams`が関係詞節`der...bestreitet`によって修飾されている。理由を示す`da`節が二つの動詞（`untergrub`と`ebnete`）を持つ。"
+    },
+    {
+        "german": "Petrus Abaelards ethischer Ansatz in 'Scito te ipsum' ('Erkenne dich selbst') legt das Hauptgewicht auf die innere Absicht (intentio) des Handelnden, weshalb eine Tat nicht an sich, sondern nur aufgrund der Zustimmung des Gewissens als sündhaft beurteilt werden könne.",
+        "japanese": "ペトルス・アベラルドゥスの『汝自身を知れ』（Scito te ipsum）における倫理学的アプローチは、行為者の内的な意図（intentio）に主眼を置く。それゆえ、ある行為は、それ自体としてではなく、ただ良心の同意に基づいてのみ罪深いと判断されうるのである。",
+        "explanation": "結果を示す`weshalb`で始まる副文の中で、`nicht ..., sondern nur ...`の対比構造と`beurteilt werden könne`という受動態・接続法が使われている。"
+    },
+    {
+        "german": "Die Lehre von der transzendentalen Analogie des Seins, wie sie von Thomas von Aquin formuliert wurde, ermöglicht es, von den geschaffenen Dingen in einer Weise auf Gott zu sprechen, die weder rein eindeutig (univok) noch völlig verschieden (äquivok) ist.",
+        "japanese": "存在の超越論的類比の教えは、トマス・アクィナスによって定式化されたように、被造物から出発して、純粋に一義的（univok）でもなく、完全に多義的（äquivok）でもないような仕方で、神について語ることを可能にする。",
+        "explanation": "形式目的語`es`を用いた`ermöglicht es, ... zu sprechen`という構造。`Weise`（仕方）を`die weder ... noch ... ist`という否定の相関構文を含む関係詞節が修飾している。"
+    },
+    {
+        "german": "Das augustinische Konzept der Erleuchtung (Illumination) besagt, dass die menschliche Vernunft die ewigen und unveränderlichen Wahrheiten nicht aus sich selbst heraus, sondern nur durch die Teilhabe an einem göttlichen, intelligiblen Licht erkennen kann.",
+        "japanese": "アウグスティヌスの照明（Illuminatio）の概念が言うには、人間の理性は、永遠で不変の真理を、自らのうちからではなく、ただ神的な、可知的な光にあずかることによってのみ認識しうるのである。",
+        "explanation": "`besagt, dass...`という構造。`dass`節の中が`nicht aus..., sondern nur durch...erkennen kann`という対比構造の枠組みになっている。"
+    },
+    {
+        "german": "Der politische Augustinismus des Mittelalters, der sich auf Augustins Werk 'De civitate Dei' ('Vom Gottesstaat') berief, tendierte dazu, die weltliche Macht (civitas terrena) der geistlichen Autorität der Kirche (civitas Dei) unterzuordnen.",
+        "japanese": "中世の政治的アウグスティヌス主義は――それはアウグスティヌスの著作『神の国』（De civitate Dei）を典拠としていたが――、世俗の権力（civitas terrena）を、教会の霊的権威（civitas Dei）に従属させる傾向があった。",
+        "explanation": "主語`Der politische Augustinismus`を関係詞節`der sich...berief`が修飾。`tendierte dazu, ... unterzuordnen`という`zu`不定詞句を用いた構文。"
+    },
+    {
+        "german": "Bonaventuras Itinerarium mentis in Deum ('Pilgerweg des Geistes zu Gott') beschreibt einen mystischen Aufstieg in drei Stufen, der von der Betrachtung der Spuren Gottes in der Außenwelt über die Einkehr in die Seele als Gottes Ebenbild bis hin zur ekstatischen Vereinigung mit dem göttlichen Urgrund führt.",
+        "japanese": "ボナヴェントゥラの『精神の神への道程』（Itinerarium mentis in Deum）は、三段階の神秘的な上昇を描写する。それは、外的世界における神の痕跡の観想から、神の似姿としての魂への内省を経て、神的な根源との脱自的な合一へと至るものである。",
+        "explanation": "目的語`einen mystischen Aufstieg`を、`der von ... über ... bis hin zu ... führt`という、複数の前置詞句を連ねた非常に長い関係詞節が修飾している。"
+    },
+    {
+        "german": "Die Unterscheidung zwischen Essenz (Wesen) und Existenz (Dasein), die in der thomistischen Metaphysik von zentraler Bedeutung ist, besagt, dass bei allen geschaffenen Dingen das Wesen nicht von sich aus die Existenz einschließt, was nur bei Gott, dessen Wesen es ist zu sein, der Fall ist.",
+        "japanese": "本質（Essenz）と現存在（Existenz）の区別は――それはトマス主義形而上学において中心的な重要性を持つが――、次のことを述べる。すなわち、すべての被造物においては、本質はそれ自体から現存在を含むわけではないのであり、このことが当てはまるのは、その本質が存在することであるような神の場合だけなのである。",
+        "explanation": "主語`Die Unterscheidung`を関係詞節`die...ist`が修飾。`dass`節の後に、その内容を補足する`was`で始まる関係詞節が続き、さらにその中に`dessen`で始まる関係詞節が入れ子になっている。"
+    },
+    {
+        "german": "Die arabische Philosophie, insbesondere die Werke von Avicenna und Averroes, spielte eine entscheidende Rolle für die Wiederentdeckung und Rezeption des aristotelischen Denkens im lateinischen Westen, was die Hochscholastik maßgeblich prägte.",
+        "japanese": "アラビア哲学、特にアヴィセンナとアヴェロエスの著作は、ラテン語圏の西洋におけるアリストテレス思想の再発見と受容にとって決定的な役割を果たし、このことは盛期スコラ学を決定的に特徴づけた。",
+        "explanation": "`was`で始まる関係詞節が、前の主文全体の内容を受けて、その結果を説明している。"
+    },
+    {
+        "german": "Der Glaube wird von den Scholastikern als eine intellektuelle Tugend verstanden, bei der der Verstand auf Geheiß des Willens Wahrheiten annimmt, die die natürliche Vernunft übersteigen, aber durch die Autorität der göttlichen Offenbarung verbürgt sind.",
+        "japanese": "信仰はスコラ学者たちによって知的な徳として理解される。その際、理性は意志の命令に基づき、自然理性を超越するが、神的な啓示の権威によって保証されている諸真理を受け入れるのである。",
+        "explanation": "`bei der`で始まる関係詞節が`Tugend`を修飾。その関係詞節の目的語`Wahrheiten`をさらに、`die...übersteigen, aber...verbürgt sind`という二つの動詞を持つ関係詞節が修飾している。"
+    },
+    {
+        "german": "Die Lehre vom Hylemorphismus, die Thomas von Aquin von Aristoteles übernimmt, besagt, dass alle körperlichen Substanzen aus zwei Prinzipien zusammengesetzt sind: der reinen Potenzialität der Materie (materia prima) und dem aktualisierenden Formprinzip (forma substantialis).",
+        "japanese": "トマス・アクィナスがアリストテレスから受け継いだ質料形相論（ヒュロモルフィスムス）の教えは、すべての物体的な実体は二つの原理から構成されていると述べる。すなわち、質料の純粋な潜勢態（materia prima）と、現実化する形相原理（forma substantialis）である。",
+        "explanation": "主語`Die Lehre`を関係詞節`die...übernimmt`が修飾。`dass`節の後のコロン（:）以下が、`zwei Prinzipien`（二つの原理）の具体的な内容を同格で説明している。"
+    },
+    {
+        "german": "Meister Eckharts radikale Predigten über die 'Geburt Gottes in der Seele' und die notwendige 'Gelassenheit', die jede Ich-Bezogenheit aufgeben muss, brachten ihm den Vorwurf der Häresie ein, da sie die Grenzen zwischen Schöpfer und Geschöpf zu verwischen schienen.",
+        "japanese": "マイスター・エックハルトの、「魂における神の誕生」と、あらゆる自己中心性を放棄せねばならない必然的な「離脱」についてのラディカルな説教は、彼に異端の非難をもたらした。なぜなら、それらは創造主と被造物の間の境界を曖昧にするように思われたからである。",
+        "explanation": "主語`Meister Eckharts radikale Predigten`を、`die...muss`という関係詞節が修飾している（この関係詞節は直前の`Gelassenheit`のみを修飾するとも解釈できる）。理由を示す`da`節が文末に置かれている。"
+    },
+    {
+        "german": "Der Konflikt zwischen den Mendikantenorden, insbesondere den Franziskanern und Dominikanern, und dem weltlichen Klerus an den Pariser Universitäten spiegelte tiefere philosophische und theologische Differenzen über das Wesen der Armut, des Lehrens und der kirchlichen Autorität wider.",
+        "japanese": "托鉢修道会、特にフランシスコ会とドミニコ会と、パリ大学の世俗聖職者との間の対立は、貧しさ、教えること、そして教会的権威の本質をめぐる、より深い哲学的・神学的相違を反映していた。",
+        "explanation": "分離動詞`spiegelte ... wider`（反映していた）が文の枠組みを作っている。主語`Der Konflikt`が`zwischen ... und ...`という長い前置詞句によって非常に長くなっている。"
+    },
+    {
+        "german": "Anselms Frage 'Cur Deus homo?' ('Warum wurde Gott Mensch?') wird in seinem gleichnamigen Werk durch eine rationale Satisfaktionstheorie beantwortet, derzufolge die unendliche Schuld des Sündenfalls nur durch die unendliche Genugtuung eines Gottmenschen gesühnt werden konnte.",
+        "japanese": "アンセルムスの問い「神は何故に人となりたもうたか？」（Cur Deus homo?）は、彼の同名の著作において、合理的な満足説によって答えられる。それによれば、原罪の無限の咎は、神人（ゴットメンシュ）の無限の償いによってのみ贖われえたのである。",
+        "explanation": "主文は`wird ... beantwortet`という受動態。`Satisfaktionstheorie`（満足説）の内容を、`derzufolge`で始まる関係詞節が補足説明している。"
+    },
+    {
+        "german": "Das Verhältnis von potentia Dei absoluta (Gottes absoluter Macht, alles zu tun, was nicht widersprüchlich ist) und potentia Dei ordinata (Gottes geordneter Macht, die an die von ihm geschaffene Weltordnung gebunden ist) war ein zentrales Thema der spätscholastischen Debatten.",
+        "japanese": "ポテンティア・デイ・アブソルータ（神の絶対的な御力、すなわち矛盾しないことであれば何でも行いえる力）とポテンティア・デイ・オルディナータ（神の秩序づけられた御力、すなわち神が自ら創造した世界秩序に拘束される力）の関係は、後期スコラ学の議論の中心的なテーマであった。",
+        "explanation": "主語である`Das Verhältnis`が、ラテン語の専門用語とそれを説明する非常に長い同格の名詞句（`Gottes ... Macht, ...`）によって極端に長くなっている。"
+    },
+    {
+        "german": "Während die frühmittelalterliche Philosophie stark vom Neuplatonismus Augustins geprägt war, dessen Fokus auf der inneren Erfahrung der Seele und der Erleuchtung durch Gott lag, wandte sich die Hochscholastik unter dem Einfluss des wiederentdeckten Aristoteles stärker der logischen Analyse und der empirischen Welt zu.",
+        "japanese": "初期中世哲学が、その焦点が魂の内的経験と神による照明とに置かれていたアウグスティヌスの新プラトン主義によって強く特徴づけられていたのに対して、盛期スコラ学は、再発見されたアリストテレスの影響のもと、より強く論理的分析と経験的世界へと向かった。",
+        "explanation": "`Während`で始まる長い対比の副文が文頭に置かれている。その副文の中では、`Neuplatonismus Augustins`を所有格の関係代名詞`dessen`で始まる関係詞節が修飾している。"
+    }
 ]
+
