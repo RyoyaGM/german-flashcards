@@ -323,7 +323,7 @@
         "german": "Der Zyniker Diogenes, der der Überlieferung nach in einem Fass lebte, um seine radikale Unabhängigkeit von allen gesellschaftlichen Konventionen und materiellen Bedürfnissen zu demonstrieren, trieb die sokratische Betonung der Tugend als autarkem Gut auf die Spitze.",
         "japanese": "キュニコス派のディオゲネスは――伝承によれば、あらゆる社会的慣習や物質的欲求からの彼のラディカルな独立を誇示するために、樽の中で生活したのだが――、自足的な善としての徳のソクラテス的な強調を、極点にまで推し進めた。",
         "explanation": "主語`Der Zyniker Diogenes`が、`der...lebte`という関係詞節によって修飾されています。この関係詞節の中には、目的を示す`um...zu demonstrieren`という長い不定詞句が含まれています。"
-    }
+    },
     {
         "german": "Die augustinische Lehre von der göttlichen Prädestination, derzufolge die Errettung der Seele nicht durch menschliches Verdienst, sondern einzig durch die unerforschliche Gnade Gottes im Voraus bestimmt ist, stellt die menschliche Willensfreiheit vor eine aporische Grenze.",
         "japanese": "アウグスティヌスの神の予定説は――それによれば、魂の救済は人間の功績によってではなく、ただ神の測り知れない恩寵によってのみあらかじめ定められているのだが――、人間の意志の自由をアポリア的な限界の前に立たせる。",
@@ -473,7 +473,7 @@
         "german": "Während die frühmittelalterliche Philosophie stark vom Neuplatonismus Augustins geprägt war, dessen Fokus auf der inneren Erfahrung der Seele und der Erleuchtung durch Gott lag, wandte sich die Hochscholastik unter dem Einfluss des wiederentdeckten Aristoteles stärker der logischen Analyse und der empirischen Welt zu.",
         "japanese": "初期中世哲学が、その焦点が魂の内的経験と神による照明とに置かれていたアウグスティヌスの新プラトン主義によって強く特徴づけられていたのに対して、盛期スコラ学は、再発見されたアリストテレスの影響のもと、より強く論理的分析と経験的世界へと向かった。",
         "explanation": "`Während`で始まる長い対比の副文が文頭に置かれている。その副文の中では、`Neuplatonismus Augustins`を所有格の関係代名詞`dessen`で始まる関係詞節が修飾している。"
-    }
+    },
     {
         "german": "René Descartes' methodischer Zweifel, dessen universelle Anwendung selbst die Axiome der Mathematik und die Existenz der Außenwelt suspendiert, findet sein unerschütterliches Fundament in der unbezweifelbaren Selbstgewissheit des denkenden Ich (ego cogito), von dem aus die Realität neu konstruiert werden soll.",
         "japanese": "ルネ・デカルトの方法的懐疑は――その普遍的な適用は数学の公理や外的世界の存在すらも停止させるのだが――、思考する自我（エゴ・コギト）の疑い得ない自己確信のうちにその揺るぎない基礎を見出すのであり、そしてそこから出発して現実は新たに構成されるべきなのである。",
@@ -623,7 +623,7 @@
         "german": "Der absolute Idealismus Hegels gelangt zu der spekulativen Einsicht, dass das Absolute nicht als eine starre, jenseits der Welt stehende Substanz, sondern als Subjekt, das heißt als der sich in der Geschichte und im Denken selbst entfaltende und zu sich kommende Geist, begriffen werden muss.",
         "japanese": "ヘーゲルの絶対的観念論は、絶対者とは、世界の彼岸に立つ固定的な実体としてではなく、むしろ主体として、すなわち、歴史と思惟のうちに自己を展開し、自己へと至る精神として把握されねばならない、という思弁的な洞察へと到達する。",
         "explanation": "`gelangt zu der ... Einsicht, dass...`という構造。`dass`節の中が`nicht als ..., sondern als ... begriffen werden muss`という受動態の対比構造になっており、`Subjekt`を`das heißt...`の同格句が詳しく説明しています。"
-    }
+    },
     {
         "german": "Die transzendentale Deduktion der reinen Verstandesbegriffe, deren Gelingen die objektive Gültigkeit der Kategorien für alle Gegenstände möglicher Erfahrung allererst sicherstellen soll, stellt das wohl schwierigste, aber zugleich zentrale Unterfangen der gesamten Kritik der reinen Vernunft dar.",
         "japanese": "純粋悟性概念の超越論的演繹は――その成功が、カテゴリーのあらゆる可能な経験の対象に対する客観的妥当性をそもそも保証すべきものなのだが――、おそらく純粋理性批判全体の最も困難であると同時に中心的な事業なのである。",
@@ -773,7 +773,7 @@
         "german": "Der Charakter eines Dinges an sich, der die unbekannte Ursache der Erscheinungen ist, kann von uns niemals positiv bestimmt werden, weil unser gesamtes kategoriales Begriffsnetz ausschließlich dazu dient, die in Raum und Zeit gegebene Mannigfaltigkeit zu einer erfahrbaren, geordneten Natur zu synthetisieren.",
         "japanese": "物自体の性格は――それは現象の未知の原因なのだが――、我々によって決して肯定的に規定されえない。なぜなら、我々のカテゴリー的な概念網の全体は、もっぱら、空間と時間のうちに与えられた多様性を、経験可能な、秩序づけられた自然へと統合することに奉仕するからである。",
         "explanation": "主語`Der Charakter`を関係詞節`der...ist`が修飾。理由を示す`weil`節の中で、`dazu dient, ... zu synthetisieren`という`zu`不定詞句の構文が使われています。"
-    }
+    },
     {
         "german": "Die Aporie, die sich am Ende einer tiefschürfenden philosophischen Untersuchung oft als unumgänglich erweist, bezeichnet jenen Zustand intellektueller Ratlosigkeit, in dem sich jede denkbare Lösung als logisch unhaltbar oder in neue Widersprüche verwickelt erweist.",
         "japanese": "アポリアは――それは深遠な哲学的探求の終わりにしばしば不可避であると判明するのだが――、知的な途方に暮れたあの状態を指し、その状態においては、考えうるあらゆる解決策が論理的に支持不可能であるか、あるいは新たな矛盾に陥ることが明らかになるのである。",
@@ -925,3 +925,4 @@
         "explanation": "理由を示す`da`節の中が`nicht eine ..., sondern eine ... Geltungsquelle`という対比構造になっており、後者をさらに`die...liegt`という関係詞節が修飾しています。"
     }
 ]
+
