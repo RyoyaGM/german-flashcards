@@ -105,7 +105,7 @@
             <p class="mb-6 text-lg">学習結果</p>
             <div class="space-y-3 text-left w-full max-w-md mx-auto">
                 <details class="bg-green-100 dark:bg-green-900/50 rounded-lg overflow-hidden"><summary class="flex justify-between items-center p-3 font-semibold cursor-pointer list-none"><span>即答</span><span id="remembered-count" class="font-bold text-lg text-green-600 dark:text-green-400 bg-white/50 dark:bg-black/20 px-2 rounded-md">0</span></summary><ul id="remembered-list" class="p-4 pt-0 space-y-2 border-t border-green-200 dark:border-green-800"></ul></details>
-                <details class="bg-yellow-100 dark:bg-yellow-900/50 rounded-lg overflow-hidden"><summary class="flex justify-between items-center p-3 font-semibold cursor-pointer list-none"><span>思い出す</span><span id="fuzzy-count" class="font-bold text-lg text-yellow-600 dark:text-yellow-400 bg-white/50 dark:bg-black/20 px-2 rounded-md">0</span></summary><ul id="fuzzy-list" class="p-4 pt-0 space-y-2 border-t border-yellow-200 dark:border-yellow-800"></ul></details>
+                <details class="bg-yellow-100 dark:bg-yellow-900/50 rounded-lg overflow-hidden"><summary class="flex justify-between items-center p-3 font-semibold cursor-pointer list-none"><span>推測</span><span id="fuzzy-count" class="font-bold text-lg text-yellow-600 dark:text-yellow-400 bg-white/50 dark:bg-black/20 px-2 rounded-md">0</span></summary><ul id="fuzzy-list" class="p-4 pt-0 space-y-2 border-t border-yellow-200 dark:border-yellow-800"></ul></details>
                 <details class="bg-orange-100 dark:bg-orange-900/50 rounded-lg overflow-hidden"><summary class="flex justify-between items-center p-3 font-semibold cursor-pointer list-none"><span>曖昧</span><span id="forgotten-count" class="font-bold text-lg text-orange-600 dark:text-orange-400 bg-white/50 dark:bg-black/20 px-2 rounded-md">0</span></summary><ul id="forgotten-list" class="p-4 pt-0 space-y-2 border-t border-orange-200 dark:border-orange-800"></ul></details>
                 <details class="bg-red-100 dark:bg-red-900/50 rounded-lg overflow-hidden"><summary class="flex justify-between items-center p-3 font-semibold cursor-pointer list-none"><span>誤答</span><span id="wrong-count" class="font-bold text-lg text-red-600 dark:text-red-400 bg-white/50 dark:bg-black/20 px-2 rounded-md">0</span></summary><ul id="wrong-list" class="p-4 pt-0 space-y-2 border-t border-red-200 dark:border-red-800"></ul></details>
             </div>
@@ -119,29 +119,39 @@
     <script>
         // --- Audio Setup ---
         const sounds = { click: new Audio('https://cdn.jsdelivr.net/gh/kristopolous/music/sounds/button-2.mp3'), flip: new Audio('https://cdn.jsdelivr.net/gh/kristopolous/music/sounds/button-1.mp3') };
-        Object.values(sounds).forEach(sound => sound.preload = 'auto');
-        function playSound(sound) { sound.currentTime = 0; sound.play().catch(e => console.error("Sound play failed:", e)); }
+        let audioUnlocked = false;
+        function unlockAudio() {
+            if (audioUnlocked) return;
+            Object.values(sounds).forEach(sound => {
+                sound.play().catch(() => {});
+                sound.pause();
+                sound.currentTime = 0;
+            });
+            audioUnlocked = true;
+            document.body.removeEventListener('click', unlockAudio);
+        }
+        document.body.addEventListener('click', unlockAudio);
+        function playSound(sound) {
+            if (!audioUnlocked) return;
+            sound.currentTime = 0;
+            sound.play().catch(e => console.error("Sound play failed:", e));
+        }
 
         // DOM Elements
         const screens = { start: document.getElementById('start-screen'), learning: document.getElementById('learning-screen'), result: document.getElementById('result-screen'), wordList: document.getElementById('word-list-screen') };
         const japaneseDisplay = document.getElementById('japanese-display'), wordDisplay = document.getElementById('word-display'), checkMeaningBtn = document.getElementById('check-meaning-btn'), checkMeaningBtnContainer = document.getElementById('check-meaning-btn-container'), assessmentContainer = document.getElementById('assessment-container'), assessmentButtons = document.querySelectorAll('.assessment-btn'), flipCard = document.getElementById('flip-card'), progressText = document.getElementById('progress-text'), progressBar = document.getElementById('progress-bar'), learningTitle = document.getElementById('learning-title'), relatedWordsContainer = document.getElementById('related-words-container'), relatedWordsDisplay = document.getElementById('related-words-display');
-        // Buttons
         const startQuizBtn = document.getElementById('start-quiz-btn'), startReviewQuizBtn = document.getElementById('start-review-quiz-btn'), viewListBtn = document.getElementById('view-list-btn'), backToStartBtn = document.getElementById('back-to-start-btn'), backToStartBtnFromQuiz = document.getElementById('back-to-start-btn-from-quiz'), backToStartFromResultBtn = document.getElementById('back-to-start-from-result-btn'), restartBtn = document.getElementById('restart-btn'), reviewQuizBtn = document.getElementById('review-quiz-btn'), resumeQuizBtn = document.getElementById('resume-quiz-btn'), resumeText = document.getElementById('resume-text'), exportJsonBtn = document.getElementById('export-json-btn'), reviewInfo = document.getElementById('review-info'), prevWordBtn = document.getElementById('prev-word-btn');
-        // Word List Elements
         const wordListTbody = document.getElementById('word-list-tbody'), searchWordInput = document.getElementById('search-word-input');
         const STORAGE_KEY = 'germanFlashcardProgress';
         let allWords = [], reviewWords = [], words = [], currentIndex = 0, stats = {}, currentMode = 'learning';
 
-        // --- Utility & Screen Management ---
         function shuffleArray(array) { for (let i = array.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1));[array[i], array[j]] = [array[j], array[i]]; } }
         function showScreen(screenName) { Object.values(screens).forEach(screen => screen.classList.add('hidden')); screens[screenName].classList.remove('hidden'); }
 
-        // --- Progress Management ---
         function saveProgress() { if (currentMode === 'learning') { const progress = { words, currentIndex, stats }; localStorage.setItem(STORAGE_KEY, JSON.stringify(progress)); } }
         function loadProgress() { const savedProgress = localStorage.getItem(STORAGE_KEY); if (savedProgress) { try { return JSON.parse(savedProgress); } catch (e) { console.error("Failed to parse progress:", e); localStorage.removeItem(STORAGE_KEY); return null; } } return null; }
         function clearProgress() { localStorage.removeItem(STORAGE_KEY); }
         
-        // --- Quiz Logic ---
         function prepareNextWord() {
             if (currentIndex >= words.length) { showResults(); return; }
             assessmentContainer.classList.add('hidden');
@@ -182,7 +192,7 @@
                 if (progress) { ({ words, currentIndex, stats } = progress); }
             } else {
                 words = [...wordList];
-                if (mode !== 'fixed_review') shuffleArray(words);
+                shuffleArray(words); // Always shuffle a new session
                 currentIndex = 0;
                 stats = { remembered: [], fuzzy: [], forgotten: [], wrong: [] };
             }
@@ -192,14 +202,12 @@
             if (mode === 'learning') saveProgress();
         }
 
-        // --- Word List Logic ---
         function displayWordList(filter = '') {
             wordListTbody.innerHTML = '';
             const filteredWords = allWords.filter(word => word.word.toLowerCase().includes(filter.toLowerCase()) || word.japanese.toLowerCase().includes(filter.toLowerCase()));
             filteredWords.forEach(word => { const tr = document.createElement('tr'); tr.className = 'border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700'; tr.innerHTML = `<td class="p-2 font-medium">${word.word}</td><td class="p-2">${word.japanese}</td><td class="p-2 text-sm text-gray-500">${word.related || ''}</td>`; wordListTbody.appendChild(tr); });
         }
 
-        // --- JSON Export Logic ---
         function exportReviewWordsAsJson() {
             const wordsForReview = [...stats.fuzzy, ...stats.forgotten, ...stats.wrong];
             const exportData = wordsForReview.map(({ word, japanese, related }) => ({ word, japanese, related }));
@@ -212,7 +220,6 @@
             URL.revokeObjectURL(url);
         }
 
-        // --- Initialization ---
         async function initializeApp() {
             try {
                 const response = await fetch('words.json');
@@ -242,16 +249,9 @@
             }
         }
 
-        // --- Event Listeners with Sound ---
         document.querySelectorAll('.btn').forEach(button => {
-            button.addEventListener('click', () => {
-                // Only play sound if the button is not the 'check-meaning' button, which has its own sound
-                if (button.id !== 'check-meaning-btn') {
-                    playSound(sounds.click);
-                }
-            });
+            button.addEventListener('click', () => { if (button.id !== 'check-meaning-btn') playSound(sounds.click); });
         });
-
         startQuizBtn.addEventListener('click', () => { clearProgress(); startSession({wordList: allWords, title: "全単語クイズ", mode: 'learning'}); });
         startReviewQuizBtn.addEventListener('click', () => { startSession({wordList: reviewWords, title: "不安な単語の復習", mode: 'fixed_review'}); });
         resumeQuizBtn.addEventListener('click', (e) => { e.preventDefault(); startSession({title: "学習の続きから", mode: 'learning', resume: true}); });
