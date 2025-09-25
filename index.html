@@ -24,6 +24,7 @@
         #word-list-container::-webkit-scrollbar-track { background: #f1f5f9; }
         .dark #word-list-container::-webkit-scrollbar-track { background: #374151; }
         #word-list-container::-webkit-scrollbar-thumb { background: #60a5fa; border-radius: 4px; }
+        #word-list-tbody tr { cursor: pointer; }
     </style>
 </head>
 <body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 flex items-center justify-center min-h-screen p-4">
@@ -230,7 +231,7 @@
             filteredWords.forEach((word) => {
                 const tr = document.createElement('tr');
                 tr.className = 'border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700';
-                const isChecked = selectedWords.includes(word);
+                const isChecked = selectedWords.some(sw => sw.word === word.word);
                 tr.innerHTML = `
                     <td class="p-2 w-8"><input type="checkbox" class="word-checkbox" data-word='${JSON.stringify(word)}' ${isChecked ? 'checked' : ''}></td>
                     <td class="p-2 font-medium">${word.word}</td>
@@ -329,6 +330,17 @@
         startSelectedQuizBtn.addEventListener('click', () => {
             if (selectedWords.length > 0) {
                 startSession({wordList: selectedWords, title: "選択単語クイズ", mode: 'custom_quiz'});
+            }
+        });
+        wordListTbody.addEventListener('click', (e) => {
+            const row = e.target.closest('tr');
+            if (row) {
+                const checkbox = row.querySelector('.word-checkbox');
+                if (checkbox && e.target.tagName !== 'INPUT') {
+                    checkbox.checked = !checkbox.checked;
+                    // Manually trigger change event
+                    checkbox.dispatchEvent(new Event('change', { bubbles: true }));
+                }
             }
         });
         wordListTbody.addEventListener('change', (e) => {
