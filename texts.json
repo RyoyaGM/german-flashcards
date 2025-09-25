@@ -1,12 +1,327 @@
 [
     {
-        "german": "Die leichte Taube, indem sie im freien Fluge die Luft teilt, deren Widerstand sie fühlt, könnte die Vorstellung fassen, dass es ihr im luftleeren Raume noch viel besser gelingen werde.",
-        "japanese": "自由な飛翔において空気の抵抗を感じながら空気を切り裂く軽い鳩は、真空の空間であればもっとうまく飛べるだろうという考えを抱くかもしれない。",
-        "explanation": "主語（Die leichte Taube）と述語（könnte die Vorstellung fassen）が、挿入句「indem sie...fühlt」によって大きく引き離されています。ドイツ語ではこのように、文の基本構造が長い修飾語句によって分断されることが頻繁に起こります。"
+        "german": "Hobbes’ metaphysische Anthropologie nun geht von der sensualistischen Voraussetzung aus, daß die intensiven Zuständlichkeiten bei Empfindungen und die dazu gehörigen sinnlichen Triebmomente die schlechthin elementaren Bestandteile seien, aus denen alles „höhere“ Seelenleben sich, als Komplexion derselben, erklären lasse.",
+        "japanese": "ホッブズの形而上学的人間学は、感覚における強烈な状態やそれに付随する感覚的な衝動の諸契機こそが、それから一切の「より高次な」精神生活がその複合体として説明されうるような、絶対的に根源的な構成要素である、という感覚論的な前提から出発する。",
+        "explanation": "主文は`Hobbes’... Anthropologie geht von der... Voraussetzung aus`と単純ですが、その`Voraussetzung`（前提）の内容を説明する`daß`以下の副文が非常に長大です。`die...Bestandteile seien`が中心構造で、その主語と関係代名詞`aus denen`で続く部分が文を複雑にしています。"
     },
     {
-        "german": "Der Verstand vermag nichts anzuschauen, und die Sinne nichts zu denken.",
-        "japanese": "悟性は何も直観することができず、感性は何も思考することができない。",
-        "explanation": "動詞が文末に置かれるドイツ語の基本的な構造（枠構造）が使われています。「vermag anschauuen (直観できる)」や「vermag denken (思考できる)」といったまとまりが、文の最初と最後で枠を作っています。"
+        "german": "Auch darüber allerdings besteht kein Zweifel, daß der Dichter mehr als irgendein anderer von Kants Schülern dafür gewirkt hat, den Geist und die Gesinnung der kritischen Philosophie in die allgemeine Vorstellungsweise überzuführen und im Bewusstsein der deutschen Bildung heimisch zu machen, und daß diese seine Wirkung mit ununterbrochener Mächtigkeit noch bis auf den heutigen Tag von seinen philosophischen Dichtungen und ästhetischen Abhandlungen ausgeht.",
+        "japanese": "しかしながら、この点についてもまた疑いの余地はない。すなわち、かの詩人（シラー）がカントのどの弟子よりも、批判哲学の精神と思潮を一般の表象様式へと移し入れ、ドイツ教養界の意識の中に根付かせるために貢献したこと、そして、この彼の影響が、途切れることのない力強さをもって今日に至るまでなお、彼の哲学的詩作や美学的論文から発し続けていること、これらについては疑いがないのである。",
+        "explanation": "文の骨格は`darüber besteht kein Zweifel, daß..., und daß...`です。`daß`で導かれる2つの非常に長い名詞節が文の主題となっています。最初の`daß`節には`um...zu`不定詞句が2つ（`überzuführen und heimisch zu machen`）含まれています。"
+    },
+    {
+        "german": "Ihr steht die Kultur als das von einem nach gewerteten Zwecken handelnden Menschen entweder direkt Hervorgebrachte oder, wenn es schon vorhanden ist, so doch wenigstens um der daran haftenden Werte willen absichtlich Gepflegte gegenüber.",
+        "japanese": "それに対して文化が対置される。文化とは、価値評価された目的に従って行為する人間によって、直接的に生み出されたものであるか、あるいは、それがすでに存在している場合には、少なくともそれに付着している価値のために、意図的に保護・育成されたものとして、である。",
+        "explanation": "動詞`gegenüberstehen`が分離し、主語`die Kultur`を長い説明句が修飾しています。`entweder ... oder ...`構文が使われ、それぞれが過去分詞の名詞的用法（`Hervorgebrachte`, `Gepflegte`）で構成されているため、非常に読解が困難です。"
+    },
+    {
+        "german": "Allerdings wirft diese Auflösung nun ein weiteres Problem auf, das uns zu jener Unterscheidung von »Erkennen« und »Anerkennen« zurückführt, mit der wir bei der Erörterung der »Unsichtbarkeit« begonnen hatten: denn es ist auch bei Kant alles andere als klar, wie wir uns jene »Vorstellung« vom Wert einer Person erklären sollen, die er als Voraussetzung aller Achtung betrachtet: ist eine solche Vorstellung das Ergebnis einer bloßen Zuschreibung, oder stellt sie eine Form der Erkenntnis, ja der Wahrnehmung dar?",
+        "japanese": "しかしながら、この解決は今やさらなる問題を提起する。それは我々を、我々が「不可視性」の議論の際に始めた、あの「認識」と「承認」の区別へと連れ戻すものである。というのも、カントにおいてもまた、彼があらゆる尊敬の前提とみなす、ある人の価値についてのあの「表象」を我々がどのように説明すべきかは、決して明確ではないからだ。すなわち、そのような表象は単なる付与の結果なのか、それともそれは認識の一形式、いやそれどころか知覚の一形式を表すものなのか。",
+        "explanation": "複数の関係代名詞（`das`, `mit der`, `die`）とコロン（:）による説明の挿入が幾重にも重なっているため、文の依存関係を把握するのが難しい構造です。文末は`ist ... oder stellt ... dar?`という二者択一の疑問文で締めくくられています。"
+    },
+    {
+        "german": "Alle nicht-menschlichen Wesen sowie alle Menschen, die nicht die Voraussetzungen erfüllen, um moralische Akteure zu sein, fallen aus dem solchermaßen gefassten Bereich der Gerechtigkeit heraus; man kann dann nicht gerecht oder ungerecht gegen Tiere, schwer geistig Behinderte oder kleine Kinder sein.",
+        "japanese": "人間以外のすべての存在、ならびに、道徳的主体であるための前提条件を満たさないすべての人間は、そのように捉えられた正義の領域から脱落する。その場合、人は動物や重度の精神障がい者、あるいは幼児に対して、正義にも不正義にもなりえないのである。",
+        "explanation": "主語`Alle nicht-menschlichen Wesen sowie alle Menschen`が非常に長くなっています。特に`alle Menschen`を修飾する関係詞節`die nicht die Voraussetzungen erfüllen, um moralische Akteure zu sein`が文の理解を複雑にしています。動詞`herausfallen`が分離して文末に置かれています。"
+    },
+    {
+        "german": "Die transzendentale Apperzeption, deren Einheit allererst die Möglichkeit konstituiert, die Mannigfaltigkeit der Anschauung in einem Bewusstsein zu synthetisieren, erweist sich als der oberste Punkt, an dem der Verstand sein gesamtes logisches Vermögen zu befestigen hat.",
+        "japanese": "超越論的統覚は――その統一性こそが初めて、直観の多様性を一つの意識のうちに統合する可能性を構成するのだが――、悟性がその論理的能力の全体をそこにおいて確立せねばならないような、最高の点であることが判明する。",
+        "explanation": "主語「Die transzendentale Apperzeption」と述語「erweist sich」が、所有格の関係代名詞`deren`で始まる非常に長い関係詞節によって分離されています。"
+    },
+    {
+        "german": "Das Sein des Seienden, insofern es sich nicht bloß als vorfindliche Substanz, sondern als in seinem wesenhaften Bezug zum Dasein sich entbergender Prozess enthüllt, fordert eine fundamentale Destruktion der bisherigen Geschichte der Ontologie.",
+        "japanese": "存在者の存在は、それが単に手前にある実体としてではなく、むしろ現存在へのその本質的な関わりのうちに自らを開示するプロセスとして現れる限りにおいて、存在論のこれまでの歴史の根源的な解体を要求する。",
+        "explanation": "主語「Das Sein des Seienden」が`insofern`（…である限りにおいて）で始まる長い副文によって修飾されています。この副文自体も`nicht bloß ..., sondern als ...`という対比構造を含み、動詞`enthüllt`が最後に置かれています。"
+    },
+    {
+        "german": "Indem das Subjekt die ihm äußerlich erscheinende Welt als ein Korrelat seiner eigenen, intentionalen Akte begreift, wird die naive Dichotomie von Innen und Außen in einer phänomenologischen Reduktion aufgehoben, deren Durchführung die eigentliche philosophische Arbeit ausmacht.",
+        "japanese": "主体が、おのれに外的に現れる世界を、それ自身の志向的行為の相関者として把握することによって、内的世界と外的世界という素朴な二分法は、現象学的還元において止揚されるのであり、そしてこの還元の遂行こそが本来の哲学的作業をなすのである。",
+        "explanation": "`Indem`で始まる長い手段・方法の副文が文頭に置かれ、主文は`wird ... aufgehoben`という受動態になっています。さらに主文の`phänomenologischen Reduktion`が`deren`で始まる関係詞節によって補足説明されています。"
+    },
+    {
+        "german": "Die Dialektik des Geistes, welche sich durch die Negation der Negation zur absoluten Idee fortbewegt, ist nichts anderes als die immanente Selbstbewegung des Begriffs, dessen Momente, obgleich sie in ihrer Vereinzelung als widerstreitend erscheinen, in der Totalität ihre notwendige Einheit finden.",
+        "japanese": "精神の弁証法は――それは否定の否定を通じて絶対理念へと運動していくのだが――、概念の内在的な自己運動に他ならず、そしてその概念の諸契機は、それらがその個別性においては矛盾しあうものとして現れるけれども、全体性においてその必然的な統一性を見出すのである。",
+        "explanation": "主語`Die Dialektik des Geistes`が関係詞節`welche...`によって修飾されています。さらに述部`die immanente Selbstbewegung des Begriffs`が、所有格の関係代名詞`dessen`で始まる非常に長い関係詞節によって詳しく説明されています。"
+    },
+    {
+        "german": "Es muss die Möglichkeit einer Ethik in Frage gestellt werden, die ihre Normen aus einem vorgängig bestimmten, sei es metaphysisch, sei es theologisch begründeten höchsten Gut ableitet, anstatt die Autonomie des sich selbst das Gesetz gebenden Willens anzuerkennen.",
+        "japanese": "ある倫理学の可能性は疑われなければならない。すなわち、自己自身に法則を与える意志の自律性を承認するかわりに、先行して規定された――それが形而上学的にであれ神学的にであれ基礎づけられた――最高善からその規範を導き出すような倫理学の可能性は。",
+        "explanation": "`in Frage gestellt werden`（疑問視される）という受動態と助動詞`muss`の組み合わせです。主語`die Möglichkeit einer Ethik`を、動詞`ableitet`で終わる長い関係詞節が修飾しています。`anstatt ... anzuerkennen`という`zu`不定詞句も構造を複雑にしています。"
+    },
+    {
+        "german": "Die Sprache ist nicht ein bloßes Werkzeug, dessen sich ein präexistentes Bewusstsein bediente, um seine Gedanken auszudrücken, sondern vielmehr dasjenige Haus des Seins, in welchem der Mensch wohnt, indem er dem Ruf des Seins entspricht.",
+        "japanese": "言語は、先在する意識が自らの思考を表現するために用いる単なる道具ではなく、むしろ存在の家であり、その家のうちで人間は、存在の呼びかけに応えることによって、住まうのである。",
+        "explanation": "`nicht ..., sondern ...`（…ではなく、むしろ…）の対比構造です。それぞれの要素が`dessen`や`in welchem`といった関係詞節によって修飾され、さらに`indem`節が挿入されるなど、入れ子構造になっています。"
+    },
+    {
+        "german": "Alle Erkenntnis, so postuliert es der kritische Idealismus, beginnt zwar mit der Erfahrung, entspringt aber deshalb nicht gänzlich aus ihr, weil der Verstand selbst die apriorischen Formen, nämlich Raum, Zeit und die Kategorien, beisteuert, ohne die Erfahrung gar nicht erst als geordnetes Ganzes möglich wäre.",
+        "japanese": "すべての認識は、なるほど経験と共に始まるが、だからといって完全に経験から生じるわけではない――と批判的観念論は要請する。なぜなら、悟性自身がアポステリオリな形式、すなわち空間、時間、そして諸カテゴリーを提供するのであり、それらなしには経験はそもそも秩序づけられた全体として可能ではないであろうからだ。",
+        "explanation": "`zwar ..., aber ...`（なるほど…だが…）の構文の間に`so postuliert es...`という挿入句が入っています。`aber`節の理由が`weil`で導かれる長い副文で説明され、その`weil`節の最後にさらに`ohne die...`という条件を示す句が続いています。"
+    },
+    {
+        "german": "Das Scheitern des Projekts der Aufklärung, dessen unbedingter Glaube an die Vernunft in die instrumentelle Rationalität und letztlich in die Barbarei umzuschlagen drohte, zwingt zu einer radikalen Kritik der Genealogie unserer modernen Moralvorstellungen.",
+        "japanese": "啓蒙のプロジェクトの失敗は――その理性への無条件の信仰が、道具的合理性へ、そして究極的には野蛮へと転化する恐れがあったのだが――、我々の近代的な道徳観念の系譜学のラディカルな批判へと我々を強いるのである。",
+        "explanation": "主語`Das Scheitern des Projekts der Aufklärung`が、所有格の関係代名詞`dessen`で始まる非常に長い関係詞節によって修飾され、主語と述語`zwingt`が大きく引き離されています。"
+    },
+    {
+        "german": "Das Nichts, das nicht als bloße Abwesenheit von Seiendem, sondern als das die Anwesenheit des Seienden als solches ermöglichende Nichten gedacht werden muss, offenbart sich ursprünglich in der Grundbefindlichkeit der Angst.",
+        "japanese": "無は――それは、単に存在者の不在としてではなく、むしろ存在者の現前をそのようなものとして可能にする無化として思考されねばならないのだが――、根源的には不安という根源気分において自らを開示するのである。",
+        "explanation": "主語`Das Nichts`が、`das...gedacht werden muss`という非常に長く複雑な関係詞節によって説明されています。この関係詞節自体も`nicht als ..., sondern als ...`という対比構造を含んでいます。"
+    },
+    {
+        "german": "Die ästhetische Erfahrung eines Kunstwerks suspendiert den alltäglichen, auf Zwecke gerichteten Weltbezug, um einen Raum zu eröffnen, in dem das freie Spiel der Erkenntniskräfte ein Gefühl des interesselosen Wohlgefallens erzeugt.",
+        "japanese": "芸術作品の美的経験は、日常的な、目的に向けられた世界関与を中断させる。それは、認識能力の自由な遊戯が、無関心な満足の感情を生み出すような空間を開くためである。",
+        "explanation": "文の後半が`um ... zu eröffnen`（…を開くために）という目的を表す不定詞句になっています。さらに`Raum`（空間）を`in dem ...`で始まる関係詞節が修飾しており、構造が入れ子になっています。"
+    },
+    {
+        "german": "Obwohl die Struktur der Macht dazu neigt, sich durch diskursive Praktiken zu naturalisieren und ihre eigene Geschichtlichkeit zu verschleiern, bleibt die Möglichkeit des Widerstands immer dort gegeben, wo neue Subjektivierungsweisen erprobt werden.",
+        "japanese": "権力の構造は、言説的実践を通じて自らを自然化し、自らの歴史性を覆い隠す傾向があるけれども、抵抗の可能性は、常に、新しい主体化の様式が試みられるところに与えられているのである。",
+        "explanation": "`Obwohl`で始まる長い譲歩の副文が文頭に置かれています。主文は`bleibt die Möglichkeit ... gegeben`ですが、場所を示す関係副詞`wo`で導かれる節が続いています。"
+    },
+    {
+        "german": "Die Zeitlichkeit des Daseins, die sich nicht in einer objektiven Abfolge von Jetzt-Punkten erschöpft, sondern sich aus der Ekstase von Gewesenheit, Gegenwart und Zukunft konstituiert, ist der ursprüngliche Horizont, innerhalb dessen sich Welt überhaupt erst zeigt.",
+        "japanese": "現存在の時間性は――それは、今という点の客観的な連続のうちに尽きるのではなく、むしろ過去存在性、現前、そして未来という脱自から構成されるのだが――、その内部において世界が überhaupt はじめて現れるような、根源的な地平なのである。",
+        "explanation": "主語`Die Zeitlichkeit des Daseins`が、`die sich nicht ..., sondern sich ... konstituiert`という`nicht/sondern`の対比構造を含む長い関係詞節によって修飾されています。述部`der ursprüngliche Horizont`もまた`innerhalb dessen...`という関係詞節によって補足されています。"
+    },
+    {
+        "german": "Der kategorische Imperativ, handle nur nach derjenigen Maxime, durch die du zugleich wollen kannst, dass sie ein allgemeines Gesetz werde, formuliert die unbedingte Forderung der praktischen Vernunft, die allein als Grundlage einer universalen Moral dienen kann.",
+        "japanese": "「汝がそれを通じて同時に、それが普遍的法則となることを意志しうるような、その格率に従ってのみ行為せよ」という定言命法は、実践理性の無条件の要求を定式化するものであり、そしてその要求こそが、普遍的な道徳の基礎として唯一役立ちうるものである。",
+        "explanation": "主語`Der kategorische Imperativ`の内容が、`handle nur nach...`という命令文の引用によって同格的に説明されています。この引用文自体が関係詞節（`durch die...`）と`dass`節を含む複雑な構造をしています。"
+    },
+    {
+        "german": "Das Unbewusste, das durch Mechanismen der Verdrängung und Verschiebung strukturiert ist wie eine Sprache, artikuliert sich in den Fehlleistungen, Träumen und Symptomen des Subjekts, welche einer hermeneutischen Deutung zugänglich sind.",
+        "japanese": "無意識は――それは抑圧と置き換えのメカニズムによって、あたかも一つの言語のように構造化されているのだが――、主体の失錯行為、夢、そして症状のうちに自らを分節化するのであり、そしてそれらは解釈学的な解釈に開かれているのである。",
+        "explanation": "主語`Das Unbewusste`を`das...ist`という関係詞節が修飾し、述語`artikuliert sich`の後の目的語`in den Fehlleistungen...`をさらに`welche...`という関係詞節が修飾するという、二重の修飾構造になっています。"
+    },
+    {
+        "german": "Die Gerechtigkeit einer Gesellschaftsordnung bemisst sich nicht an der Maximierung des Gesamtnutzens, sondern daran, ob ihre Grundinstitutionen jenen Prinzipien entsprechen, auf die sich freie und gleiche Personen in einer fairen Ausgangssituation einigen würden.",
+        "japanese": "ある社会秩序の正義は、全体の効用の最大化によって測られるのではなく、むしろ、その基礎的な諸制度が、自由で平等な人々が公正な初期状況において合意するであろうかの諸原理に合致するかどうかによって測られるのである。",
+        "explanation": "`bemißt sich nicht an ..., sondern daran, ob ...`という対比構造です。`daran`の内容が`ob`で始まる長い間接疑問文で説明され、その中の`jenen Prinzipien`を`auf die sich ... einigen würden`という関係詞節が修飾しています。"
+    },
+    {
+        "german": "Der Wille zur Macht, verstanden nicht als ein Streben nach äußerer Herrschaft, sondern als das innerste Prinzip allen Geschehens, nämlich das unaufhörliche Sich-selbst-Überwinden und Wachsen, stellt die letzte metaphysische Annahme der abendländischen Philosophie dar.",
+        "japanese": "力への意志は――外的な支配への努力としてではなく、むしろあらゆる出来事の最も内的な原理、すなわち絶え間ない自己超克と成長として理解されるのだが――、西洋哲学の最後の形而上学的な想定なのである。",
+        "explanation": "主語`Der Wille zur Macht`が、`verstanden nicht als ..., sondern als ...`という非常に長い分詞構文によって補足説明されています。動詞は`stellt ... dar`という分離動詞で、文末に置かれています。"
+    },
+    {
+        "german": "Die hermeneutische Zirkularität, derzufolge das Verstehen eines Teiles immer schon ein Vorverständnis des Ganzen voraussetzt, welches sich wiederum nur aus den Teilen ergibt, ist keine methodische Schwäche, sondern die ontologische Grundbedingung des Verstehens selbst.",
+        "japanese": "解釈学的循環は――それによれば、部分の理解は常にすでに全体の予備理解を前提とし、そしてその全体は wiederum 部分からしか生じないのだが――、方法論的な弱点ではなく、理解それ自体の存在論的な根本条件なのである。",
+        "explanation": "主語`Die hermeneutische Zirkularität`の内容が、`derzufolge`で始まる関係詞節で詳細に説明されています。この関係詞節自体も`welches`で始まるさらなる関係詞節を含んでおり、入れ子構造になっています。"
+    },
+    {
+        "german": "Das Erhabene, im Gegensatz zum Schönen, das ein Wohlgefallen an der Form hervorruft, ist jene Erfahrung der Begegnung mit dem Formlosen und Ungeheuren, die, indem sie unsere sinnlichen Vermögen übersteigt, die Überlegenheit unserer moralischen Bestimmung fühlbar macht.",
+        "japanese": "崇高なるものは――形の美に満足を見出す美とは対照的に――、形のないものや巨大なものとの出会いのあの経験であり、その経験は、我々の感覚的能力を超越することによって、我々の道徳的使命の優越性を感じさせるのである。",
+        "explanation": "主語`Das Erhabene`が`im Gegensatz zum Schönen...`という挿入句によって説明されています。述語`ist jene Erfahrung...`の`Erfahrung`を`die...fühlbar macht`という関係詞節が修飾し、その中にさらに`indem sie...`という手段を示す副文が挿入されています。"
+    },
+    {
+        "german": "Die Dekonstruktion der logozentrischen Metaphysik zielt darauf ab, die hierarchische Opposition von Anwesenheit und Abwesenheit, Sprache und Schrift, Ursprung und Spur aufzudecken, um die différance als das ursprüngliche Spiel der Unterschiede freizulegen.",
+        "japanese": "ロゴス中心主義的な形而上学の脱構築は、現前と不在、音声言語と文字言語、起源と痕跡といった階層的な対立を暴き出し、それによって差延を差異の根源的な遊戯として解き放つことを目指す。",
+        "explanation": "`zielt darauf ab, ... aufzudecken, um ... freizulegen`という二重の`zu`不定詞句の構造です。最初の不定詞句の目的語`die hierarchische Opposition...`が非常に長くなっています。"
+    },
+    {
+        "german": "Das Anerkennungsverhältnis zwischen zwei sich begegnenden Selbstbewusstseinen durchläuft den dialektischen Kampf auf Leben und Tod, um sich über die Stufen von Herrschaft und Knechtschaft zu einer gegenseitigen, freien Anerkennung fortzuentwickeln.",
+        "japanese": "出会いあう二つの自己意識の間の承認関係は、主人と奴隷という段階を経て、相互的で自由な承認へと自らを高めていくために、生死をかけた弁証法的な闘争を経験する。",
+        "explanation": "文の構造は比較的単純ですが、`sich begegnenden Selbstbewusstseinen`（出会いあう自己意識）や`fortzuentwickeln`（高めていく）のような哲学的な複合語が多く使われています。目的を示す`um ... zu`不定詞句が文末に置かれています。"
+    },
+    {
+        "german": "Ein Urteil, das den Anspruch auf objektive Gültigkeit erhebt, muss sich von den bloß subjektiven Bedingungen der Assoziation unterscheiden, indem es eine notwendige Verbindung der Vorstellungen postuliert, die durch die transzendentale Einheit der Apperzeption gewährleistet wird.",
+        "japanese": "客観的妥当性を要求する判断は、単に主観的な連合の条件からは区別されなければならない。それは、諸表象の必然的な結合を要請することによってであり、そしてその結合は、超越論的統覚の統一性によって保証されるのである。",
+        "explanation": "主語`Ein Urteil`が関係詞節`das...erhebt`によって修飾されています。手段を示す`indem es ... postuliert`という副文があり、その目的語`eine notwendige Verbindung der Vorstellungen`がさらに`die...gewährleistet wird`という関係詞節によって修飾されています。"
+    },
+    {
+        "german": "Die Souveränität des modernen Staates legitimiert sich durch den fiktiven Gesellschaftsvertrag, in welchem die Individuen auf ihr ursprüngliches Recht der Selbstbehauptung verzichten, um es einem Souverän zu übertragen, der im Gegenzug für Frieden und Sicherheit sorgt.",
+        "japanese": "近代国家の主権は、虚構的な社会契約によって正当化される。その契約において、諸個人は、自己保存という根源的な権利を放棄し、それを主権者に委譲するのであり、そしてその主権者は見返りとして平和と安全を保障するのである。",
+        "explanation": "`in welchem`で始まる長い関係詞節が`Gesellschaftsvertrag`を修飾しています。この関係詞節の中には、目的を示す`um es ... zu übertragen`という不定詞句があり、さらに`Souverän`が`der...sorgt`という関係詞節によって説明されています。"
+    },
+    {
+        "german": "Die in der Lebenswelt verankerte, kommunikative Rationalität, die auf Verständigung und intersubjektive Geltungsansprüche ausgerichtet ist, stellt ein kritisches Korrektiv gegenüber einer systemischen, strategisch handelnden Rationalität dar, welche die Bereiche des Sozialen zu kolonisieren droht.",
+        "japanese": "生活世界に根ざし、了解と間主観的な妥当要求へと方向づけられたコミュニケーション的合理性は、社会的な諸領域を植民地化する恐れのある、体系的で戦略的に行為する合理性に対する、批判的な是正物なのである。",
+        "explanation": "主語`Die ... Rationalität`が、`in der Lebenswelt verankerte`という過去分詞と`die auf ... ausgerichtet ist`という関係詞節の両方によって修飾されています。分離動詞`stellt ... dar`が文を枠のように囲み、その目的語も`welche...droht`という関係詞節によって修飾されています。"
+    },
+    {
+        "german": "Das Ereignis, das jede kausale Erklärung und jede Einordnung in bestehende Wissenssysteme sprengt, ist derjenige unvorhersehbare Einbruch des Anderen, der das Subjekt aus seiner ontologischen Sicherheit reißt und zu einer ethischen Antwort verpflichtet.",
+        "japanese": "出来事は――それはあらゆる因果的説明や既存の知の体系へのあらゆる分類を打ち破るのだが――、他者のあの予測不可能な侵入であり、それは主体をその存在論的な安定から引き剥がし、倫理的な応答へと義務づけるのである。",
+        "explanation": "主語`Das Ereignis`が関係詞節`das...sprengt`によって修飾されています。述語である`derjenige...Einbruch des Anderen`もまた、`der ... reißt und ... verpflichtet`という二つの動詞を持つ関係詞節によって修飾されています。"
+    },
+    {
+        "german": "Diejenige Philosophie, die ihre eigene sprachliche Verfasstheit zu ignorieren versucht, verfällt unweigerlich den metaphysischen Illusionen, die in der Tiefengrammatik unserer alltäglichen Redeweisen verborgen liegen und nur durch eine therapeutische Analyse der Sprache aufgelöst werden können.",
+        "japanese": "自らの言語的な構成を無視しようと試みる哲学は、必然的に、我々の日常的な語り口の深層文法のうちに隠されており、そして言語の治療的な分析によってのみ解消されうるような、形而上学的な幻想へと陥るのである。",
+        "explanation": "主語`Diejenige Philosophie`が`die...versucht`という関係詞節によって修飾されています。目的語`den metaphysischen Illusionen`が、`die ... liegen und ... aufgelöst werden können`という二つの動詞を持つ非常に長い関係詞節によって修飾されています。"
+    },
+    {
+        "german": "Das Begehren des Menschen ist fundamental das Begehren des Anderen, was bedeutet, dass das Subjekt seine Identität nicht in sich selbst findet, sondern nur in dem symbolischen Netz von sozialen und sprachlichen Strukturen, in das es von Geburt an geworfen ist.",
+        "japanese": "人間の欲望は根源的に他者の欲望である。このことは、主体がその同一性を自己自身のうちに見出すのではなく、むしろ、それが生まれつき投げ込まれている社会的・言語的構造の象徴的な網の目の中にのみ見出すということを意味する。",
+        "explanation": "`was bedeutet, dass ...`という関係代名詞`was`を用いた構文です。`dass`節の中には`nicht in ..., sondern nur in ...`という対比構造があり、さらに`Netz`が`in das es ... geworfen ist`という関係詞節によって修飾されています。"
+    },
+    {
+        "german": "Der Leib, der weder ein reines Objekt unter anderen noch das transparente Instrument eines reinen Bewusstseins ist, fungiert als der Nullpunkt der Orientierung, von dem aus sich die Welt für uns überhaupt erst in Perspektiven von Nähe und Ferne, Oben und Unten ordnet.",
+        "japanese": "身体は――それは他の純粋な客体でもなければ、純粋な意識の透明な道具でもないのだが――、方向定位の原点として機能し、そこから出発して、世界は我々にとって初めて、近さと遠さ、上と下という遠近法のうちに秩序づけられるのである。",
+        "explanation": "主語`Der Leib`が`weder ... noch ...`（…でも…でもない）という否定の相関構文を含む関係詞節によって修飾されています。述語`fungiert als der Nullpunkt...`の`Nullpunkt`が`von dem aus...`で始まる関係詞節によってさらに説明されています。"
+    },
+    {
+        "german": "Indem die Biopolitik die Sorge um das Leben der Bevölkerung zum zentralen Gegenstand staatlicher Machttechniken macht, verschwimmt die klassische Trennung zwischen dem privaten Bereich der Existenz und der öffentlichen Sphäre der Politik.",
+        "japanese": "生権力が、住民の生命への配慮を国家の権力技術の中心的な対象とすることによって、実存の私的領域と政治の公的領域との間の古典的な分離は、曖昧になるのである。",
+        "explanation": "`Indem`で始まる長い手段・方法の副文が文頭に置かれ、主文の主語`die klassische Trennung`と述語`verschwimmt`を分離しています。"
+    },
+    {
+        "german": "Das schlechthin Gute kann nicht in einem bestimmten Objekt des Willens liegen, dessen Wert immer nur bedingt und relativ wäre, sondern einzig und allein in einem guten Willen, der sich durch die Achtung vor dem moralischen Gesetz bestimmt.",
+        "japanese": "絶対的な善は、その価値が常に条件づけられ相対的であるにすぎないような、意志の特定の客体のうちに存することはできず、むしろ、道徳法則への尊敬によって自らを規定するような、善い意志のうちにのみ存することができる。",
+        "explanation": "`kann nicht in ..., sondern einzig und allein in ... liegen`という対比構造です。`Objekt`と`Willen`の両方が、それぞれ`dessen`と`der`で始まる関係詞節によって修飾されています。"
+    },
+    {
+        "german": "Jede Epoche ist durch ein unbewusstes Wissensarchiv, ein sogenanntes Epistem, charakterisiert, das die Bedingungen der Möglichkeit dessen festlegt, was innerhalb dieser Epoche als Wahrheit gesagt und gedacht werden kann, bevor ein epistemischer Bruch eine neue Ordnung des Wissens hervorbringt.",
+        "japanese": "各々の時代は、無意識的な知の古文書、いわゆるエピステーメーによって特徴づけられる。それは、ある認識論的断絶が新たな知の秩序を生み出す前に、その時代の中で何が真理として語られ思考されうるかの可能性の条件を規定するものである。",
+        "explanation": "主語`Jede Epoche`の述語は`ist ... charakterisiert`です。その後の`das...festlegt`は、`Epistem`を修飾する非常に長い関係詞節であり、その中にはさらに`was...werden kann`という関係詞節と`bevor...`という時を示す副文が含まれています。"
+    },
+    {
+        "german": "Die platonische Ideenlehre, deren adäquates Verständnis die Überwindung der bloß auf die sinnliche Wahrnehmung gestützten Scheinwelt erfordert, postuliert eine unveränderliche, intelligible Sphäre des wahren Seins, an der die vergänglichen Einzeldinge nur partizipieren.",
+        "japanese": "プラトンのイデア論は――その適切な理解は、単に感覚的知覚に基づいた仮象の世界の克服を要求するのだが――、真なる存在の、不変で可知的な領域を要請するのであり、その領域に、儚い個々の物事はただ分有するのみなのである。",
+        "explanation": "主語`Die platonische Ideenlehre`と述語`postuliert`が、所有格の関係代名詞`deren`で始まる非常に長い関係詞節によって分離されています。"
+    },
+    {
+        "german": "Für Aristoteles muss das konkrete Einzelding, das sogenannte 'tode ti', als eine untrennbare Einheit von Materie (hýlē) und Form (morphḗ) analysiert werden, insofern die Form das Wesen und die Materie das Prinzip der Individuation darstellt.",
+        "japanese": "アリストテレスにとって、具体的な個物、いわゆる「これなるもの」は、形相が本質であり、質料が個体化の原理である限りにおいて、質料（ヒュレー）と形相（モルフェー）の不可分な統一として分析されねばならない。",
+        "explanation": "主文は`muss ... analysiert werden`という受動態の枠構造です。理由や範囲を示す`insofern`節が文末に置かれ、文全体の意味を補足しています。"
+    },
+    {
+        "german": "Die sokratische Mäeutik, die oft fälschlicherweise als eine bloße Lehrmethode missverstanden wird, ist in Wahrheit eine dialogische Kunst, die darauf abzielt, dem Gesprächspartner zur Selbsterkenntnis zu verhelfen, indem dessen verborgene, aber inkonsistente Überzeugungen aufgedeckt werden.",
+        "japanese": "ソクラテスの産婆術は――しばしば誤って単なる教授法として誤解されるが――、真実においては、対話相手の隠された、しかし矛盾した信念を暴き出すことによって、彼が自己認識に至るのを助けることを目的とする、対話の術なのである。",
+        "explanation": "主語`Die sokratische Mäeutik`と述語`ist`が関係詞節`die...`によって分離されています。さらに述部`eine dialogische Kunst`が`die darauf abzielt, ... zu verhelfen`という関係詞節によって修飾され、その中に手段を示す`indem`節が含まれています。"
+    },
+    {
+        "german": "Der aus dem berühmten Höhlengleichnis entlassene Gefangene, dessen Augen sich nur langsam an das blendende Licht der Idee des Guten gewöhnen können, symbolisiert den beschwerlichen Bildungsweg des Philosophen, der sich vom Schatten zum wahren Sein emporarbeiten muss.",
+        "japanese": "かの有名な洞窟の比喩から解放された囚人は――その目は善のイデアの眩い光にゆっくりとしか慣れることができないのだが――、哲学者の困難な教養の道を象徴しており、その哲学者は影から真の存在へと自らを高めていかなければならないのである。",
+        "explanation": "主語`Der ... Gefangene`が、所有格の関係代名詞`dessen`で始まる関係詞節によって修飾されています。述語`symbolisiert`の目的語である`den ... Bildungsweg des Philosophen`もまた、`der`で始まる関係詞節によって補足説明されています。"
+    },
+    {
+        "german": "Die aristotelische Eudaimonia, welche nicht mit einem kurzfristigen Glücksgefühl, sondern als das durch tugendhafte Tätigkeit der Seele erreichte, in sich vollendete gute Leben übersetzt werden muss, stellt das oberste Telos menschlichen Handelns dar.",
+        "japanese": "アリストテレス的なエウダイモニアは――それは短期的な幸福感とではなく、魂の徳に適った活動によって達成される、それ自体で完結した善き生として翻訳されねばならないのだが――、人間の行為の最高目的（テロス）なのである。",
+        "explanation": "主語`Die aristotelische Eudaimonia`が、`nicht mit ..., sondern als ...`という対比構造を含む非常に長い関係詞節によって修飾されています。分離動詞`stellt ... dar`が文全体を枠で囲んでいます。"
+    },
+    {
+        "german": "Während die Eleaten, allen voran Parmenides, jede Form von Bewegung und Vielheit als dem wahren, einen und unbewegten Sein widersprechend für eine Täuschung der Sinne erklärten, sah Heraklit im unaufhörlichen Wandel, dem Panta rhei, das Grundgesetz des Kosmos.",
+        "japanese": "エレア派の人々が、とりわけパルメニデスが、運動と多様性のあらゆる形式を、真なる一にして不動の存在に矛盾するものとして、感覚の欺瞞であると説明したのに対して、ヘラクレイトスは、絶え間ない変化、すなわち万物流転（パンタ・レイ）のうちに、宇宙の根本法則を見た。",
+        "explanation": "`Während`で始まる長い対比の副文が文頭に置かれています。`erklärten`の目的語`jede Form...`が`als...`と`für...`の二重の補語を取る複雑な構造をしています。"
+    },
+    {
+        "german": "Die Anamnesis-Lehre Platons besagt, dass alles Lernen im Grunde eine Wiedererinnerung der unsterblichen Seele an jene Ideen ist, die sie vor ihrer Einkerkerung im sterblichen Leibe in einem reinen, a-temporalen Zustand geschaut hat.",
+        "japanese": "プラトンの想起（アナムネーシス）説が言うには、すべての学びは根本において、不死なる魂が、死すべき身体に投獄される以前に、純粋で非時間的な状態において観照したかのイデアを、再び思い出すことなのである。",
+        "explanation": "`besagt, dass...`という基本的な構造ですが、`dass`節の目的語`jene Ideen`を`die sie...geschaut hat`という長い関係詞節が修飾しています。"
+    },
+    {
+        "german": "Aristoteles' Untersuchung der vier Ursachen – der Causa materialis, formalis, efficiens und finalis – liefert einen umfassenden explanatorischen Rahmen, ohne dessen Berücksichtigung keine vollständige Erklärung für das Sein und Werden eines Phänomens gegeben werden kann.",
+        "japanese": "アリストテレスの四原因――質料因、形相因、作用因、そして目的因――の探求は、包括的な説明の枠組みを提供するのであり、そしてその枠組みを考慮することなしには、いかなる現象の存在と生成についての完全な説明も与えられえないのである。",
+        "explanation": "文の後半が`ohne dessen Berücksichtigung`（それを考慮することなしには）という、所有格の関係代名詞`dessen`を用いた句で接続されています。"
+    },
+    {
+        "german": "Das sokratische 'Ich weiß, dass ich nichts weiß' ist nicht als Ausdruck resignativer Skepsis zu verstehen, sondern als die fundamentale philosophische Einsicht in die Begrenztheit des menschlichen Wissens, welche allererst die Bedingung der Möglichkeit für echtes Fragen und Streben nach Weisheit ist.",
+        "japanese": "ソクラテスの「私は私が何も知らないことを知っている」は、諦念に満ちた懐疑の表現として理解されるべきではなく、むしろ、人間の知の有限性への根源的な哲学的洞察として理解されるべきであり、そしてこの洞察こそが、真の問いと知への探求の可能性の条件なのである。",
+        "explanation": "`nicht als ..., sondern als ... zu verstehen`という`zu`不定詞を用いた対比構造です。`Einsicht`（洞察）を`welche...`で始まる関係詞節が修飾しています。"
+    },
+    {
+        "german": "Der platonische Staat, dessen ideale Verfassung in der 'Politeia' entworfen wird, basiert auf einer strengen Analogie zwischen der dreigeteilten Struktur der Seele (Vernunft, Mut, Begierde) und den drei Ständen der Gesellschaft (Herrscher, Wächter, Nährstand).",
+        "japanese": "プラトンの国家は――その理想的な国制は『国家』において構想されているのだが――、魂の三部分構造（理性、気概、欲望）と社会の三階級（支配者、防衛者、生産者）との間の厳密な類比に基づいている。",
+        "explanation": "主語`Der platonische Staat`と述語`basiert`が、所有格の関係代名詞`dessen`で始まる関係詞節によって分離されています。"
+    },
+    {
+        "german": "Die stoische Ethik fordert das Individuum dazu auf, in Übereinstimmung mit der universellen Natur, die vom göttlichen Logos durchwaltet wird, zu leben, um durch die Kultivierung der Tugend zur Apatheia, der Unerschütterlichkeit gegenüber den Affekten und Schicksalsschlägen, zu gelangen.",
+        "japanese": "ストア派の倫理学は、個人に対して、神的なロゴスによって貫かれている普遍的な自然と一致して生き、それによって徳の涵養を通じて、情念や運命の打撃に対する不動の心境（アパテイア）へと到達することを要求する。",
+        "explanation": "`fordert ... dazu auf, ... zu leben, um ... zu gelangen`という、目的を示す`um...zu`句を含む複雑な`zu`不定詞の構造になっています。"
+    },
+    {
+        "german": "Im Gegensatz zur platonischen Trennung von Ideen- und Sinnenwelt besteht Aristoteles darauf, dass das Allgemeine (to kathólou) nicht getrennt von den Einzeldingen (ta kath' hékaston) existiert, sondern nur in und durch sie erkannt werden kann.",
+        "japanese": "イデア界と感覚界というプラトン的な分離とは対照的に、アリストテレスは、普遍（ト・カトルー）は個物（タ・カト・ヘカストン）から分離して存在するのではなく、個物のうちに、そして個物を通じてのみ認識されうると主張する。",
+        "explanation": "`besteht darauf, dass...`という構造で、`dass`節の内容が`nicht ..., sondern ...`の対比構造になっています。"
+    },
+    {
+        "german": "Der unbewegte Beweger, der bei Aristoteles als die letzte Ursache aller Bewegung im Kosmos fungiert, bewegt nicht durch physischen Anstoß, sondern als das höchste Gut und das reinste Denken, das, indem es sich selbst denkt, von allem anderen als letztes Ziel erstrebt wird.",
+        "japanese": "不動の動者は――それはアリストテレスにおいて宇宙のすべての運動の究極原因として機能するのだが――、物理的な一撃によって動かすのではなく、最高の善および最も純粋な思惟として動かすのであり、そしてその思惟は、自らを思惟することによって、他のすべてのものから究極目的として求められるのである。",
+        "explanation": "主語`Der unbewegte Beweger`を関係詞節`der...fungiert`が修飾しています。`nicht durch..., sondern als...`という対比があり、さらに`das reinste Denken`を`das...erstrebt wird`という関係詞節が修飾し、その中に`indem`節が挿入されています。"
+    },
+    {
+        "german": "Die epikureische Philosophie, deren Ziel die Erlangung der Ataraxia, der seelischen Ruhe, ist, lehrt einen maßvollen Hedonismus, der nicht die Jagd nach intensiven, sondern die Wahl der dauerhaften und von Schmerz freien Lüste empfiehlt.",
+        "japanese": "エピクロス哲学は――その目標は魂の平静（アタラクシア）の獲得であるのだが――、節度ある快楽主義を教える。それは、強烈な快楽の追求ではなく、持続的で苦痛のない快楽の選択を推奨するものである。",
+        "explanation": "主語`Die epikureische Philosophie`が`deren...ist`という所有格の関係詞節によって修飾され、述語`lehrt`の目的語`einen maßvollen Hedonismus`がさらに`der nicht..., sondern...empfiehlt`という対比構造を含む関係詞節によって修飾されています。"
+    },
+    {
+        "german": "Die Seele, die Platon als unsterblich und dem Körper prinzipiell fremd begreift, wird von Aristoteles als die erste Entelechie eines natürlichen, organischen Körpers definiert, also als das Lebensprinzip, das von diesem Körper nicht getrennt existieren kann.",
+        "japanese": "魂は――プラトンはそれを不死なるもの、そして身体とは原理的に異質なものとして把握するのだが――、アリストテレスによっては、自然で有機的な身体の第一のエンテレケイアとして、すなわち、この身体から分離しては存在しえない生命原理として定義される。",
+        "explanation": "主語`Die Seele`が関係詞節`die Platon...begreift`によって修飾されています。`wird...definiert`という受動態の文で、`also als das Lebensprinzip`以下が同格による補足説明、さらにそれを`das...kann`という関係詞節が修飾しています。"
+    },
+    {
+        "german": "Sokrates wurde von seinen Anklägern vorgeworfen, die Jugend zu verderben und nicht an die Götter des Staates zu glauben, weil seine unermüdliche elenktische Praxis die traditionellen, unhinterfragt hingenommenen Autoritäten untergrub.",
+        "japanese": "ソクラテスは告発者たちから、青年を堕落させ、国家の神々を信じないと非難された。なぜなら、彼の執拗な問答法の実践が、伝統的な、疑われることなく受け入れられていた権威を突き崩したからである。",
+        "explanation": "`wurde...vorgeworfen, ... zu verderben und ... zu glauben`という`zu`不定詞句を伴う受動態構文です。その理由が`weil`節で説明されています。"
+    },
+    {
+        "german": "Die Freundschaft (philía) wird von Aristoteles in der Nikomachischen Ethik als eine für das gute Leben unerlässliche Tugend analysiert, deren höchste Form nicht auf Nutzen oder Lust, sondern auf der gegenseitigen Anerkennung des guten Charakters des Freundes beruht.",
+        "japanese": "友愛（フィリア）は、アリストテレスによってニコマコス倫理学の中で、善き生にとって不可欠な徳として分析されるが、その最高の形態は、有用性や快楽にではなく、友の善き人柄の相互的な承認に基づいているのである。",
+        "explanation": "主文は`Die Freundschaft...wird...analysiert`という受動態ですが、`Tugend`（徳）を`deren`で始まる関係詞節が修飾し、その関係詞節の中が`nicht auf..., sondern auf...`の対比構造になっています。"
+    },
+    {
+        "german": "Das pythagoreische Denken, demzufolge die tiefste Struktur der Wirklichkeit in mathematischen Verhältnissen und der Harmonie der Zahlen zu finden sei, hat Platons Ontologie und seine Vorstellung von der Ordnung des Kosmos nachhaltig beeinflusst.",
+        "japanese": "ピタゴラス派の思想は――それによれば、現実の最も深い構造は数学的な比率と数の調和のうちに見出されるとされるのだが――、プラトンの存在論と、彼の宇宙の秩序についての観念に、持続的な影響を与えた。",
+        "explanation": "主語`Das pythagoreische Denken`が、`demzufolge`で始まる関係詞節によって修飾され、述語`hat...beeinflusst`と分離されています。"
+    },
+    {
+        "german": "Die Tragödie, so analysiert es Aristoteles in seiner 'Poetik', bewirkt durch die Darstellung von Jammer (éleos) und Schaudern (phóbos) eine Katharsis, eine Reinigung des Zuschauers von eben diesen Affekten.",
+        "japanese": "悲劇は――アリストテレスがその『詩学』で分析しているように――、憐れみ（エレオス）と恐れ（ポボス）の描写を通じて、観客のまさにこれらの情念からの浄化（カタルシス）を引き起こすのである。",
+        "explanation": "主語`Die Tragödie`と述語`bewirkt`の間に、`so analysiert es Aristoteles...`という挿入句が入っています。"
+    },
+    {
+        "german": "Die Atomisten Leukipp und Demokrit vertraten die revolutionäre These, dass die gesamte Wirklichkeit aus nichts anderem als unteilbaren, im leeren Raum sich bewegenden Partikeln und deren zufälligen Kollisionen zusammengesetzt sei.",
+        "japanese": "原子論者レウキッポスとデモクリトスは、全現実は、空虚な空間の中を運動する不可分な粒子と、それらの偶然の衝突以外の何ものからも構成されていない、という革命的なテーゼを主張した。",
+        "explanation": "動詞`vertraten`の目的語`die revolutionäre These`の内容が、`dass`で始まる非常に長い同格の名詞節で説明されています。"
+    },
+    {
+        "german": "Ein gerechter Mensch ist nach Platon derjenige, in dessen Seele jeder der drei Teile – der vernünftige, der muthafte und der begehrende – seine ihm gemäße Aufgabe erfüllt, ohne die der anderen an sich zu reißen.",
+        "japanese": "プラトンによれば、正義の人は、その魂において、三つの部分――理性的部分、気概的部分、欲望的部分――の各々が、他の部分の仕事を奪うことなく、自分にふさわしい役目を果たすような、そのような人である。",
+        "explanation": "`derjenige`（そのような人）を`in dessen Seele...`で始まる非常に長い関係詞節が修飾しています。この関係詞節の最後には`ohne...zu`不定詞句が付加されています。"
+    },
+    {
+        "german": "Die aristotelische Lehre vom Mesotes (der Mitte) besagt, dass jede ethische Tugend, wie beispielsweise die Tapferkeit, die Mitte zwischen zwei extremen Lastern, in diesem Fall Feigheit und Tollkühnheit, darstellt.",
+        "japanese": "アリストテレスの中庸（メソテース）の教えが言うには、あらゆる倫理的な徳は、例えば勇気がそうであるように、二つの極端な悪徳、この場合は臆病と蛮勇との間の中間なのである。",
+        "explanation": "`besagt, dass...`という構造で、`dass`節の主語`jede ethische Tugend`が`wie beispielsweise die Tapferkeit`という挿入句によって例示されています。"
+    },
+    {
+        "german": "Die Sophisten, gegen die Sokrates und Platon ihre Philosophie entwickelten, waren umherziehende Lehrer, die gegen Bezahlung Rhetorik und die Kunst der Überredung unterrichteten, wobei sie oftmals einen relativistischen Standpunkt bezüglich Wahrheit und Moral vertraten.",
+        "japanese": "ソフィストたちは――ソクラテスとプラトンは彼らに対抗して自らの哲学を発展させたのだが――、報酬と引き換えに修辞学と説得の技術を教える遍歴教師であり、その際しばしば、真理と道徳に関して相対主義的な観点を主張した。",
+        "explanation": "主語`Die Sophisten`が関係詞節`gegen die...`によって修飾されています。述語`waren umherziehende Lehrer`の`Lehrer`がさらに`die...unterrichteten`という関係詞節によって修飾され、その節に`wobei`で始まる補足的な状況説明が続いています。"
+    },
+    {
+        "german": "Die Unterscheidung zwischen wahrer Meinung (orthē doxa) und Wissen (epistēmē) ist für Platon von zentraler Bedeutung, da erst letzteres durch die Angabe eines logischen Grundes (logismós) gerechtfertigt und damit unerschütterlich ist.",
+        "japanese": "真なる思いなし（オルテー・ドクサ）と知（エピステーメー）との区別は、プラトンにとって中心的な重要性を持つ。なぜなら、後者こそが初めて、論理的な根拠（ロギスモス）を示すことによって正当化され、それによって揺るぎないものとなるからである。",
+        "explanation": "理由を示す`da`節の中で、主語`letzteres`（後者）に対して`gerechtfertigt ist`と`unerschütterlich ist`という二つの述語が`und damit`で結びつけられています。"
+    },
+    {
+        "german": "Aristoteles' Logik, insbesondere die im 'Organon' entwickelte Syllogistik, stellt den ersten systematischen Versuch dar, die formalen Regeln des gültigen Schließens zu analysieren, unabhängig vom konkreten Inhalt der Aussagen.",
+        "japanese": "アリストテレスの論理学、特に『オルガノン』で展開された三段論法は、命題の具体的な内容とは無関係に、妥当な推論の形式的規則を分析しようとする、最初の体系的な試みなのである。",
+        "explanation": "分離動詞`stellt ... dar`が文を枠で囲んでいます。目的語`den ersten systematischen Versuch`を、`die formalen...zu analysieren`という`zu`不定詞句が修飾しています。"
+    },
+    {
+        "german": "Die Idee der Staatskunst bei Platon setzt voraus, dass nur die Philosophen, die das wahre Wesen der Gerechtigkeit und des Guten geschaut haben, qualifiziert sind, als 'Philosophenkönige' den Staat zu lenken, anstatt dass die Macht in den Händen der unwissenden Menge liegt.",
+        "japanese": "プラトンにおける国家統治の術の理念は、無知な大衆の手に権力が存するかわりに、ただ哲学者たち――彼らは正義と善の真の本質を観照した者たちなのだが――のみが「哲人王」として国家を統治する資格がある、ということを前提とする。",
+        "explanation": "`setzt voraus, dass...`という構造ですが、`dass`節の中が`anstatt dass...`（…であるかわりに）という従属接続詞によって複雑な対比構造になっています。"
+    },
+    {
+        "german": "Xenophanes' frühe Kritik an den anthropomorphen Göttern Homers und Hesiods, die er als Projektionen menschlicher Laster kritisierte, kann als ein wichtiger Schritt zur Entwicklung eines rationaleren, philosophischen Gottesbegriffs angesehen werden.",
+        "japanese": "ホメロスとヘシオドスの擬人神に対するクセノパネスの早期の批判は――彼はそれを人間的な悪徳の投影として批判したのだが――、より合理的な、哲学的な神概念の発展への重要な一歩と見なされうる。",
+        "explanation": "主語`Xenophanes' frühe Kritik`が、`die er...kritisierte`という関係詞節によって修飾されています。文全体は`kann als ... angesehen werden`という受動態の枠構造です。"
+    },
+    {
+        "german": "Die aristotelische Unterscheidung zwischen Poiesis (Herstellen, das sein Ziel außerhalb seiner selbst hat) und Praxis (Handeln, das sein Ziel in sich selbst trägt) ist fundamental für sein Verständnis von Ethik und Politik als Wissenschaften vom menschlichen Handeln.",
+        "japanese": "アリストテレス的な、ポイエーシス（制作、その目的を自己の外に持つ）とプラクシス（行為、その目的を自己自身のうちに持つ）との区別は、人間の行為に関する学としての倫理学と政治学の彼の理解にとって、根源的に重要である。",
+        "explanation": "主語である`Die aristotelische Unterscheidung`が、`Poiesis`と`Praxis`という2つの専門用語と、それぞれを修飾する関係詞節によって非常に長くなっています。"
+    },
+    {
+        "german": "Obwohl die Seele im platonischen Dialog 'Phaidon' als unsterblich und unzerstörbar argumentiert wird, bleibt die Frage offen, inwieweit die individuelle Persönlichkeit, die an den vergänglichen Körper gebunden scheint, diesen Übergang überdauern kann.",
+        "japanese": "プラトンの対話篇『パイドン』において魂は不死にして不滅であると論じられているけれども、はかない身体に結びついているように思われる個的な人格が、どの程度までこの移行を生き延びることができるかという問いは、未解決のままである。",
+        "explanation": "`Obwohl`で始まる譲歩の副文が文頭に置かれています。主文は`bleibt die Frage offen`ですが、その`Frage`（問い）の内容が`inwieweit...`で始まる非常に長い間接疑問文で説明されています。"
+    },
+    {
+        "german": "Der Zyniker Diogenes, der der Überlieferung nach in einem Fass lebte, um seine radikale Unabhängigkeit von allen gesellschaftlichen Konventionen und materiellen Bedürfnissen zu demonstrieren, trieb die sokratische Betonung der Tugend als autarkem Gut auf die Spitze.",
+        "japanese": "キュニコス派のディオゲネスは――伝承によれば、あらゆる社会的慣習や物質的欲求からの彼のラディカルな独立を誇示するために、樽の中で生活したのだが――、自足的な善としての徳のソクラテス的な強調を、極点にまで推し進めた。",
+        "explanation": "主語`Der Zyniker Diogenes`が、`der...lebte`という関係詞節によって修飾されています。この関係詞節の中には、目的を示す`um...zu demonstrieren`という長い不定詞句が含まれています。"
     }
 ]
