@@ -474,5 +474,156 @@
         "japanese": "初期中世哲学が、その焦点が魂の内的経験と神による照明とに置かれていたアウグスティヌスの新プラトン主義によって強く特徴づけられていたのに対して、盛期スコラ学は、再発見されたアリストテレスの影響のもと、より強く論理的分析と経験的世界へと向かった。",
         "explanation": "`Während`で始まる長い対比の副文が文頭に置かれている。その副文の中では、`Neuplatonismus Augustins`を所有格の関係代名詞`dessen`で始まる関係詞節が修飾している。"
     }
+    {
+        "german": "René Descartes' methodischer Zweifel, dessen universelle Anwendung selbst die Axiome der Mathematik und die Existenz der Außenwelt suspendiert, findet sein unerschütterliches Fundament in der unbezweifelbaren Selbstgewissheit des denkenden Ich (ego cogito), von dem aus die Realität neu konstruiert werden soll.",
+        "japanese": "ルネ・デカルトの方法的懐疑は――その普遍的な適用は数学の公理や外的世界の存在すらも停止させるのだが――、思考する自我（エゴ・コギト）の疑い得ない自己確信のうちにその揺るぎない基礎を見出すのであり、そしてそこから出発して現実は新たに構成されるべきなのである。",
+        "explanation": "主語`methodischer Zweifel`と述語`findet`が、所有格の関係代名詞`dessen`で始まる非常に長い関係詞節によって分離されています。"
+    },
+    {
+        "german": "Die in Spinozas 'Ethik' geometrisch demonstrierte Substanz, die er als Gott oder Natur (Deus sive Natura) bezeichnet, ist die eine, unendliche und in sich seiende Ursache ihrer selbst, deren unendliche Attribute, von denen uns nur Denken und Ausdehnung bekannt sind, das Wesen aller Einzeldinge (Modi) konstituieren.",
+        "japanese": "スピノザの『エチカ』において幾何学的に論証された実体は――彼はそれを神あるいは自然（デウス・シウェ・ナトゥーラ）と呼ぶのだが――、それ自身の唯一、無限かつ自己原因的なものであり、その無限の属性は――そのうち我々に知られているのは思惟と延長だけであるが――、すべての個物（様態）の本質を構成するのである。",
+        "explanation": "主語`Die...Substanz`が`die er...bezeichnet`という関係詞節によって修飾されています。さらに述部`die eine...Ursache`が`deren`で始まる関係詞節によって修飾され、その中にさらに`von denen`で始まる関係詞節が入れ子になっています。"
+    },
+    {
+        "german": "Gottfried Wilhelm Leibniz' Monadologie konzipiert das Universum als eine unendliche Vielheit von einfachen, fensterlosen Substanzen oder Kraftpunkten, deren jede, mit Perzeption und Streben (appetitus) ausgestattet, das gesamte Universum aus ihrer einzigartigen Perspektive in einer von Gott prästabilierten Harmonie widerspiegelt.",
+        "japanese": "ゴットフリート・ヴィルヘルム・ライプニッツのモナドロジーは、宇宙を、単純で窓のない実体、あるいは力点の無限の多様性として構想する。その各々は、表象と欲求（アッペティトゥス）を備え、神によって予定調和させられた状態で、宇宙全体をその唯一の視点から反映するのである。",
+        "explanation": "目的語`eine unendliche Vielheit`が、`deren`で始まる非常に長い関係詞節によって説明されています。この関係詞節の主語は`jede`（各々の実体）です。"
+    },
+    {
+        "german": "John Lockes empiristische These, derzufolge der menschliche Geist bei der Geburt einer unbeschriebenen Tafel (tabula rasa) gleicht, impliziert, dass alle unsere Ideen, seien sie einfach oder komplex, letztlich aus der Erfahrung stammen müssen, die sich in äußere Wahrnehmung (sensation) und innere Selbstbeobachtung (reflection) gliedert.",
+        "japanese": "ジョン・ロックの経験論的テーゼは――それによれば、人間の精神は生まれたときには白紙（タブラ・ラサ）に等しいのだが――、我々のすべての観念は、それが単純であれ複雑であれ、究極的には経験に由来しなければならないということを含意する。そしてその経験は、外的感覚（センセーション）と内的反省（リフレクション）に分けられるのである。",
+        "explanation": "主語`These`が`derzufolge`で始まる関係詞節によって修飾されています。述語`impliziert`の後の`dass`節の中に、`seien sie...`という譲歩の接続法が挿入されています。"
+    },
+    {
+        "german": "David Humes skeptische Untersuchung der Kausalität kommt zu dem Schluss, dass die Vorstellung einer notwendigen Verbindung zwischen zwei Ereignissen nicht aus der Vernunft stammt, sondern lediglich auf einer durch Gewohnheit erzeugten Erwartung beruht, die aus der wiederholten Beobachtung ihrer konstanten Aufeinanderfolge erwächst.",
+        "japanese": "デイヴィッド・ヒュームの因果性に関する懐疑的な探求は、二つの出来事の間の必然的な結合という観念は、理性から生じるのではなく、むしろ、それらの恒常的な連続の反復的観察から生じる、習慣によって作り出された期待にのみ基づいている、という結論に至る。",
+        "explanation": "`kommt zu dem Schluss, dass...`という構造です。`dass`節内が`nicht aus ..., sondern lediglich auf ... beruht`という対比構造になっており、`Erwartung`を`die...erwächst`という関係詞節が修飾しています。"
+    },
+    {
+        "german": "Jean-Jacques Rousseaus Konzept des Gesellschaftsvertrags (contrat social) postuliert einen Akt der totalen Entäußerung jedes einzelnen Mitglieds an die Gemeinschaft, wodurch ein moralischer Gesamtkörper entsteht, dessen Souveränität im allgemeinen Willen (volonté générale) liegt, der immer auf das Gemeinwohl abzielt.",
+        "japanese": "ジャン＝ジャック・ルソーの社会契約（コントラ・ソシアル）の構想は、各構成員の共同体への全面的な譲渡という行為を要請し、それによって道徳的な共同体が生じる。その主権は、常に公共の善を目指す一般意志（ヴォロンテ・ジェネラル）のうちに存するのである。",
+        "explanation": "目的語`einen Akt`の後に`wodurch`で始まる関係副詞節が続き、さらにその節の主語`ein moralischer Gesamtkörper`を`dessen`で始まる関係詞節が修飾し、さらにその中の`allgemeinen Willen`を`der`で始まる関係詞節が修飾するという、三重の入れ子構造になっています。"
+    },
+    {
+        "german": "Die Hegelsche Dialektik, die nicht als eine bloß äußerliche Methode, sondern als die immanente Selbstbewegung des Begriffs zu verstehen ist, schreitet durch die Negation der Negation fort, wobei jede bestimmte Form des Bewusstseins oder der Geschichte an ihrem eigenen inneren Widerspruch zugrunde geht, um in einer höheren, reicheren Form aufgehoben zu werden.",
+        "japanese": "ヘーゲルの弁証法は――それは単なる外面的な方法としてではなく、概念の内在的な自己運動として理解されるべきなのだが――、否定の否定を通じて進行し、その際、意識や歴史の各々の特定の形式は、それ自身の内的な矛盾によって滅び、より高次の、より豊かな形式において止揚されるのである。",
+        "explanation": "主語`Die Hegelsche Dialektik`が関係詞節`die...ist`によって修飾されています。`wobei`節が補足的な状況を説明し、その中に`um...aufgehoben zu werden`という目的の不定詞句が含まれています。"
+    },
+    {
+        "german": "Spinozas Ethik, deren Ziel die Befreiung von der Knechtschaft der Affekte ist, lehrt, dass wahre Freiheit nicht in einer willkürlichen Wahl, sondern in der durch adäquate Ideen geleiteten Einsicht in die Notwendigkeit der göttlichen Natur besteht.",
+        "japanese": "スピノザの倫理学は――その目標は情念の隷属からの解放であるが――、真の自由は任意な選択のうちにではなく、むしろ適切な観念によって導かれた、神的な自然の必然性への洞察のうちに存すると教える。",
+        "explanation": "主語`Spinozas Ethik`が所有格の関係代名詞`deren`で始まる節によって修飾されています。`lehrt, dass...`と続き、`dass`節の中が`nicht in..., sondern in...besteht`という対比構造になっています。"
+    },
+    {
+        "german": "Für Leibniz löst sich das Problem der Theodizee, also die Frage nach der Vereinbarkeit eines allgütigen Gottes mit dem Übel in der Welt, durch die Annahme, dass Gott in seiner unendlichen Weisheit aus allen möglichen Welten die beste, das heißt diejenige mit der größtmöglichen Vielfalt bei größtmöglicher Ordnung, geschaffen hat.",
+        "japanese": "ライプニッツにとって、神義論の問題、すなわち、全き善である神と世界における悪との両立可能性の問いは、神がその無限の知恵において、すべての可能な世界の中から最善の世界、すなわち、最大限の秩序を伴った最大限の多様性を持つ世界を創造した、という想定によって解決される。",
+        "explanation": "`löst sich ... durch die Annahme, dass...`という構造です。`dass`節が`Annahme`（想定）の内容を同格で説明しており、その`dass`節の目的語`die beste`が`das heißt...`によってさらに詳しく説明されています。"
+    },
+    {
+        "german": "Das cartesianische Problem der Interaktion zwischen der denkenden, ausdehnungslosen Substanz (res cogitans) und der ausgedehnten, nicht-denkenden Substanz (res extensa) führte zu verschiedenen Lösungsversuchen wie dem Okkasionalismus, der bei jeder Interaktion ein direktes Eingreifen Gottes annimmt.",
+        "japanese": "思惟し延長を持たない実体（レス・コギタンス）と、延長を持ち思惟しない実体（レス・エクステンサ）との相互作用というデカルト的問題は、機会原因論のような様々な解決の試みへと至った。そして機会原因論は、いかなる相互作用においても神の直接的な介入を想定するものである。",
+        "explanation": "主語`Das cartesianische Problem`が`zwischen...`で始まる長い前置詞句によって修飾されています。`Okkasionalismus`を`der...annimmt`という関係詞節が補足的に説明しています。"
+    },
+    {
+        "german": "Humes Analyse des persönlichen Ichs, das er als nichts weiter denn ein Bündel oder eine Sammlung von verschiedenen, in beständigem Fluss und Bewegung befindlichen Perzeptionen beschreibt, untergräbt die traditionelle metaphysische Vorstellung einer einfachen und beharrenden Seelensubstanz.",
+        "japanese": "ヒュームの個人的自我の分析は――彼はそれを、恒常的な流動と運動のうちにある様々な知覚の束あるいは集合以外の何ものでもないと記述するのだが――、単純で恒存する魂という実体の伝統的な形而上学的観念を突き崩すのである。",
+        "explanation": "主語`Humes Analyse`が`das er als...beschreibt`という関係詞節によって修飾されています。`nichts weiter denn`（…以外の何ものでもない）という古い言い回しが使われています。"
+    },
+    {
+        "german": "Fichtes 'Wissenschaftslehre' beginnt mit der Tathandlung eines absoluten Ich, das sich selbst setzt und, um zu seinem Selbstbewusstsein zu gelangen, in einem zweiten Akt ein Nicht-Ich entgegensetzt, wodurch die objektive Welt als der Bereich der zu erfüllenden sittlichen Pflichten konstituiert wird.",
+        "japanese": "フィヒテの『知識学』は、絶対的な自我の行為そのものから始まる。自我は自らを定立し、そして、その自己意識へと到達するために、第二の行為において非我を対置し、それによって客観的世界が、果たされるべき道徳的義務の領域として構成されるのである。",
+        "explanation": "主語`ein absolutes Ich`を`das sich selbst setzt und ... ein Nicht-Ich entgegensetzt`という二つの動詞を持つ関係詞節が修飾しています。その中に目的を示す`um...zu`不定詞句が挿入され、さらに`wodurch`で始まる関係副詞節が文全体の結果を示しています。"
+    },
+    {
+        "german": "Der absolute Geist in Hegels Philosophie ist der Prozess, in dem sich die Vernunft durch die Stufen von Kunst, Religion und schließlich Philosophie zu ihrem vollständigen Selbstbewusstsein durchringt und sich als die Totalität der Wirklichkeit begreift.",
+        "japanese": "ヘーゲル哲学における絶対的精神とは、理性が、芸術、宗教、そして最終的に哲学という諸段階を通じて、その完全な自己意識へと到達し、そして自らを現実性の全体性として把握する、そのようなプロセスである。",
+        "explanation": "`in dem`で始まる関係詞節が`Prozess`を修飾しており、その中で`sich durchringt`と`sich begreift`という二つの動詞が`und`で結ばれています。"
+    },
+    {
+        "german": "Rousseaus Unterscheidung zwischen dem amour de soi (der natürlichen Selbstliebe, die auf Selbsterhaltung zielt) und dem amour-propre (der in der Gesellschaft entstehenden, auf Anerkennung durch andere gerichteten Eigenliebe) ist fundamental für seine Kritik an der Entfremdung des modernen Menschen.",
+        "japanese": "ルソーの、アムール・ド・ソワ（自己保存を目的とする自然な自己愛）とアムール・プロプル（社会において生じ、他者からの承認に向けられる自己愛）との区別は、近代的人間の疎外に対する彼の批判にとって根源的に重要である。",
+        "explanation": "主語である`Unterscheidung`が、フランス語の専門用語とそれを説明する非常に長い同格の名詞句によって極端に長くなっています。"
+    },
+    {
+        "german": "Die von Locke entwickelte politische Theorie, die das Recht auf Leben, Freiheit und Eigentum als unveräußerliche natürliche Rechte postuliert, bildet die Grundlage des modernen Liberalismus, demzufolge die Legitimität jeder Regierung von der Zustimmung der Regierten abhängt.",
+        "japanese": "ロックによって展開された政治理論は――それは生命、自由、そして財産への権利を不可譲の自然権として要請するのだが――、近代的な自由主義の基礎を形成し、それによれば、いかなる政府の正統性も、被治者の同意に依存するのである。",
+        "explanation": "主語`Die...Theorie`が関係詞節`die...postuliert`によって修飾されています。述部の`Grundlage`を、さらに`demzufolge`で始まる関係詞節が説明しています。"
+    },
+    {
+        "german": "Schellings Identitätsphilosophie, die in seiner frühen Phase entwickelt wurde, betrachtet Natur und Geist als die zwei Pole oder Potenzen einer einzigen, absoluten Indifferenz, wobei die Natur als der sichtbare Geist und der Geist als die unsichtbare Natur erscheint.",
+        "japanese": "シェリングの同一哲学は――それは彼の初期に展開されたものであるが――、自然と精神を、唯一の絶対的な無差別の二つの極、あるいは力能として見なし、その際、自然は可視的な精神として、精神は不可視的な自然として現れるのである。",
+        "explanation": "主語`Schellings Identitätsphilosophie`が関係詞節`die...wurde`によって修飾されています。`wobei`で始まる副文が、主文の内容を補足的に説明しています。"
+    },
+    {
+        "german": "Der Hegelsche Begriff der 'List der Vernunft' beschreibt den Prozess, durch den der Weltgeist die Leidenschaften und partikularen Interessen großer historischer Individuen benutzt, um seine eigenen, universalen Zwecke in der Weltgeschichte zu verwirklichen, oft ohne deren Wissen und Wollen.",
+        "japanese": "ヘーゲルの「理性の狡知」という概念は、世界精神が、偉大な歴史的個人の情熱や特殊な利害関心を、しばしば彼らの知や意欲なしに、世界史においてそれ自身の普遍的な目的を実現するために利用する、そのプロセスを記述するものである。",
+        "explanation": "目的語`den Prozess`が、`durch den ... benutzt, um ... zu verwirklichen`という、`um...zu`不定詞句を含む長い関係詞節によって修飾されています。"
+    },
+    {
+        "german": "Pascals berühmte Wette argumentiert, dass es, selbst wenn die Existenz Gottes rational unentscheidbar wäre, dennoch vernünftiger sei, auf seine Existenz zu wetten, da der mögliche Gewinn (ewige Glückseligkeit) den endlichen Einsatz (ein irdisches Leben) unendlich übersteige.",
+        "japanese": "パスカルの有名な賭けは、たとえ神の存在が合理的に決定不可能であったとしても、それでもなお神の存在に賭けるほうが理に適っている、と論じる。なぜなら、ありうる利得（永遠の至福）は、有限な賭け金（地上の生）を無限に上回るからである。",
+        "explanation": "`argumentiert, dass...`という構造。`dass`節の中に`selbst wenn ... wäre`という譲歩の副文が挿入され、さらに理由を示す`da`節が続いています。"
+    },
+    {
+        "german": "Die in der 'Phänomenologie des Geistes' dargestellte Dialektik von Herrschaft und Knechtschaft zeigt, wie das Selbstbewusstsein seine Anerkennung nur durch ein anderes Selbstbewusstsein erlangen kann, wobei der Knecht durch die formende Arbeit an der Natur letztlich eine höhere Stufe der Selbstständigkeit erreicht als der nur genießende Herr.",
+        "japanese": "『精神現象学』で示される主人と奴隷の弁証法は、自己意識がその承認をただ他の自己意識を通じてのみ獲得しうることを示しており、その際、奴隷は自然への形成的な労働を通じて、究極的には、ただ享受するだけの主人よりも高い自立の段階に到達するのである。",
+        "explanation": "動詞`zeigt`の目的語が`wie...kann`という間接疑問文になっています。`wobei`で始まる補足的な文が、比較級`höhere ... als`を用いています。"
+    },
+    {
+        "german": "Thomas Hobbes' Staatsphilosophie, die von einem pessimistischen Menschenbild des 'homo homini lupus' ('Der Mensch ist dem Menschen ein Wolf') im Naturzustand ausgeht, legitimiert einen absoluten Souverän (den Leviathan), dessen uneingeschränkte Macht allein in der Lage ist, den Krieg aller gegen alle zu beenden und Frieden zu garantieren.",
+        "japanese": "トマス・ホッブズの国家哲学は――それは自然状態における「人間は人間に対して狼である」（homo homini lupus）という悲観的な人間像から出発するのだが――、絶対的な主権者（リヴァイアサン）を正当化する。そしてその主権者の無制限の権力のみが、万人の万人に対する戦争を終結させ、平和を保証することができるのである。",
+        "explanation": "主語`Staatsphilosophie`が関係詞節`die...ausgeht`によって修飾されています。目的語`einen absoluten Souverän`を、所有格の関係代名詞`dessen`で始まる関係詞節が修飾しています。"
+    },
+    {
+        "german": "George Berkeleys radikaler Idealismus, der unter dem Motto 'esse est percipi aut percipere' ('Sein ist Wahrgenommenwerden oder Wahrnehmen') steht, bestreitet die Existenz einer von einem Geist unabhängigen, materiellen Substanz.",
+        "japanese": "ジョージ・バークリーの急進的な観念論は――それは「存在するとは、知覚されること、あるいは知覚することである」（esse est percipi aut percipere）というモットーのもとにあるのだが――、精神から独立した物質的実体の存在を否定する。",
+        "explanation": "主語`Idealismus`を関係詞節`der...steht`が修飾。目的語`einer ... Substanz`が、`von einem Geist unabhängigen`という長い形容詞句によって修飾されています。"
+    },
+    {
+        "german": "Fichtes Konzeption der Nation, wie er sie in den 'Reden an die deutsche Nation' darlegt, ist nicht primär ethnisch, sondern sprachlich und kulturell begründet und fordert eine Nationalerziehung, um den moralischen Charakter des Volkes zu erneuern.",
+        "japanese": "フィヒテの国民の構想は、彼が『ドイツ国民に告ぐ』で詳述するように、第一に民族的ではなく、むしろ言語的・文化的に基礎づけられており、そして、民族の道徳的性格を刷新するために、国民教育を要求するのである。",
+        "explanation": "`wie er sie...darlegt`という比較の副文が挿入されています。述語が`ist...begründet`と`fordert`の二つあり、`und`で結ばれています。"
+    },
+    {
+        "german": "Der 'élan vital' (Lebensschwung) bei Henri Bergson, der als eine Art kreativer, unvorhersehbarer evolutionärer Impuls verstanden wird, steht im Gegensatz zu einer rein mechanistischen oder finalistischen Erklärung des Lebens, welche die qualitative Dauer (durée) und die Freiheit des Werdens ignoriert.",
+        "japanese": "アンリ・ベルクソンにおける「エラン・ヴィタール」（生の飛躍）は――それは一種の創造的で予測不可能な進化的衝動として理解されるのだが――、生の純粋に機械論的、あるいは目的論的な説明とは対照をなしており、そしてその説明は、質的な持続（デュレ）と生成の自由を無視するのである。",
+        "explanation": "主語`Der 'élan vital'`を関係詞節`der...wird`が修飾。`Erklärung des Lebens`（生の説明）を、さらに`welche...ignoriert`という関係詞節が修飾しています。"
+    },
+    {
+        "german": "Hegels Philosophie des Rechts kulminiert in der Konzeption des sittlichen Staates, der als die Verwirklichung der konkreten Freiheit verstanden wird, insofern er die subjektive Freiheit der bürgerlichen Gesellschaft mit der objektiven Vernünftigkeit der Institutionen versöhnt.",
+        "japanese": "ヘーゲルの法哲学は、人倫的な国家の構想において頂点に達する。その国家は、具体的な自由の現実化として理解されるのであり、その限りにおいて、それは市民社会の主観的自由を、諸制度の客観的な合理性と和解させるのである。",
+        "explanation": "`der als...verstanden wird`という関係詞節が`Staat`を修飾し、その中にさらに理由・範囲を示す`insofern`節が含まれています。"
+    },
+    {
+        "german": "Montesquieus staatstheoretisches Hauptwerk 'Vom Geist der Gesetze' entwickelt die für die moderne Demokratie grundlegende Lehre der Gewaltenteilung in Legislative, Exekutive und Judikative, deren gegenseitige Kontrolle die Freiheit des Bürgers sichern soll.",
+        "japanese": "モンテスキューの国家理論上の主著『法の精神』は、近代民主主義にとって基礎的な、立法、行政、司法への権力分立の教説を展開する。そしてその権力の相互的な抑制が、市民の自由を保障すべきなのである。",
+        "explanation": "目的語`die...Lehre`が`für die moderne Demokratie grundlegende`という長い形容詞句によって修飾されています。`Gewaltenteilung`を、所有格の関係代名詞`deren`で始まる関係詞節が修飾しています。"
+    },
+    {
+        "german": "Schellings Spätphilosophie unterscheidet zwischen einer negativen Philosophie, die das bloße Was-Sein (die Essenz) des Seienden erfasst, und einer positiven Philosophie, die das kontingente, nicht ableitbare Dass-Sein (die Existenz) aus einem Akt göttlicher Freiheit zu begreifen versucht.",
+        "japanese": "シェリングの後期哲学は、存在者の単なる何であるか（本質）を捉える消極哲学と、偶然的で導出不可能な、存在者が在るということ（現存在）を神的な自由の一つの行為から把握しようと試みる積極哲学とを区別する。",
+        "explanation": "`unterscheidet zwischen ... und ...`という構造。`negative Philosophie`と`positive Philosophie`のそれぞれが、`die...erfasst`と`die...versucht`という関係詞節によって長く修飾されています。"
+    },
+    {
+        "german": "Die schottische Aufklärung, vertreten durch Denker wie Adam Smith und Adam Ferguson, betonte die Bedeutung von moralischen Empfindungen (moral sentiments) und spontanen Ordnungen, die aus menschlichem Handeln, aber nicht notwendigerweise aus menschlichem Entwurf entstehen.",
+        "japanese": "スコットランド啓蒙は、アダム・スミスやアダム・ファーガソンのような思想家によって代表されるが、道徳感情（モラル・センティメント）と、人間の行為から生じるが、必ずしも人間の設計からではない自生的秩序の重要性を強調した。",
+        "explanation": "主語`Die schottische Aufklärung`が`vertreten durch...`という分詞構文によって修飾されています。`spontanen Ordnungen`（自生的秩序）を、`die aus..., aber nicht...entstehen`という対比を含む関係詞節が修飾しています。"
+    },
+    {
+        "german": "Vicos 'Neue Wissenschaft' postuliert, dass der Mensch die historische Welt besser verstehen könne als die Natur, weil er erstere selbst gemacht habe ('verum et factum convertuntur'), und schlägt eine zyklische Theorie der Geschichte vor, die sich durch göttliche, heroische und menschliche Zeitalter bewegt.",
+        "japanese": "ヴィーコの『新しい学』は、人間は歴史的世界を自然よりもよく理解しうると要請する。なぜなら、人間は前者（歴史的世界）を自ら作ったからである（「真なるものと作られたものとは交換可能である」）。そして彼は、神的、英雄的、そして人間的という時代を遍歴する、循環的な歴史の理論を提案する。",
+        "explanation": "動詞が`postuliert`と`schlägt vor`の二つあり、`und`で結ばれています。`postuliert`の目的語が`dass`節であり、その中に理由を示す`weil`節が含まれています。"
+    },
+    {
+        "german": "Feuerbachs religionskritische Projektionstheorie, die einen entscheidenden Einfluss auf Marx ausübte, argumentiert, dass der Mensch seine eigenen, entfremdeten Wesenskräfte – Verstand, Wille und Herz – in ein jenseitiges Wesen namens Gott projiziert habe.",
+        "japanese": "フォイエルバッハの宗教批判的な投射理論は――それはマルクスに決定的な影響を及ぼしたが――、人間は、自らの疎外された本質力――悟性、意志、そして心――を、神と名付けられた彼岸的な存在へと投射したのだ、と論じる。",
+        "explanation": "主語`Projektionstheorie`を関係詞節`die...ausübte`が修飾。`argumentiert, dass...`と続き、`dass`節の目的語`Wesenskräfte`をダッシュ（–）による同格句が補足説明しています。"
+    },
+    {
+        "german": "Der absolute Idealismus Hegels gelangt zu der spekulativen Einsicht, dass das Absolute nicht als eine starre, jenseits der Welt stehende Substanz, sondern als Subjekt, das heißt als der sich in der Geschichte und im Denken selbst entfaltende und zu sich kommende Geist, begriffen werden muss.",
+        "japanese": "ヘーゲルの絶対的観念論は、絶対者とは、世界の彼岸に立つ固定的な実体としてではなく、むしろ主体として、すなわち、歴史と思惟のうちに自己を展開し、自己へと至る精神として把握されねばならない、という思弁的な洞察へと到達する。",
+        "explanation": "`gelangt zu der ... Einsicht, dass...`という構造。`dass`節の中が`nicht als ..., sondern als ... begriffen werden muss`という受動態の対比構造になっており、`Subjekt`を`das heißt...`の同格句が詳しく説明しています。"
+    }
 ]
+
 
