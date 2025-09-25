@@ -62,7 +62,7 @@
             <div id="word-list-container" class="max-h-[55vh] overflow-y-auto pr-2">
                 <table class="w-full text-left">
                     <thead class="sticky top-0 bg-gray-100 dark:bg-gray-800">
-                        <tr><th class="p-2 w-8"><input type="checkbox" id="select-all-checkbox"></th><th class="p-2">ドイツ語</th><th class="p-2">日本語</th></tr>
+                        <tr><th class="p-2 w-8"><input type="checkbox" id="select-all-checkbox"></th><th class="p-2">ドイツ語</th><th class="p-2">日本語</th><th class="p-2">関連語</th></tr>
                     </thead>
                     <tbody id="word-list-tbody"></tbody>
                 </table>
@@ -227,18 +227,19 @@
         function displayWordList(filter = '') {
             wordListTbody.innerHTML = '';
             const filteredWords = allWords.filter(word => word.word.toLowerCase().includes(filter.toLowerCase()) || word.japanese.toLowerCase().includes(filter.toLowerCase()));
-            filteredWords.forEach((word, index) => {
+            filteredWords.forEach((word) => {
                 const tr = document.createElement('tr');
                 tr.className = 'border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700';
                 const isChecked = selectedWords.includes(word);
                 tr.innerHTML = `
-                    <td class="p-2 w-8"><input type="checkbox" class="word-checkbox" data-index="${allWords.indexOf(word)}" ${isChecked ? 'checked' : ''}></td>
+                    <td class="p-2 w-8"><input type="checkbox" class="word-checkbox" data-word='${JSON.stringify(word)}' ${isChecked ? 'checked' : ''}></td>
                     <td class="p-2 font-medium">${word.word}</td>
                     <td class="p-2">${word.japanese}</td>
+                    <td class="p-2 text-sm text-gray-500">${word.related || ''}</td>
                 `;
                 wordListTbody.appendChild(tr);
             });
-            selectAllCheckbox.checked = filteredWords.length > 0 && filteredWords.every(word => selectedWords.includes(word));
+            selectAllCheckbox.checked = filteredWords.length > 0 && filteredWords.every(word => selectedWords.find(sw => sw.word === word.word));
         }
 
         function exportReviewWordsAsJson() {
@@ -332,27 +333,25 @@
         });
         wordListTbody.addEventListener('change', (e) => {
             if (e.target.classList.contains('word-checkbox')) {
-                const wordIndex = parseInt(e.target.dataset.index, 10);
-                const word = allWords[wordIndex];
+                const word = JSON.parse(e.target.dataset.word);
                 if (e.target.checked) {
-                    if (!selectedWords.includes(word)) selectedWords.push(word);
+                    if (!selectedWords.find(sw => sw.word === word.word)) selectedWords.push(word);
                 } else {
-                    selectedWords = selectedWords.filter(w => w !== word);
+                    selectedWords = selectedWords.filter(w => w.word !== word.word);
                 }
                 updateSelectedQuizButton();
             }
         });
         selectAllCheckbox.addEventListener('change', (e) => {
             const isChecked = e.target.checked;
-            const checkboxes = wordListTbody.querySelectorAll('.word-checkbox');
-            checkboxes.forEach(checkbox => {
+            wordListTbody.querySelectorAll('.word-checkbox').forEach(checkbox => {
                 checkbox.checked = isChecked;
-                const wordIndex = parseInt(checkbox.dataset.index, 10);
-                const word = allWords[wordIndex];
-                if (isChecked) {
-                    if (!selectedWords.includes(word)) selectedWords.push(word);
-                } else {
-                    selectedWords = selectedWords.filter(w => w !== word);
+                const word = JSON.parse(checkbox.dataset.word);
+                const isSelected = selectedWords.some(sw => sw.word === word.word);
+                if (isChecked && !isSelected) {
+                    selectedWords.push(word);
+                } else if (!isChecked && isSelected) {
+                    selectedWords = selectedWords.filter(w => w.word !== word.word);
                 }
             });
             updateSelectedQuizButton();
