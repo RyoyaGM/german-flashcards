@@ -1,0 +1,12 @@
+[
+    {
+        "german": "Die leichte Taube, indem sie im freien Fluge die Luft teilt, deren Widerstand sie fühlt, könnte die Vorstellung fassen, dass es ihr im luftleeren Raume noch viel besser gelingen werde.",
+        "japanese": "自由な飛翔において空気の抵抗を感じながら空気を切り裂く軽い鳩は、真空の空間であればもっとうまく飛べるだろうという考えを抱くかもしれない。",
+        "explanation": "主語（Die leichte Taube）と述語（könnte die Vorstellung fassen）が、挿入句「indem sie...fühlt」によって大きく引き離されています。ドイツ語ではこのように、文の基本構造が長い修飾語句によって分断されることが頻繁に起こります。"
+    },
+    {
+        "german": "Der Verstand vermag nichts anzuschauen, und die Sinne nichts zu denken.",
+        "japanese": "悟性は何も直観することができず、感性は何も思考することができない。",
+        "explanation": "動詞が文末に置かれるドイツ語の基本的な構造（枠構造）が使われています。「vermag anschauuen (直観できる)」や「vermag denken (思考できる)」といったまとまりが、文の最初と最後で枠を作っています。"
+    }
+]
