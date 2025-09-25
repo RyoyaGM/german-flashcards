@@ -45,7 +45,7 @@
                 <button id="start-quiz-btn" class="btn w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md text-lg">全単語クイズ</button>
                 <button id="random-10-quiz-btn" class="btn w-full bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-6 rounded-lg shadow-md text-lg">ランダム10問クイズ</button>
                 <button id="start-review-quiz-btn" class="btn w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg shadow-md text-lg" disabled>不安な単語クイズ</button>
-                <button id="view-list-btn" class="btn w-full bg-gray-500 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg shadow-md text-lg">単語を一覧する</button>
+                <button id="view-list-btn" class="btn w-full bg-gray-500 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg shadow-md text-lg">単語を一覧・選択する</button>
             </div>
             <p id="review-info" class="text-xs text-gray-400 mt-2 hidden">`review_words.json`が見つからないため無効です。</p>
             <p id="resume-text" class="text-sm text-gray-500 dark:text-gray-400 mt-6 hidden">
@@ -55,17 +55,20 @@
 
         <div id="word-list-screen" class="hidden screen p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
             <div class="flex justify-between items-center mb-4">
-                <h2 class="text-2xl font-bold text-blue-600 dark:text-blue-400">単語一覧</h2>
+                <h2 class="text-2xl font-bold text-blue-600 dark:text-blue-400">単語一覧・選択</h2>
                 <button id="back-to-start-btn" class="btn bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 font-bold py-2 px-4 rounded-lg">戻る</button>
             </div>
             <input type="text" id="search-word-input" placeholder="検索..." class="w-full p-2 mb-4 border rounded-md bg-gray-50 dark:bg-gray-700 border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none">
-            <div id="word-list-container" class="max-h-[60vh] overflow-y-auto pr-2">
+            <div id="word-list-container" class="max-h-[55vh] overflow-y-auto pr-2">
                 <table class="w-full text-left">
                     <thead class="sticky top-0 bg-gray-100 dark:bg-gray-800">
-                        <tr><th class="p-2">ドイツ語</th><th class="p-2">日本語</th><th class="p-2">関連語</th></tr>
+                        <tr><th class="p-2 w-8"><input type="checkbox" id="select-all-checkbox"></th><th class="p-2">ドイツ語</th><th class="p-2">日本語</th></tr>
                     </thead>
                     <tbody id="word-list-tbody"></tbody>
                 </table>
+            </div>
+             <div class="mt-4 text-center">
+                <button id="start-selected-quiz-btn" class="btn w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg shadow-md" disabled>選択した単語でクイズを開始 (<span id="selected-count">0</span>)</button>
             </div>
         </div>
         
@@ -153,11 +156,11 @@
         // DOM Elements
         const screens = { start: document.getElementById('start-screen'), learning: document.getElementById('learning-screen'), result: document.getElementById('result-screen'), wordList: document.getElementById('word-list-screen') };
         const japaneseDisplay = document.getElementById('japanese-display'), wordDisplay = document.getElementById('word-display'), checkMeaningBtn = document.getElementById('check-meaning-btn'), checkMeaningBtnContainer = document.getElementById('check-meaning-btn-container'), assessmentContainer = document.getElementById('assessment-container'), assessmentButtons = document.querySelectorAll('.assessment-btn'), flipCard = document.getElementById('flip-card'), progressText = document.getElementById('progress-text'), progressBar = document.getElementById('progress-bar'), learningTitle = document.getElementById('learning-title'), relatedWordsContainer = document.getElementById('related-words-container'), relatedWordsDisplay = document.getElementById('related-words-display');
-        const startQuizBtn = document.getElementById('start-quiz-btn'), startReviewQuizBtn = document.getElementById('start-review-quiz-btn'), random10QuizBtn = document.getElementById('random-10-quiz-btn'), viewListBtn = document.getElementById('view-list-btn'), backToStartBtn = document.getElementById('back-to-start-btn'), backToStartBtnFromQuiz = document.getElementById('back-to-start-btn-from-quiz'), backToStartFromResultBtn = document.getElementById('back-to-start-from-result-btn'), restartBtn = document.getElementById('restart-btn'), reviewQuizBtn = document.getElementById('review-quiz-btn'), resumeQuizBtn = document.getElementById('resume-quiz-btn'), resumeText = document.getElementById('resume-text'), exportJsonBtn = document.getElementById('export-json-btn'), reviewInfo = document.getElementById('review-info'), prevWordBtn = document.getElementById('prev-word-btn'), soundToggleBtn = document.getElementById('sound-toggle-btn'), soundOnIcon = document.getElementById('sound-on-icon'), soundOffIcon = document.getElementById('sound-off-icon');
+        const startQuizBtn = document.getElementById('start-quiz-btn'), startReviewQuizBtn = document.getElementById('start-review-quiz-btn'), random10QuizBtn = document.getElementById('random-10-quiz-btn'), viewListBtn = document.getElementById('view-list-btn'), backToStartBtn = document.getElementById('back-to-start-btn'), backToStartBtnFromQuiz = document.getElementById('back-to-start-btn-from-quiz'), backToStartFromResultBtn = document.getElementById('back-to-start-from-result-btn'), restartBtn = document.getElementById('restart-btn'), reviewQuizBtn = document.getElementById('review-quiz-btn'), resumeQuizBtn = document.getElementById('resume-quiz-btn'), resumeText = document.getElementById('resume-text'), exportJsonBtn = document.getElementById('export-json-btn'), reviewInfo = document.getElementById('review-info'), prevWordBtn = document.getElementById('prev-word-btn'), soundToggleBtn = document.getElementById('sound-toggle-btn'), soundOnIcon = document.getElementById('sound-on-icon'), soundOffIcon = document.getElementById('sound-off-icon'), startSelectedQuizBtn = document.getElementById('start-selected-quiz-btn'), selectedCount = document.getElementById('selected-count'), selectAllCheckbox = document.getElementById('select-all-checkbox');
         const wordListTbody = document.getElementById('word-list-tbody'), searchWordInput = document.getElementById('search-word-input');
         const STORAGE_KEY = 'germanFlashcardProgress';
         const SOUND_SETTING_KEY = 'germanFlashcardSound';
-        let allWords = [], reviewWords = [], words = [], currentIndex = 0, stats = {}, currentMode = 'learning';
+        let allWords = [], reviewWords = [], words = [], selectedWords = [], currentIndex = 0, stats = {}, currentMode = 'learning';
 
         function shuffleArray(array) { for (let i = array.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1));[array[i], array[j]] = [array[j], array[i]]; } }
         function showScreen(screenName) { Object.values(screens).forEach(screen => screen.classList.add('hidden')); screens[screenName].classList.remove('hidden'); }
@@ -216,10 +219,26 @@
             if (mode === 'learning') saveProgress();
         }
 
+        function updateSelectedQuizButton() {
+            selectedCount.textContent = selectedWords.length;
+            startSelectedQuizBtn.disabled = selectedWords.length === 0;
+        }
+
         function displayWordList(filter = '') {
             wordListTbody.innerHTML = '';
             const filteredWords = allWords.filter(word => word.word.toLowerCase().includes(filter.toLowerCase()) || word.japanese.toLowerCase().includes(filter.toLowerCase()));
-            filteredWords.forEach(word => { const tr = document.createElement('tr'); tr.className = 'border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700'; tr.innerHTML = `<td class="p-2 font-medium">${word.word}</td><td class="p-2">${word.japanese}</td><td class="p-2 text-sm text-gray-500">${word.related || ''}</td>`; wordListTbody.appendChild(tr); });
+            filteredWords.forEach((word, index) => {
+                const tr = document.createElement('tr');
+                tr.className = 'border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700';
+                const isChecked = selectedWords.includes(word);
+                tr.innerHTML = `
+                    <td class="p-2 w-8"><input type="checkbox" class="word-checkbox" data-index="${allWords.indexOf(word)}" ${isChecked ? 'checked' : ''}></td>
+                    <td class="p-2 font-medium">${word.word}</td>
+                    <td class="p-2">${word.japanese}</td>
+                `;
+                wordListTbody.appendChild(tr);
+            });
+            selectAllCheckbox.checked = filteredWords.length > 0 && filteredWords.every(word => selectedWords.includes(word));
         }
 
         function exportReviewWordsAsJson() {
@@ -279,7 +298,7 @@
         random10QuizBtn.addEventListener('click', () => { const quizWords = [...allWords]; shuffleArray(quizWords); startSession({wordList: quizWords.slice(0, 10), title: "ランダム10問クイズ", mode: 'random_quiz'}); });
         startReviewQuizBtn.addEventListener('click', () => { startSession({wordList: reviewWords, title: "不安な単語の復習", mode: 'fixed_review'}); });
         resumeQuizBtn.addEventListener('click', (e) => { e.preventDefault(); startSession({title: "学習の続きから", mode: 'learning', resume: true}); });
-        viewListBtn.addEventListener('click', () => { displayWordList(); showScreen('wordList'); });
+        viewListBtn.addEventListener('click', () => { selectedWords = []; updateSelectedQuizButton(); displayWordList(); showScreen('wordList'); });
         searchWordInput.addEventListener('input', (e) => displayWordList(e.target.value));
         [backToStartBtn, backToStartBtnFromQuiz, backToStartFromResultBtn].forEach(btn => btn.addEventListener('click', () => { showScreen('start'); initializeApp(); }));
         checkMeaningBtn.addEventListener('click', () => { playSound(sounds.flip); flipCard.classList.add('flipped'); checkMeaningBtnContainer.classList.add('hidden'); assessmentContainer.classList.remove('hidden'); prevWordBtn.disabled = currentIndex === 0; });
@@ -305,6 +324,38 @@
             localStorage.setItem(SOUND_SETTING_KEY, isSoundEnabled);
             updateSoundIcon();
             playSound(sounds.click);
+        });
+        startSelectedQuizBtn.addEventListener('click', () => {
+            if (selectedWords.length > 0) {
+                startSession({wordList: selectedWords, title: "選択単語クイズ", mode: 'custom_quiz'});
+            }
+        });
+        wordListTbody.addEventListener('change', (e) => {
+            if (e.target.classList.contains('word-checkbox')) {
+                const wordIndex = parseInt(e.target.dataset.index, 10);
+                const word = allWords[wordIndex];
+                if (e.target.checked) {
+                    if (!selectedWords.includes(word)) selectedWords.push(word);
+                } else {
+                    selectedWords = selectedWords.filter(w => w !== word);
+                }
+                updateSelectedQuizButton();
+            }
+        });
+        selectAllCheckbox.addEventListener('change', (e) => {
+            const isChecked = e.target.checked;
+            const checkboxes = wordListTbody.querySelectorAll('.word-checkbox');
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = isChecked;
+                const wordIndex = parseInt(checkbox.dataset.index, 10);
+                const word = allWords[wordIndex];
+                if (isChecked) {
+                    if (!selectedWords.includes(word)) selectedWords.push(word);
+                } else {
+                    selectedWords = selectedWords.filter(w => w !== word);
+                }
+            });
+            updateSelectedQuizButton();
         });
         restartBtn.addEventListener('click', () => { startSession({wordList: words, title: learningTitle.textContent, mode: currentMode}); });
         reviewQuizBtn.addEventListener('click', () => { const wordsForReview = [...stats.fuzzy, ...stats.forgotten, ...stats.wrong]; startSession({wordList: wordsForReview, title: "苦手単語の復習", mode: 'review'}); });
