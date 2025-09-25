@@ -89,7 +89,7 @@
                 <div id="assessment-buttons" class="hidden mt-6 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
                     <button data-status="remembered" class="btn assessment-btn bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-4 rounded-lg shadow-md">即答</button>
                     <button data-status="fuzzy" class="btn assessment-btn bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-4 rounded-lg shadow-md">思い出す</button>
-                    <button data-status="forgotten" class="btn assessment-btn bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-4 rounded-lg shadow-md">怪しい</button>
+                    <button data-status="forgotten" class="btn assessment-btn bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-4 rounded-lg shadow-md">分からない</button>
                     <button data-status="wrong" class="btn assessment-btn bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-4 rounded-lg shadow-md">誤答</button>
                 </div>
             </main>
@@ -101,7 +101,7 @@
             <div class="space-y-3 text-left w-full max-w-md mx-auto">
                 <details class="bg-green-100 dark:bg-green-900/50 rounded-lg overflow-hidden"><summary class="flex justify-between items-center p-3 font-semibold cursor-pointer list-none"><span>即答</span><span id="remembered-count" class="font-bold text-lg text-green-600 dark:text-green-400 bg-white/50 dark:bg-black/20 px-2 rounded-md">0</span></summary><ul id="remembered-list" class="p-4 pt-0 space-y-2 border-t border-green-200 dark:border-green-800"></ul></details>
                 <details class="bg-yellow-100 dark:bg-yellow-900/50 rounded-lg overflow-hidden"><summary class="flex justify-between items-center p-3 font-semibold cursor-pointer list-none"><span>思い出す</span><span id="fuzzy-count" class="font-bold text-lg text-yellow-600 dark:text-yellow-400 bg-white/50 dark:bg-black/20 px-2 rounded-md">0</span></summary><ul id="fuzzy-list" class="p-4 pt-0 space-y-2 border-t border-yellow-200 dark:border-yellow-800"></ul></details>
-                <details class="bg-orange-100 dark:bg-orange-900/50 rounded-lg overflow-hidden"><summary class="flex justify-between items-center p-3 font-semibold cursor-pointer list-none"><span>怪しい</span><span id="forgotten-count" class="font-bold text-lg text-orange-600 dark:text-orange-400 bg-white/50 dark:bg-black/20 px-2 rounded-md">0</span></summary><ul id="forgotten-list" class="p-4 pt-0 space-y-2 border-t border-orange-200 dark:border-orange-800"></ul></details>
+                <details class="bg-orange-100 dark:bg-orange-900/50 rounded-lg overflow-hidden"><summary class="flex justify-between items-center p-3 font-semibold cursor-pointer list-none"><span>分からない</span><span id="forgotten-count" class="font-bold text-lg text-orange-600 dark:text-orange-400 bg-white/50 dark:bg-black/20 px-2 rounded-md">0</span></summary><ul id="forgotten-list" class="p-4 pt-0 space-y-2 border-t border-orange-200 dark:border-orange-800"></ul></details>
                 <details class="bg-red-100 dark:bg-red-900/50 rounded-lg overflow-hidden"><summary class="flex justify-between items-center p-3 font-semibold cursor-pointer list-none"><span>誤答</span><span id="wrong-count" class="font-bold text-lg text-red-600 dark:text-red-400 bg-white/50 dark:bg-black/20 px-2 rounded-md">0</span></summary><ul id="wrong-list" class="p-4 pt-0 space-y-2 border-t border-red-200 dark:border-red-800"></ul></details>
             </div>
             <div class="mt-8 flex flex-col justify-center items-center gap-4">
@@ -248,4 +248,5 @@
         initializeApp();
     </script>
 </body>
+
 </html>
