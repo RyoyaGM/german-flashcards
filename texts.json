@@ -624,6 +624,157 @@
         "japanese": "ヘーゲルの絶対的観念論は、絶対者とは、世界の彼岸に立つ固定的な実体としてではなく、むしろ主体として、すなわち、歴史と思惟のうちに自己を展開し、自己へと至る精神として把握されねばならない、という思弁的な洞察へと到達する。",
         "explanation": "`gelangt zu der ... Einsicht, dass...`という構造。`dass`節の中が`nicht als ..., sondern als ... begriffen werden muss`という受動態の対比構造になっており、`Subjekt`を`das heißt...`の同格句が詳しく説明しています。"
     }
+    {
+        "german": "Die transzendentale Deduktion der reinen Verstandesbegriffe, deren Gelingen die objektive Gültigkeit der Kategorien für alle Gegenstände möglicher Erfahrung allererst sicherstellen soll, stellt das wohl schwierigste, aber zugleich zentrale Unterfangen der gesamten Kritik der reinen Vernunft dar.",
+        "japanese": "純粋悟性概念の超越論的演繹は――その成功が、カテゴリーのあらゆる可能な経験の対象に対する客観的妥当性をそもそも保証すべきものなのだが――、おそらく純粋理性批判全体の最も困難であると同時に中心的な事業なのである。",
+        "explanation": "主語`Die ... Deduktion`と分離動詞の述語`stellt ... dar`が、所有格の関係代名詞`deren`で始まる非常に長い関係詞節によって分離されています。"
+    },
+    {
+        "german": "Das Ding an sich, obgleich es als notwendiger Grenzbegriff gedacht werden muss, um die Erscheinungen nicht für die Totalität der Wirklichkeit zu halten, bleibt für unsere theoretische Vernunft prinzipiell unerkennbar, insofern alle unsere Erkenntnis an die subjektiven Formen der Anschauung, Raum und Zeit, gebunden ist.",
+        "japanese": "物自体は、現象を現実性の全体と見なさないために、必然的な限界概念として思考されねばならないにもかかわらず、我々の理論的理性にとっては原理的に認識不可能であり続ける。その限りにおいて、我々のすべての認識は、空間と時間という直観の主観的形式に束縛されているのである。",
+        "explanation": "`obgleich`で始まる譲歩の副文が主文に挿入されています。主文の理由が`insofern`で始まる副文によって説明されています。"
+    },
+    {
+        "german": "Der kategorische Imperativ, der in seiner universalen Gesetzesformel fordert, nur nach derjenigen Maxime zu handeln, durch die man zugleich wollen kann, dass sie ein allgemeines Gesetz werde, begründet eine von allen empirischen Neigungen und Zwecken unabhängige, rein formale Ethik der Pflicht.",
+        "japanese": "定言命法は――それはその普遍的な法則の定式において、それによって同時にそれが普遍的な法則となることを意志しうるような格率に従ってのみ行為することを要求するのだが――、あらゆる経験的な傾向や目的から独立した、純粋に形式的な義務の倫理学を基礎づける。",
+        "explanation": "主語`Der kategorische Imperativ`を`der...fordert`という関係詞節が修飾しています。その関係詞節の中に`zu handeln`という不定詞句があり、その目的語`Maxime`をさらに`durch die...`という関係詞節が修飾し、その中に`dass`節が含まれるという、極めて複雑な入れ子構造です。"
+    },
+    {
+        "german": "Kants kopernikanische Wende in der Philosophie besteht in der revolutionären Annahme, dass nicht unsere Erkenntnis sich nach den Gegenständen, sondern umgekehrt die Gegenstände sich nach den apriorischen Strukturen unseres Erkenntnisvermögens richten müssen, ohne welche Erfahrung gar nicht erst möglich wäre.",
+        "japanese": "哲学におけるカントのコペルニクス的転回は、我々の認識が対象に従うのではなく、逆に対象が我々の認識能力のアポステリオリな構造に従わねばならない、という革命的な想定のうちに存するのであり、そしてその構造なしには、経験はそもそも可能ではないであろう。",
+        "explanation": "`besteht in der Annahme, dass...`という構造です。`dass`節の中が`nicht ..., sondern umgekehrt ...`という対比構造になっており、文末の`ohne welche`で始まる関係詞節が`Strukturen`を補足説明しています。"
+    },
+    {
+        "german": "Die Autonomie des Willens, die Kant als das oberste Prinzip der Sittlichkeit etabliert, bezeichnet die Eigenschaft des Willens, sich selbst, unabhängig von jeglicher Beschaffenheit der Objekte des Wollens, ein Gesetz zu sein, wohingegen jede Heteronomie die moralische Würde des Menschen untergräbt.",
+        "japanese": "意志の自律は――カントはそれを道徳性の最高原理として確立するのだが――、意志が、欲求の対象のいかなる性質からも独立して、それ自身に対して法則であるという性質を指すのであり、それに対して、いかなる他律も人間の道徳的尊厳を侵害するのである。",
+        "explanation": "主語`Die Autonomie des Willens`を関係詞節`die Kant...etabliert`が修飾。述語`bezeichnet`の目的語`die Eigenschaft`を、`sich selbst...ein Gesetz zu sein`という長い`zu`不定詞句が修飾し、`wohingegen`で対比的な文が続いています。"
+    },
+    {
+        "german": "In den Antinomien der reinen Vernunft, in denen diese sich in unauflösliche Widersprüche verwickelt, sobald sie die Welt als ein unbedingtes Ganzes zu denken versucht, zeigt sich die notwendige Beschränkung des spekulativen Vernunftgebrauchs auf den Bereich möglicher Erfahrung.",
+        "japanese": "純粋理性のアンチノミーにおいては――その中で理性は、世界を無制約的な全体として思考しようと試みるやいなや、解決不可能な矛盾へと陥ってしまうのだが――、思弁的な理性使用の、可能な経験の領域への必然的な制限が示される。",
+        "explanation": "文頭の長い前置詞句`In den Antinomien...`が、`in denen...`と`sobald...`という二つの副文を含んでいます。主文の動詞`zeigt sich`は文の最後に置かれています。"
+    },
+    {
+        "german": "Das ästhetische Urteil über das Schöne, das ein interesseloses Wohlgefallen ohne allen Begriff zum Ausdruck bringt, erhebt einen Anspruch auf subjektive Allgemeinheit, der sich nicht auf logische Gründe, sondern auf das freie Spiel der Erkenntniskräfte, Einbildungskraft und Verstand, stützt.",
+        "japanese": "美に関する美的判断は――それは一切の概念なしに無関心な満足を表現するのだが――、主観的普遍性への要求を提起し、そしてその要求は、論理的な根拠にではなく、むしろ認識能力、すなわち構想力と悟性の自由な遊戯に依拠しているのである。",
+        "explanation": "主語`Das ästhetische Urteil`を関係詞節`das...bringt`が修飾。述語`erhebt`の目的語`einen Anspruch`を、`der sich nicht auf..., sondern auf...stützt`という対比構造を含む関係詞節がさらに修飾しています。"
+    },
+    {
+        "german": "Die transzendentale Einheit der Apperzeption, das 'Ich denke', das alle meine Vorstellungen muss begleiten können, ist der oberste Punkt und das ursprüngliche synthetische Prinzip, von dem die gesamte Logik und die Möglichkeit der Erfahrung selbst abhängen.",
+        "japanese": "超越論的統覚の統一性、すなわち「われ思う」は――それは私のすべての表象に伴うことができなければならないのだが――、最高の点であり、根源的な総合的原理であり、そこから論理学全体と経験の可能性そのものが依存するのである。",
+        "explanation": "主語`Die ... Einheit`を、同格の`das 'Ich denke'`と、それをさらに修飾する関係詞節`das...können`が説明しています。述語`ist...`の後の`Punkt`と`Prinzip`を、`von dem`で始まる関係詞節がまとめて修飾しています。"
+    },
+    {
+        "german": "Obwohl die Ideen der Vernunft – Gott, Freiheit und Unsterblichkeit – in der theoretischen Philosophie nicht bewiesen werden können, da ihnen keine entsprechende Anschauung gegeben werden kann, gewinnen sie als notwendige Postulate der praktischen Vernunft eine objektive, wenn auch nur praktische Realität.",
+        "japanese": "理性の理念――神、自由、そして不死――は、理論哲学においては証明されえないにもかかわらず――というのも、それらに対応する直観が与えられえないからだが――、それらは実践理性の必然的な要請として、たかだか実践的ではあるにせよ、客観的な実在性を獲得するのである。",
+        "explanation": "`Obwohl`で始まる譲歩の副文が文頭に置かれ、その中に理由を示す`da`節が挿入されています。主文の目的語`eine objektive...Realität`に`wenn auch nur...`（たとえ…にすぎないとしても）という譲歩の句が挿入されています。"
+    },
+    {
+        "german": "Das Erhabene, dessen Erfahrung im Gegensatz zum Schönen mit einem Gefühl der Unlust beginnt, indem die Einbildungskraft an ihre Grenzen stößt, offenbart die Überlegenheit der Ideen der Vernunft über jede Sinnenmaßstab und macht so die moralische Bestimmung des Menschen fühlbar.",
+        "japanese": "崇高なるものは――その経験は美とは対照的に、構想力がその限界に突き当たることによって、不快の感情をもって始まるのだが――、あらゆる感性の尺度に対する理性理念の優越性を開示し、そうして人間の道徳的使命を感じさせるのである。",
+        "explanation": "主語`Das Erhabene`を`dessen`で始まる関係詞節が修飾し、その中に`indem`節が含まれています。主文は`offenbart...und macht...`という二つの動詞を持つ構造です。"
+    },
+    {
+        "german": "Der in der Schrift 'Zum ewigen Frieden' entwickelte Entwurf eines Völkerbundes freier Staaten, dessen Ziel die endgültige Überwindung des kriegerischen Naturzustandes zwischen den Nationen ist, basiert auf republikanischen Verfassungsprinzipien und dem Ideal der universalen Hospitalität.",
+        "japanese": "論文『永遠平和のために』で展開された、自由な諸国家からなる国際連盟の構想は――その目標は国家間の戦争状態の最終的な克服であるが――、共和主義的な憲法原理と普遍的な歓待の理想に基づいている。",
+        "explanation": "主語`Der ... Entwurf`を所有格の関係代名詞`dessen`で始まる関係詞節が修飾し、主語と述語`basiert`を分離しています。"
+    },
+    {
+        "german": "Die Schematismen der reinen Verstandesbegriffe sind die transzendentalen Zeitbestimmungen, welche die Anwendung der reinen, unsinnlichen Kategorien auf die sinnlichen Erscheinungen vermitteln, indem sie eine Regel für die Subsumtion des Besonderen unter das Allgemeine bereitstellen.",
+        "japanese": "純粋悟性概念の図式は、超越論的な時間規定であり、それは、特殊なものを普遍的なものの下に包摂するための一つの規則を提供することによって、純粋で非感覚的なカテゴリーの感覚的現象への適用を媒介するのである。",
+        "explanation": "述語`die transzendentalen Zeitbestimmungen`を、関係詞節`welche...vermitteln`が修飾し、その中に手段を示す`indem`節が含まれています。"
+    },
+    {
+        "german": "Aufklärung ist für Kant der Ausgang des Menschen aus seiner selbstverschuldeten Unmündigkeit, deren Ursache nicht im Mangel des Verstandes, sondern in der Feigheit und Faulheit liegt, sich seines eigenen Verstandes ohne Leitung eines anderen zu bedienen.",
+        "japanese": "カントにとって啓蒙とは、人間が自ら招いた未成年状態から抜け出ることである。そしてその原因は、悟性の欠如にではなく、むしろ、他者の指導なしに自らの悟性を用いることへの臆病と怠惰のうちに存するのである。",
+        "explanation": "`Unmündigkeit`（未成年状態）を所有格の関係代名詞`deren`で始まる関係詞節が修飾しています。この関係詞節の中には`nicht in ..., sondern in ...`の対比構造と、`sich...zu bedienen`という長い`zu`不定詞句が含まれています。"
+    },
+    {
+        "german": "Das Reich der Zwecke ist die von Kant konzipierte systematische Verbindung vernünftiger Wesen durch gemeinschaftliche objektive Gesetze, in welchem jedes Mitglied sich selbst und alle anderen niemals bloß als Mittel, sondern jederzeit zugleich als Zweck an sich selbst behandelt.",
+        "japanese": "目的の国は、カントによって構想された、共通の客観的法則による理性的存在者の体系的な結合であり、その国において各々の成員は、自己自身と他のすべての者を、決して単に手段としてではなく、常に同時にそれ自体における目的として扱うのである。",
+        "explanation": "述語`die...Verbindung`を`in welchem`で始まる関係詞節が修飾しています。その関係詞節の中は`niemals bloß als ..., sondern jederzeit zugleich als ... behandelt`という複雑な対比・並列構造になっています。"
+    },
+    {
+        "german": "Das teleologische Urteil, das die Natur so betrachtet, als ob sie von einer verständigen Ursache nach Zwecken organisiert worden wäre, ist ein bloß reflektierendes, kein bestimmendes Urteil, das uns hilft, die organisierte Natur zu erforschen, ohne ihr jedoch eine objektive Zweckmäßigkeit zuzuschreiben.",
+        "japanese": "目的論的判断は――それは自然を、あたかもそれが知性的な原因によって目的に従って組織されたかのように見なすのだが――、単に反省的で、規定的ではない判断であり、それは、我々が、しかしながらそれに客観的な合目的性を帰することなく、組織された自然を探求するのを助けるのである。",
+        "explanation": "主語`Das teleologische Urteil`を`das...betrachtet`という関係詞節が修飾しています。述語`ist ein...Urteil`の`Urteil`を、さらに`das uns hilft, ... zu erforschen`という`zu`不定詞句を含む関係詞節が修飾しています。"
+    },
+    {
+        "german": "Die Würde des Menschen beruht ausschließlich auf seiner Fähigkeit zur Autonomie, das heißt auf seiner Eigenschaft als moralisch gesetzgebendes Glied im Reich der Zwecke, weshalb er einen unbedingten, über jeden Preis erhabenen Wert besitzt.",
+        "japanese": "人間の尊厳は、もっぱらその自律の能力、すなわち、目的の国における道徳的に法則を与える成員としてのその性質に基づいており、それゆえに彼は、いかなる価格をも超えた無条件の価値を有するのである。",
+        "explanation": "`das heißt`が同格による説明を導入しています。`weshalb`で始まる関係副詞節が、前の文全体を理由として、その帰結を述べています。"
+    },
+    {
+        "german": "Die Kritik der Urteilskraft hat die Aufgabe, eine Brücke zwischen dem Reich der Natur, das von kausaler Notwendigkeit beherrscht wird, und dem Reich der Freiheit, das durch das Sittengesetz bestimmt ist, zu schlagen, um die Einheit des gesamten philosophischen Systems zu vollenden.",
+        "japanese": "判断力批判は、自然の国――それは因果的必然性によって支配されている――と、自由の国――それは道徳法則によって規定されている――との間に橋を架け、それによって哲学体系全体の統一を完成させるという課題を持つ。",
+        "explanation": "`hat die Aufgabe, ... zu schlagen, um ... zu vollenden`という、目的を示す`um...zu`句を含む`zu`不定詞の構造です。`zwischen...und...`のそれぞれの要素が関係詞節によって修飾されています。"
+    },
+    {
+        "german": "Ein synthetisches Urteil a priori, wie es in der Mathematik und der reinen Naturwissenschaft vorkommt, ist nach Kant deshalb möglich, weil es seine Gültigkeit nicht aus der Erfahrung schöpft, sondern aus den Bedingungen der Möglichkeit von Erfahrung, die im Subjekt selbst liegen.",
+        "japanese": "数学や純粋自然科学に見られるようなア・プリオリな総合判断は、カントによれば、それがその妥当性を経験から汲み取るのではなく、むしろ主体自身のうちに存する経験の可能性の諸条件から汲み取るがゆえに、可能なのである。",
+        "explanation": "`deshalb ..., weil ...`という理由を示す構文です。`weil`節の中が`nicht aus ..., sondern aus ...`の対比構造になっており、`Bedingungen`（諸条件）を`die...liegen`という関係詞節が修飾しています。"
+    },
+    {
+        "german": "Die praktische Vernunft hat einen unbestreitbaren Primat vor der spekulativen, insofern das moralische Gesetz uns zu Annahmen nötigt (Freiheit, Gott, Unsterblichkeit), die die theoretische Vernunft zwar nicht beweisen, aber auch nicht widerlegen kann.",
+        "japanese": "実践理性は、思弁理性に対する誰もが認める優位を持つ。その限りにおいて、道徳法則は我々に、理論理性がなるほど証明はできないが、しかし論駁することもできないような諸々の想定（自由、神、不死）を強いるのである。",
+        "explanation": "理由・範囲を示す`insofern`節の目的語`Annahmen`を、`die`で始まり`zwar nicht ..., aber auch nicht ...`という構文を含む関係詞節が修飾しています。"
+    },
+    {
+        "german": "Raum und Zeit werden in der Transzendentalen Ästhetik nicht als von den Dingen unabhängige Realitäten oder als von ihnen abstrahierte Begriffe, sondern als die reinen Formen unserer sinnlichen Anschauung a priori erwiesen, die allen äußeren bzw. inneren Erfahrungen zugrunde liegen.",
+        "japanese": "空間と時間は、超越論的感性論において、事物から独立した実在性としてでも、あるいはそれらから抽象された概念としてでもなく、むしろ、あらゆる外的ないし内的経験の根底にある、我々の感覚的直観のア・プリオリな純粋形式として証明される。",
+        "explanation": "`werden nicht als ... oder als ..., sondern als ... erwiesen`という受動態の対比構造。最後の`Formen`を`die...liegen`という関係詞節が修飾しています。"
+    },
+    {
+        "german": "Das radikal Böse in der menschlichen Natur besteht nach Kant nicht in der Sinnlichkeit an sich, sondern in der Verkehrung der Triebfedern, also in der willentlichen Umkehrung der moralischen Ordnung, bei der die Selbstliebe zur obersten Maxime anstelle des Sittengesetzes gemacht wird.",
+        "japanese": "人間本性における根源悪は、カントによれば、感性それ自体に存するのではなく、むしろ動機の倒錯、すなわち、道徳法則のかわりに自己愛が最高の格率とされるような、道徳的秩序の意図的な転倒のうちに存するのである。",
+        "explanation": "`besteht nicht in ..., sondern in ...`の対比構造。`also`が同格による説明を導入し、`Ordnung`を`bei der...gemacht wird`という関係副詞節が修飾しています。"
+    },
+    {
+        "german": "Jedes empirische Bewusstsein, das sich seiner selbst als eines in der Zeit bestimmten Daseins bewusst ist, setzt notwendigerweise ein beharrliches Etwas außer ihm voraus, in Beziehung auf welches der Wechsel aller Erscheinungen überhaupt erst wahrgenommen werden kann.",
+        "japanese": "時間のうちに規定された一つの現存在としての自己自身を意識する各々の経験的意識は、必然的に、それ自身の外にあるある持続的なものを前提とする。そしてそれとの関係において、あらゆる現象の交代が überhaupt はじめて知覚されうるのである。",
+        "explanation": "主語`Jedes empirische Bewusstsein`を`das...bewusst ist`という関係詞節が修飾。述語`setzt...voraus`の目的語`ein beharrliches Etwas`を、`in Beziehung auf welches...`という非常に複雑な関係詞節が修飾しています。"
+    },
+    {
+        "german": "Der öffentliche Gebrauch der Vernunft, der jederzeit frei sein muss, um die Aufklärung zu befördern, ist derjenige, den jemand als Gelehrter vor dem gesamten Publikum der Lesewelt von ihr macht, im Gegensatz zum Privatgebrauch, der in einem bürgerlichen Posten eingeschränkt sein darf.",
+        "japanese": "理性の公的（Öffentlich）使用は――それは啓蒙を促進するために常に自由でなければならないのだが――、ある人が学者として読者界という公衆全体の前で行う使用のことであり、それは、ある公的な役職において制限されうる私的（Privat）使用とは対照的である。",
+        "explanation": "`ist derjenige, den...`という構造で`derjenige`（それ）を関係詞節が修飾。`im Gegensatz zum Privatgebrauch`という対比があり、`Privatgebrauch`も関係詞節`der...darf`によって修飾されています。"
+    },
+    {
+        "german": "Die Achtung vor dem Gesetz ist kein pathologisch erzeugtes Gefühl, sondern ein durch einen intellektuellen Grund, nämlich durch das Bewusstsein des Sittengesetzes, selbstgewirktes Gefühl, das als einzige moralische Triebfeder der Handlung dienen darf.",
+        "japanese": "法則への尊敬は、病理的に生み出された感情ではなく、知性的な根拠、すなわち道徳法則の意識によって、自ら作用する感情であり、それは行為の唯一の道徳的な動機として役立ちうるものである。",
+        "explanation": "`kein ..., sondern ein ... Gefühl`という対比構造。`Grund`を`nämlich`以下の同格句が説明し、`Gefühl`を`das...darf`という関係詞節が修飾しています。"
+    },
+    {
+        "german": "Die regulativen Ideen der Vernunft, die uns dazu anleiten, die Erkenntnisse des Verstandes so zu ordnen, als ob sie auf eine systematische, unbedingte Einheit hingeordnet wären, dürfen nicht konstitutiv gebraucht werden, als ob sie Erkenntnisse von übersinnlichen Objekten lieferten.",
+        "japanese": "理性の統制的理念は――それは我々を、悟性の認識をあたかもそれが体系的で無制約的な統一へと秩序づけられているかのように整序するよう導くのだが――、あたかもそれが超感覚的対象の認識を提供するものであるかのように、構成的に用いられてはならない。",
+        "explanation": "主語`Die...Ideen`を関係詞節`die uns dazu anleiten...`が修飾。`als ob...`（あたかも…のように）という非現実話法の接続詞が2回使われています。"
+    },
+    {
+        "german": "Die transzendentale Dialektik deckt den unvermeidlichen Schein auf, dem die menschliche Vernunft unterliegt, wenn sie versucht, über die Grenzen möglicher Erfahrung hinauszugehen, um das Unbedingte in Form der psychologischen, kosmologischen und theologischen Ideen zu erkennen.",
+        "japanese": "超越論的弁証論は、人間の理性が、心理学的、宇宙論的、そして神学的理念という形で無制約的なものを認識するために、可能な経験の限界を超えていこうと試みる際に、陥る不可避的な仮象を暴き出す。",
+        "explanation": "目的語`den...Schein`を、関係代名詞`dem`で始まる関係詞節が修飾し、その中に`wenn`で始まる時・条件の副文と`um...zu`で始まる目的の不定詞句が入れ子になっています。"
+    },
+    {
+        "german": "Ein vollkommener Wille, wie ihn Kant einem göttlichen Wesen zuschreibt, würde nicht unter dem Zwang von Imperativen stehen, da sein Wollen von Natur aus und ohne inneren Widerstreit mit dem Gesetz der Vernunft übereinstimmte.",
+        "japanese": "カントが神的な存在者に帰するような完全な意志は、命令の強制のもとにはないであろう。なぜなら、その意志の欲することは、本性的に、そして内的な葛藤なしに、理性の法則と一致しているであろうからだ。",
+        "explanation": "主語`Ein vollkommener Wille`を`wie ihn Kant...zuschreibt`という比較の関係詞節が修飾。`würde...stehen`と`übereinstimmte`は、非現実的な状況を述べる接続法第二式です。"
+    },
+    {
+        "german": "Die Möglichkeit eines hypothetischen Imperativs, der die Notwendigkeit einer Handlung als Mittel zu einer beliebigen Absicht vorschreibt, ist leicht einzusehen, während die Möglichkeit des kategorischen Imperativs, der ohne zugrunde liegenden Zweck gebietet, ein synthetisch-praktischer Satz a priori ist.",
+        "japanese": "ある任意の意図への手段として行為の必然性を規定する仮言命法の可能性は、容易に理解できる。それに対して、根底にある目的ぬきに命じる定言命法の可能性は、ア・プリオリな総合的実践命題なのである。",
+        "explanation": "`während`（…であるのに対して）で接続された、二つの文の対比構造。それぞれの文で、主語`Möglichkeit`を関係詞節`der...vorschreibt`と`der...gebietet`が修飾しています。"
+    },
+    {
+        "german": "Das Recht wird von Kant als der Inbegriff der Bedingungen definiert, unter denen die Willkür des einen mit der Willkür des anderen nach einem allgemeinen Gesetze der Freiheit zusammen vereinigt werden kann.",
+        "japanese": "法はカントによって、ある人の任意が、他の人の任意と、自由の普遍的な法則に従って、共に結合されうるような、諸々の条件の総体として定義される。",
+        "explanation": "述語`der Inbegriff der Bedingungen`を、`unter denen...`で始まる関係詞節が修飾する、受動態の文です。"
+    },
+    {
+        "german": "Der Charakter eines Dinges an sich, der die unbekannte Ursache der Erscheinungen ist, kann von uns niemals positiv bestimmt werden, weil unser gesamtes kategoriales Begriffsnetz ausschließlich dazu dient, die in Raum und Zeit gegebene Mannigfaltigkeit zu einer erfahrbaren, geordneten Natur zu synthetisieren.",
+        "japanese": "物自体の性格は――それは現象の未知の原因なのだが――、我々によって決して肯定的に規定されえない。なぜなら、我々のカテゴリー的な概念網の全体は、もっぱら、空間と時間のうちに与えられた多様性を、経験可能な、秩序づけられた自然へと統合することに奉仕するからである。",
+        "explanation": "主語`Der Charakter`を関係詞節`der...ist`が修飾。理由を示す`weil`節の中で、`dazu dient, ... zu synthetisieren`という`zu`不定詞句の構文が使われています。"
+    }
 ]
+
 
 
