@@ -111,7 +111,8 @@
                     </div>
                 </div>
             </div>
-            <div class="mt-4 text-center">
+            <div class="mt-6 flex flex-col sm:flex-row gap-2">
+                <button id="toggle-read-status-btn" class="btn w-full text-white font-bold py-3 px-6 rounded-lg shadow-md"></button>
                 <button id="next-text-btn" class="btn w-full bg-gray-800 hover:bg-gray-900 dark:bg-gray-200 dark:hover:bg-gray-300 text-white dark:text-black font-bold py-3 px-6 rounded-lg shadow-md">次の文章へ</button>
             </div>
         </div>
@@ -221,7 +222,7 @@
         const japaneseDisplay = document.getElementById('japanese-display'), wordDisplay = document.getElementById('word-display'), checkMeaningBtn = document.getElementById('check-meaning-btn'), checkMeaningBtnContainer = document.getElementById('check-meaning-btn-container'), assessmentContainer = document.getElementById('assessment-container'), assessmentButtons = document.querySelectorAll('.assessment-btn'), flipCard = document.getElementById('flip-card'), progressText = document.getElementById('progress-text'), progressBar = document.getElementById('progress-bar'), learningTitle = document.getElementById('learning-title'), relatedWordsContainer = document.getElementById('related-words-container'), relatedWordsDisplay = document.getElementById('related-words-display');
         const startQuizBtn = document.getElementById('start-quiz-btn'), startReviewQuizBtn = document.getElementById('start-review-quiz-btn'), random10QuizBtn = document.getElementById('random-10-quiz-btn'), viewListBtn = document.getElementById('view-list-btn'), backToStartBtn = document.getElementById('back-to-start-btn'), backToStartBtnFromQuiz = document.getElementById('back-to-start-btn-from-quiz'), backToStartFromResultBtn = document.getElementById('back-to-start-from-result-btn'), restartBtn = document.getElementById('restart-btn'), reviewQuizBtn = document.getElementById('review-quiz-btn'), resumeQuizBtn = document.getElementById('resume-quiz-btn'), resumeText = document.getElementById('resume-text'), exportJsonBtn = document.getElementById('export-json-btn'), reviewInfo = document.getElementById('review-info'), prevWordBtn = document.getElementById('prev-word-btn'), soundToggleBtn = document.getElementById('sound-toggle-btn'), soundOnIcon = document.getElementById('sound-on-icon'), soundOffIcon = document.getElementById('sound-off-icon'), startSelectedQuizBtn = document.getElementById('start-selected-quiz-btn'), selectedCount = document.getElementById('selected-count'), selectAllCheckbox = document.getElementById('select-all-checkbox');
         const wordListTbody = document.getElementById('word-list-tbody'), searchWordInput = document.getElementById('search-word-input');
-        const readTextsBtn = document.getElementById('read-texts-btn'), textsInfo = document.getElementById('texts-info'), germanTextDisplay = document.getElementById('german-text-display'), japaneseTextContainer = document.getElementById('japanese-text-container'), toggleJapaneseBtn = document.getElementById('toggle-japanese-btn'), japaneseTextContent = document.getElementById('japanese-text-content'), japaneseTextDisplay = document.getElementById('japanese-text-display'), explanationContainer = document.getElementById('explanation-container'), toggleExplanationBtn = document.getElementById('toggle-explanation-btn'), explanationContent = document.getElementById('explanation-content'), explanationDisplay = document.getElementById('explanation-display'), nextTextBtn = document.getElementById('next-text-btn'), backToStartFromTextBtn = document.getElementById('back-to-start-from-text-btn'), viewTextListBtn = document.getElementById('view-text-list-btn'), textListContainer = document.getElementById('text-list-container'), backToStartFromTextListBtn = document.getElementById('back-to-start-from-text-list-btn');
+        const readTextsBtn = document.getElementById('read-texts-btn'), textsInfo = document.getElementById('texts-info'), germanTextDisplay = document.getElementById('german-text-display'), japaneseTextContainer = document.getElementById('japanese-text-container'), toggleJapaneseBtn = document.getElementById('toggle-japanese-btn'), japaneseTextContent = document.getElementById('japanese-text-content'), japaneseTextDisplay = document.getElementById('japanese-text-display'), explanationContainer = document.getElementById('explanation-container'), toggleExplanationBtn = document.getElementById('toggle-explanation-btn'), explanationContent = document.getElementById('explanation-content'), explanationDisplay = document.getElementById('explanation-display'), nextTextBtn = document.getElementById('next-text-btn'), backToStartFromTextBtn = document.getElementById('back-to-start-from-text-btn'), viewTextListBtn = document.getElementById('view-text-list-btn'), textListContainer = document.getElementById('text-list-container'), backToStartFromTextListBtn = document.getElementById('back-to-start-from-text-list-btn'), toggleReadStatusBtn = document.getElementById('toggle-read-status-btn');
 
         // --- State ---
         const STORAGE_KEY = 'germanFlashcardProgress';
@@ -338,16 +339,21 @@
                 }
             });
         }
+        
+        function updateReadStatusButton(index) {
+            const isRead = !!readTextStates[index];
+            if (isRead) {
+                toggleReadStatusBtn.textContent = '未読に戻す';
+                toggleReadStatusBtn.classList.remove('bg-green-600', 'hover:bg-green-700');
+                toggleReadStatusBtn.classList.add('bg-yellow-600', 'hover:bg-yellow-700');
+            } else {
+                toggleReadStatusBtn.textContent = '読了済みにする';
+                toggleReadStatusBtn.classList.remove('bg-yellow-600', 'hover:bg-yellow-700');
+                toggleReadStatusBtn.classList.add('bg-green-600', 'hover:bg-green-700');
+            }
+        }
 
         function showText(index) {
-            // ▼▼▼ ここを変更 ▼▼▼
-            // 表示された文章を「読了済み」として記録し、保存する
-            if (!readTextStates[index]) {
-                readTextStates[index] = true;
-                saveReadTextStates();
-            }
-            // ▲▲▲ 変更ここまで ▲▲▲
-
             const text = allTexts[index];
             germanTextDisplay.textContent = text.german;
             japaneseTextDisplay.textContent = text.japanese;
@@ -358,6 +364,8 @@
             toggleJapaneseBtn.textContent = '日本語訳を表示';
             explanationContent.classList.add('hidden');
             toggleExplanationBtn.textContent = '文法解説を表示';
+            
+            updateReadStatusButton(index);
         }
 
         // --- JSON Export & Sound ---
@@ -497,6 +505,14 @@
         });
 
         nextTextBtn.addEventListener('click', () => { currentTextIndex = (currentTextIndex + 1) % allTexts.length; showText(currentTextIndex); });
+        
+        toggleReadStatusBtn.addEventListener('click', () => {
+            readTextStates[currentTextIndex] = !readTextStates[currentTextIndex];
+            saveReadTextStates();
+            updateReadStatusButton(currentTextIndex);
+            playSound(sounds.click);
+        });
+
         toggleJapaneseBtn.addEventListener('click', () => {
             const isHidden = japaneseTextContent.classList.toggle('hidden');
             toggleJapaneseBtn.textContent = isHidden ? '日本語訳を表示' : '日本語訳を閉じる';
