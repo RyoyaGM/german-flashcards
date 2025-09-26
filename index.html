@@ -24,7 +24,7 @@
         #word-list-container::-webkit-scrollbar-track, #text-display-container::-webkit-scrollbar-track, #text-list-container::-webkit-scrollbar-track { background: #f1f5f9; }
         .dark #word-list-container::-webkit-scrollbar-track, .dark #text-display-container::-webkit-scrollbar-track, .dark #text-list-container::-webkit-scrollbar-track { background: #374151; }
         #word-list-container::-webkit-scrollbar-thumb, #text-display-container::-webkit-scrollbar-thumb, #text-list-container::-webkit-scrollbar-thumb { background: #60a5fa; border-radius: 4px; }
-        #word-list-tbody tr, #text-list-tbody tr { cursor: pointer; }
+        #word-list-tbody tr, #unread-text-list-tbody tr, #read-text-list-tbody tr { cursor: pointer; }
     </style>
 </head>
 <body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 flex items-center justify-center min-h-screen p-4">
@@ -58,16 +58,31 @@
                 <h2 class="text-2xl font-bold text-cyan-600 dark:text-cyan-400">文章一覧</h2>
                 <button id="back-to-start-from-text-list-btn" class="btn bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 font-bold py-2 px-4 rounded-lg">戻る</button>
             </div>
-            <div id="text-list-container" class="max-h-[60vh] overflow-y-auto pr-2">
-                <table class="w-full text-left">
-                    <thead class="sticky top-0 bg-gray-100 dark:bg-gray-800">
-                        <tr>
-                            <th class="p-2 w-8 text-center">読了</th>
-                            <th class="p-2">ドイツ語原文</th>
-                        </tr>
-                    </thead>
-                    <tbody id="text-list-tbody"></tbody>
-                </table>
+            <div id="text-list-container" class="max-h-[60vh] overflow-y-auto pr-2 space-y-8">
+                <div>
+                    <h3 class="text-xl font-semibold text-cyan-700 dark:text-cyan-500 mb-2 border-b-2 border-cyan-200 dark:border-cyan-800 pb-1">未読の文章</h3>
+                    <table class="w-full text-left">
+                        <thead class="sticky top-0 bg-gray-100 dark:bg-gray-800">
+                            <tr>
+                                <th class="p-2 w-10 text-center">状態</th>
+                                <th class="p-2">ドイツ語原文</th>
+                            </tr>
+                        </thead>
+                        <tbody id="unread-text-list-tbody"></tbody>
+                    </table>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-500 dark:text-gray-400 mb-2 border-b-2 border-gray-200 dark:border-gray-700 pb-1">読了済みの文章</h3>
+                    <table class="w-full text-left">
+                         <thead class="sticky top-0 bg-gray-100 dark:bg-gray-800">
+                            <tr>
+                                <th class="p-2 w-10 text-center">状態</th>
+                                <th class="p-2">ドイツ語原文</th>
+                            </tr>
+                        </thead>
+                        <tbody id="read-text-list-tbody"></tbody>
+                    </table>
+                </div>
             </div>
         </div>
 
@@ -206,14 +221,14 @@
         const japaneseDisplay = document.getElementById('japanese-display'), wordDisplay = document.getElementById('word-display'), checkMeaningBtn = document.getElementById('check-meaning-btn'), checkMeaningBtnContainer = document.getElementById('check-meaning-btn-container'), assessmentContainer = document.getElementById('assessment-container'), assessmentButtons = document.querySelectorAll('.assessment-btn'), flipCard = document.getElementById('flip-card'), progressText = document.getElementById('progress-text'), progressBar = document.getElementById('progress-bar'), learningTitle = document.getElementById('learning-title'), relatedWordsContainer = document.getElementById('related-words-container'), relatedWordsDisplay = document.getElementById('related-words-display');
         const startQuizBtn = document.getElementById('start-quiz-btn'), startReviewQuizBtn = document.getElementById('start-review-quiz-btn'), random10QuizBtn = document.getElementById('random-10-quiz-btn'), viewListBtn = document.getElementById('view-list-btn'), backToStartBtn = document.getElementById('back-to-start-btn'), backToStartBtnFromQuiz = document.getElementById('back-to-start-btn-from-quiz'), backToStartFromResultBtn = document.getElementById('back-to-start-from-result-btn'), restartBtn = document.getElementById('restart-btn'), reviewQuizBtn = document.getElementById('review-quiz-btn'), resumeQuizBtn = document.getElementById('resume-quiz-btn'), resumeText = document.getElementById('resume-text'), exportJsonBtn = document.getElementById('export-json-btn'), reviewInfo = document.getElementById('review-info'), prevWordBtn = document.getElementById('prev-word-btn'), soundToggleBtn = document.getElementById('sound-toggle-btn'), soundOnIcon = document.getElementById('sound-on-icon'), soundOffIcon = document.getElementById('sound-off-icon'), startSelectedQuizBtn = document.getElementById('start-selected-quiz-btn'), selectedCount = document.getElementById('selected-count'), selectAllCheckbox = document.getElementById('select-all-checkbox');
         const wordListTbody = document.getElementById('word-list-tbody'), searchWordInput = document.getElementById('search-word-input');
-        const readTextsBtn = document.getElementById('read-texts-btn'), textsInfo = document.getElementById('texts-info'), germanTextDisplay = document.getElementById('german-text-display'), japaneseTextContainer = document.getElementById('japanese-text-container'), toggleJapaneseBtn = document.getElementById('toggle-japanese-btn'), japaneseTextContent = document.getElementById('japanese-text-content'), japaneseTextDisplay = document.getElementById('japanese-text-display'), explanationContainer = document.getElementById('explanation-container'), toggleExplanationBtn = document.getElementById('toggle-explanation-btn'), explanationContent = document.getElementById('explanation-content'), explanationDisplay = document.getElementById('explanation-display'), nextTextBtn = document.getElementById('next-text-btn'), backToStartFromTextBtn = document.getElementById('back-to-start-from-text-btn'), viewTextListBtn = document.getElementById('view-text-list-btn'), textListTbody = document.getElementById('text-list-tbody'), backToStartFromTextListBtn = document.getElementById('back-to-start-from-text-list-btn');
+        const readTextsBtn = document.getElementById('read-texts-btn'), textsInfo = document.getElementById('texts-info'), germanTextDisplay = document.getElementById('german-text-display'), japaneseTextContainer = document.getElementById('japanese-text-container'), toggleJapaneseBtn = document.getElementById('toggle-japanese-btn'), japaneseTextContent = document.getElementById('japanese-text-content'), japaneseTextDisplay = document.getElementById('japanese-text-display'), explanationContainer = document.getElementById('explanation-container'), toggleExplanationBtn = document.getElementById('toggle-explanation-btn'), explanationContent = document.getElementById('explanation-content'), explanationDisplay = document.getElementById('explanation-display'), nextTextBtn = document.getElementById('next-text-btn'), backToStartFromTextBtn = document.getElementById('back-to-start-from-text-btn'), viewTextListBtn = document.getElementById('view-text-list-btn'), textListContainer = document.getElementById('text-list-container'), backToStartFromTextListBtn = document.getElementById('back-to-start-from-text-list-btn');
 
         // --- State ---
         const STORAGE_KEY = 'germanFlashcardProgress';
         const SOUND_SETTING_KEY = 'germanFlashcardSound';
-        const TEXTS_READ_STATUS_KEY = 'germanTextsReadStatus'; // 新規：読了状態保存用のキー
+        const TEXTS_READ_STATUS_KEY = 'germanTextsReadStatus';
         let allWords = [], reviewWords = [], allTexts = [], words = [], selectedWords = [], currentIndex = 0, currentTextIndex = 0, stats = {}, currentMode = 'learning';
-        let readTextStates = {}; // 新規：文章の読了状態を保持するオブジェクト
+        let readTextStates = {};
 
         // --- Utility & Screen Management ---
         function shuffleArray(array) { for (let i = array.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1));[array[i], array[j]] = [array[j], array[i]]; } }
@@ -224,7 +239,6 @@
         function loadProgress() { const savedProgress = localStorage.getItem(STORAGE_KEY); if (savedProgress) { try { return JSON.parse(savedProgress); } catch (e) { console.error("Failed to parse progress:", e); localStorage.removeItem(STORAGE_KEY); return null; } } return null; }
         function clearProgress() { localStorage.removeItem(STORAGE_KEY); }
 
-        // --- 新規：文章の読了状態を保存・読み込みする関数 ---
         function saveReadTextStates() {
             localStorage.setItem(TEXTS_READ_STATUS_KEY, JSON.stringify(readTextStates));
         }
@@ -298,22 +312,30 @@
             selectAllCheckbox.checked = filteredWords.length > 0 && filteredWords.every(word => selectedWords.find(sw => sw.word === word.word));
         }
         
-        // 修正：チェックボックスと読了スタイルを追加
         function displayTextList() {
-            textListTbody.innerHTML = '';
+            const readTbody = document.getElementById('read-text-list-tbody');
+            const unreadTbody = document.getElementById('unread-text-list-tbody');
+            readTbody.innerHTML = '';
+            unreadTbody.innerHTML = '';
+
             allTexts.forEach((text, index) => {
                 const tr = document.createElement('tr');
                 const isRead = !!readTextStates[index];
                 tr.className = 'border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700';
                 
                 tr.innerHTML = `
-                    <td class="p-2 w-8 text-center">
+                    <td class="p-2 w-10 text-center">
                         <input type="checkbox" class="read-text-checkbox" data-index="${index}" ${isRead ? 'checked' : ''}>
                     </td>
-                    <td class="p-2 text-cell ${isRead ? 'line-through text-gray-500' : ''}" data-index="${index}">
+                    <td class="p-2 text-cell ${isRead ? 'text-gray-500 dark:text-gray-400' : ''}" data-index="${index}">
                         ${text.german.substring(0, 70)}...
                     </td>`;
-                textListTbody.appendChild(tr);
+                
+                if (isRead) {
+                    readTbody.appendChild(tr);
+                } else {
+                    unreadTbody.appendChild(tr);
+                }
             });
         }
 
@@ -349,7 +371,7 @@
 
         // --- Initialization ---
         async function initializeApp() {
-            loadReadTextStates(); // 新規：アプリ起動時に読了状態を読み込む
+            loadReadTextStates();
             const savedSoundSetting = localStorage.getItem(SOUND_SETTING_KEY);
             isSoundEnabled = savedSoundSetting === null ? true : savedSoundSetting === 'true';
             updateSoundIcon();
@@ -445,27 +467,18 @@
             });
         });
         
-        // 修正：チェックボックスの処理と、行クリックの処理を統合
-        textListTbody.addEventListener('click', (e) => {
+        textListContainer.addEventListener('click', (e) => {
             const target = e.target;
             
-            // チェックボックスがクリックされた場合の処理
             if (target.classList.contains('read-text-checkbox')) {
                 const index = target.dataset.index;
                 const isChecked = target.checked;
                 readTextStates[index] = isChecked;
                 saveReadTextStates();
-
-                // テキストセルの見た目を即座に更新
-                const textCell = target.closest('tr').querySelector('.text-cell');
-                if (textCell) {
-                    textCell.classList.toggle('line-through', isChecked);
-                    textCell.classList.toggle('text-gray-500', isChecked);
-                }
-                return; // 行クリックイベントは発生させない
+                displayTextList();
+                return;
             }
 
-            // 行（テキスト部分）がクリックされた場合の処理
             const textCell = target.closest('.text-cell');
             if (textCell && textCell.dataset.index) {
                 playSound(sounds.click);
