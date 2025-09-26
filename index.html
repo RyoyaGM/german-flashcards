@@ -24,34 +24,12 @@
         #word-list-container::-webkit-scrollbar-track, #text-display-container::-webkit-scrollbar-track, #text-list-container::-webkit-scrollbar-track { background: #f1f5f9; }
         .dark #word-list-container::-webkit-scrollbar-track, .dark #text-display-container::-webkit-scrollbar-track, .dark #text-list-container::-webkit-scrollbar-track { background: #374151; }
         #word-list-container::-webkit-scrollbar-thumb, #text-display-container::-webkit-scrollbar-thumb, #text-list-container::-webkit-scrollbar-thumb { background: #60a5fa; border-radius: 4px; }
-        #word-list-tbody tr, #text-list-tbody tr { cursor: pointer; }
+        #word-list-tbody tr, #text-list-tbody .text-item-content { cursor: pointer; }
     </style>
 </head>
 <body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 flex items-center justify-center min-h-screen p-4">
 
     <div id="app" class="w-full max-w-2xl mx-auto">
-
-        <div id="start-screen" class="screen text-center p-8 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 relative">
-             <button id="sound-toggle-btn" class="btn absolute top-4 right-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700">
-                <svg id="sound-on-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600 dark:text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" /></svg>
-                <svg id="sound-off-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600 dark:text-gray-300 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15zM17 14l2-2m0 0l2-2m-2 2L17 10m2 2l2 2" /></svg>
-            </button>
-            <h1 class="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">ドイツ語学習</h1>
-            <p class="text-gray-500 dark:text-gray-400 mb-8">総合学術単語</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <button id="start-quiz-btn" class="btn w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md text-lg">全単語クイズ</button>
-                <button id="random-10-quiz-btn" class="btn w-full bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-6 rounded-lg shadow-md text-lg">ランダム10問クイズ</button>
-                <button id="start-review-quiz-btn" class="btn w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg shadow-md text-lg" disabled>不安な単語クイズ</button>
-                <button id="view-list-btn" class="btn w-full bg-gray-500 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg shadow-md text-lg">単語を一覧・選択する</button>
-                <button id="read-texts-btn" class="btn w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg shadow-md text-lg" disabled>ランダムに文章を読む</button>
-                <button id="view-text-list-btn" class="btn w-full bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg shadow-md text-lg" disabled>文章一覧から選ぶ</button>
-            </div>
-            <p id="review-info" class="text-xs text-gray-400 mt-2 hidden">`review_words.json`が見つからないため無効です。</p>
-            <p id="texts-info" class="text-xs text-gray-400 mt-2 hidden">`texts.json`が見つからないため無効です。</p>
-            <p id="resume-text" class="text-sm text-gray-500 dark:text-gray-400 mt-6 hidden">
-                前回の学習データがあります。<a href="#" id="resume-quiz-btn" class="text-blue-600 dark:text-blue-400 hover:underline">ここから再開</a>
-            </p>
-        </div>
 
         <div id="text-list-screen" class="hidden screen p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
             <div class="flex justify-between items-center mb-4">
@@ -63,14 +41,14 @@
                     <thead class="sticky top-0 bg-gray-100 dark:bg-gray-800">
                         <tr>
                             <th class="p-2 w-8">読</th>
-                            <th class="p-2">ドイツ語原文</th>
+                            <th class="p-2">ドイツ語原文 (冒頭)</th>
                         </tr>
                     </thead>
                     <tbody id="text-list-tbody"></tbody>
                 </table>
             </div>
         </div>
-
+        
         <div id="text-reader-screen" class="hidden screen p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
             <div class="flex justify-between items-center mb-4">
                 <h2 class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">難解な文章を読む</h2>
@@ -105,12 +83,13 @@
     </div>
 
     <script>
-        // --- (他のスクリプト部分は変更なし) ---
-        
-        // --- DOM Elements (追加) ---
+        // ... (大部分のスクリプトは変更なし)
+
+        // --- DOM Elements (追加・修正) ---
         const textProgressIndicator = document.getElementById('text-progress-indicator');
-        
-        // --- State (追加) ---
+        const backToTextListBtn = document.getElementById('back-to-text-list-btn');
+
+        // --- State (追加・修正) ---
         const TEXT_STATUS_KEY = 'germanTextsReadStatus';
         let textsReadStatus = [];
 
@@ -121,22 +100,14 @@
                 const tr = document.createElement('tr');
                 tr.className = 'border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700';
                 
-                const checkboxCell = document.createElement('td');
-                checkboxCell.className = 'p-2 w-8';
-                const checkbox = document.createElement('input');
-                checkbox.type = 'checkbox';
-                checkbox.className = 'read-checkbox h-5 w-5 rounded text-cyan-600 focus:ring-cyan-500 border-gray-300 dark:border-gray-600 dark:bg-gray-900 dark:checked:bg-cyan-600';
-                checkbox.checked = textsReadStatus[index] || false;
-                checkbox.dataset.index = index;
-                checkboxCell.appendChild(checkbox);
-
-                const textCell = document.createElement('td');
-                textCell.className = 'p-2';
-                textCell.textContent = text.german.substring(0, 70) + '...';
-                textCell.dataset.index = index; // 行クリックのためにインデックスを設定
+                const isChecked = textsReadStatus[index] || false;
                 
-                tr.appendChild(checkboxCell);
-                tr.appendChild(textCell);
+                tr.innerHTML = `
+                    <td class="p-2 w-8">
+                        <input type="checkbox" class="read-checkbox h-5 w-5 rounded text-cyan-600 focus:ring-cyan-500 border-gray-300 dark:border-gray-600 dark:bg-gray-900 dark:checked:bg-cyan-600" data-index="${index}" ${isChecked ? 'checked' : ''}>
+                    </td>
+                    <td class="p-2 text-item-content" data-index="${index}">${text.german.substring(0, 70)}...</td>
+                `;
                 textListTbody.appendChild(tr);
             });
         }
@@ -147,7 +118,7 @@
             germanTextDisplay.textContent = text.german;
             japaneseTextDisplay.textContent = text.japanese;
             explanationDisplay.textContent = text.explanation;
-
+            
             textProgressIndicator.textContent = `${index + 1} / ${allTexts.length}`;
 
             japaneseTextContent.classList.add('hidden');
@@ -155,7 +126,7 @@
             toggleJapaneseBtn.textContent = '日本語訳を表示';
             toggleExplanationBtn.textContent = '文法解説を表示';
         }
-        
+
         // --- Initialization (修正) ---
         async function initializeApp() {
             // ...
@@ -175,22 +146,25 @@
                     readTextsBtn.disabled = allTexts.length === 0;
                     viewTextListBtn.disabled = allTexts.length === 0;
                     textsInfo.classList.toggle('hidden', allTexts.length > 0);
-                } else { textsInfo.classList.remove('hidden'); }
-            } catch (e) { textsInfo.classList.remove('hidden'); }
-
+                } else { 
+                    textsInfo.classList.remove('hidden'); 
+                    readTextsBtn.disabled = true; 
+                    viewTextListBtn.disabled = true;
+                }
+            } catch (e) { 
+                textsInfo.classList.remove('hidden'); 
+                readTextsBtn.disabled = true; 
+                viewTextListBtn.disabled = true;
+            }
+            
             // ...
         }
 
         // --- Event Listeners (追加・修正) ---
         textListTbody.addEventListener('click', (e) => {
-            const row = e.target.closest('tr');
-            if (row && row.dataset.index) {
-                // チェックボックス自体をクリックした場合は、そのイベントに任せる
-                if (e.target.tagName === 'INPUT' && e.target.type === 'checkbox') {
-                    return;
-                }
+            if (e.target.classList.contains('text-item-content')) {
                 playSound(sounds.click);
-                currentTextIndex = parseInt(row.dataset.index, 10);
+                currentTextIndex = parseInt(e.target.dataset.index, 10);
                 showText(currentTextIndex);
                 showScreen('textReader');
             }
@@ -204,17 +178,16 @@
                 playSound(sounds.click);
             }
         });
-
+        
         backToTextListBtn.addEventListener('click', () => {
-            // 読んだ文章を自動でチェック
             if (!textsReadStatus[currentTextIndex]) {
                 textsReadStatus[currentTextIndex] = true;
                 localStorage.setItem(TEXT_STATUS_KEY, JSON.stringify(textsReadStatus));
             }
-            displayTextList(); // リストを再描画してチェック状態を反映
+            displayTextList();
             showScreen('textList');
         });
-
+        
         // (他のイベントリスナーは変更なし)
     </script>
 </body>
