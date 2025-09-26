@@ -301,6 +301,7 @@
         }
         function startSession({ wordList, title, mode = 'learning', resume = false }) {
             showScreen('learning');
+            playSound(sounds.click);
             currentMode = mode;
             if (resume && mode === 'learning') {
                 const progress = loadProgress();
@@ -351,7 +352,7 @@
                         <input type="checkbox" class="read-text-checkbox" data-index="${index}" ${isRead ? 'checked' : ''}>
                     </td>
                     <td class="p-2 text-cell ${isRead ? 'text-gray-500 dark:text-gray-400' : ''}" data-index="${index}">
-                        ${text.german.substring(0, 70)}...
+                        ${text.original.substring(0, 70)}...
                     </td>`;
                 
                 if (isRead) {
@@ -377,7 +378,7 @@
 
         function showText(index) {
             const text = allTexts[index];
-            originalTextDisplay.textContent = text.german; // ID was german-text-display, generalized
+            originalTextDisplay.textContent = text.original;
             japaneseTextDisplay.textContent = text.japanese;
             explanationDisplay.textContent = text.explanation;
             japaneseTextContainer.classList.remove('hidden');
@@ -408,13 +409,12 @@
         
         async function loadLanguageData(language) {
             allWords = []; reviewWords = []; allTexts = [];
-            
             reviewInfo.textContent = `\`${language}_review_words.json\`が見つからないため無効です。`;
-            textsInfo.textContent = `\`${language}_texts.json\`が見つからないため無効です。`;
+            textsInfo.textContent = `\`${language}_texts.json\` が見つからないため無効です。`;
 
             try {
                 const wordsResponse = await fetch(`${language}_words.json`);
-                if (!wordsResponse.ok) throw new Error(`'${language}_words.json'が見つかりません。`);
+                if (!wordsResponse.ok) throw new Error(`'${language}_words.json' が見つかりません。`);
                 allWords = await wordsResponse.json();
 
                 try {
@@ -428,7 +428,7 @@
                 } catch (e) { /* ignore */ }
 
             } catch (error) {
-                alert(`データファイルの読み込みに失敗しました: ${error.message}`);
+                alert(`データファイルの読み込みに失敗しました:\n${error.message}\n\nファイル名が正しいか、ファイルがHTMLと同じ場所にあるか確認してください。`);
                 return false;
             }
             return true;
@@ -466,6 +466,7 @@
 
             const success = await loadLanguageData(language);
             if(success) {
+                playSound(sounds.click);
                 updateStudyMenu();
                 showScreen('studyMenu');
             } else {
@@ -485,40 +486,23 @@
             btn.addEventListener('click', (e) => selectLanguage(e.target.dataset.lang));
         });
         
-        backToMainMenuBtn.addEventListener('click', () => showScreen('mainMenu'));
+        backToMainMenuBtn.addEventListener('click', () => { playSound(sounds.click); showScreen('mainMenu'); });
 
         document.querySelectorAll('.back-to-study-menu').forEach(btn => {
-            btn.addEventListener('click', () => showScreen('studyMenu'));
+            btn.addEventListener('click', () => { playSound(sounds.click); showScreen('studyMenu'); });
         });
 
-        document.querySelectorAll('.btn').forEach(button => { button.addEventListener('click', () => { if (button.id !== 'check-meaning-btn' && button.id !== 'sound-toggle-btn') playSound(sounds.click); }); });
-        startQuizBtn.addEventListener('click', () => { clearProgress(); startSession({wordList: allWords, title: "全単語クイズ", mode: 'learning'}); });
+        startQuizBtn.addEventListener('click', () => { startSession({wordList: allWords, title: "全単語クイズ", mode: 'learning'}); });
         random10QuizBtn.addEventListener('click', () => { const quizWords = [...allWords]; shuffleArray(quizWords); startSession({wordList: quizWords.slice(0, 10), title: "ランダム10問クイズ", mode: 'random_quiz'}); });
         startReviewQuizBtn.addEventListener('click', () => { startSession({wordList: reviewWords, title: "不安な単語の復習", mode: 'fixed_review'}); });
         resumeQuizBtn.addEventListener('click', (e) => { e.preventDefault(); startSession({title: "学習の続きから", mode: 'learning', resume: true}); });
-        viewListBtn.addEventListener('click', () => { selectedWords = []; updateSelectedQuizButton(); displayWordList(); showScreen('wordList'); });
-        readTextsBtn.addEventListener('click', () => { if (allTexts.length > 0) { shuffleArray(allTexts); currentTextIndex = 0; showText(currentTextIndex); showScreen('textReader'); } });
-        viewTextListBtn.addEventListener('click', () => { displayTextList(); showScreen('textList'); });
-        searchWordInput.addEventListener('input', (e) => displayWordList(e.target.value));
+        viewListBtn.addEventListener('click', () => { playSound(sounds.click); selectedWords = []; updateSelectedQuizButton(); displayWordList(); showScreen('wordList'); });
+        readTextsBtn.addEventListener('click', () => { playSound(sounds.click); if (allTexts.length > 0) { shuffleArray(allTexts); currentTextIndex = 0; showText(currentTextIndex); showScreen('textReader'); } });
+        viewTextListBtn.addEventListener('click', () => { playSound(sounds.click); displayTextList(); showScreen('textList'); });
         
         checkMeaningBtn.addEventListener('click', () => { playSound(sounds.flip); flipCard.classList.add('flipped'); checkMeaningBtnContainer.classList.add('hidden'); assessmentContainer.classList.remove('hidden'); prevWordBtn.disabled = currentIndex === 0; });
         assessmentButtons.forEach(button => { button.addEventListener('click', (e) => { const status = e.target.dataset.status; stats[status].push(words[currentIndex]); currentIndex++; saveProgress(); flipCard.classList.remove('flipped'); setTimeout(prepareNextWord, 300); }); });
-        prevWordBtn.addEventListener('click', () => {
-            if (currentIndex > 0) {
-                const lastWord = words[currentIndex - 1];
-                for (const key in stats) {
-                    const categoryArray = stats[key];
-                    if (categoryArray.length > 0 && categoryArray[categoryArray.length - 1] === lastWord) {
-                        categoryArray.pop();
-                        break;
-                    }
-                }
-                currentIndex--;
-                saveProgress();
-                flipCard.classList.remove('flipped');
-                setTimeout(prepareNextWord, 150);
-            }
-        });
+        prevWordBtn.addEventListener('click', () => { playSound(sounds.click); if (currentIndex > 0) { const lastWord = words[currentIndex - 1]; for (const key in stats) { const categoryArray = stats[key]; if (categoryArray.length > 0 && categoryArray[categoryArray.length - 1] === lastWord) { categoryArray.pop(); break; } } currentIndex--; saveProgress(); flipCard.classList.remove('flipped'); setTimeout(prepareNextWord, 150); } });
         soundToggleBtn.addEventListener('click', () => { isSoundEnabled = !isSoundEnabled; localStorage.setItem(SOUND_SETTING_KEY, isSoundEnabled); updateSoundIcon(); playSound(sounds.click); });
         startSelectedQuizBtn.addEventListener('click', () => { if (selectedWords.length > 0) startSession({wordList: selectedWords, title: "選択単語クイズ", mode: 'custom_quiz'}); });
         wordListTbody.addEventListener('click', (e) => {
@@ -573,7 +557,7 @@
             }
         });
 
-        nextTextBtn.addEventListener('click', () => { currentTextIndex = (currentTextIndex + 1) % allTexts.length; showText(currentTextIndex); });
+        nextTextBtn.addEventListener('click', () => { playSound(sounds.click); currentTextIndex = (currentTextIndex + 1) % allTexts.length; showText(currentTextIndex); });
         
         toggleReadStatusBtn.addEventListener('click', () => {
             readTextStates[currentTextIndex] = !readTextStates[currentTextIndex];
@@ -582,17 +566,12 @@
             playSound(sounds.click);
         });
 
-        toggleJapaneseBtn.addEventListener('click', () => {
-            const isHidden = japaneseTextContent.classList.toggle('hidden');
-            toggleJapaneseBtn.textContent = isHidden ? '日本語訳を表示' : '日本語訳を閉じる';
-        });
-        toggleExplanationBtn.addEventListener('click', () => {
-            const isHidden = explanationContent.classList.toggle('hidden');
-            toggleExplanationBtn.textContent = isHidden ? '文法解説を表示' : '文法解説を閉じる';
-        });
+        toggleJapaneseBtn.addEventListener('click', () => { playSound(sounds.click); const isHidden = japaneseTextContent.classList.toggle('hidden'); toggleJapaneseBtn.textContent = isHidden ? '日本語訳を表示' : '日本語訳を閉じる'; });
+        toggleExplanationBtn.addEventListener('click', () => { playSound(sounds.click); const isHidden = explanationContent.classList.toggle('hidden'); toggleExplanationBtn.textContent = isHidden ? '文法解説を表示' : '文法解説を閉じる'; });
         restartBtn.addEventListener('click', () => { startSession({wordList: words, title: learningTitle.textContent, mode: currentMode}); });
         reviewQuizBtn.addEventListener('click', () => { const wordsForReview = [...stats.fuzzy, ...stats.forgotten, ...stats.wrong]; startSession({wordList: wordsForReview, title: "苦手な単語の復習", mode: 'review'}); });
-        exportJsonBtn.addEventListener('click', exportReviewWordsAsJson);
+        exportJsonBtn.addEventListener('click', () => { playSound(sounds.click); exportReviewWordsAsJson(); });
+        searchWordInput.addEventListener('input', (e) => displayWordList(e.target.value));
         
         initializeApp();
     </script>
