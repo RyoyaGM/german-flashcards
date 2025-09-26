@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ドイツ語単語学習アプリ - 総合学術単語</title>
+    <title>単語学習アプリ</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,13 +31,24 @@
 
     <div id="app" class="w-full max-w-2xl mx-auto">
 
-        <div id="start-screen" class="screen text-center p-8 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 relative">
+        <div id="main-menu-screen" class="screen text-center p-8 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
+            <h1 class="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-8">学習する言語を選択</h1>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <button data-lang="german" class="lang-select-btn btn w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-lg shadow-md text-xl">ドイツ語</button>
+                <button data-lang="english" class="lang-select-btn btn w-full bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-6 rounded-lg shadow-md text-xl" disabled>英語 (準備中)</button>
+            </div>
+        </div>
+
+        <div id="study-menu-screen" class="hidden screen text-center p-8 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 relative">
+             <button id="back-to-main-menu-btn" class="btn absolute top-4 left-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600" title="言語選択に戻る">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+             </button>
              <button id="sound-toggle-btn" class="btn absolute top-4 right-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700">
                 <svg id="sound-on-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600 dark:text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" /></svg>
                 <svg id="sound-off-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600 dark:text-gray-300 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15zM17 14l2-2m0 0l2-2m-2 2L17 10m2 2l2 2" /></svg>
             </button>
-            <h1 class="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">ドイツ語学習</h1>
-            <p class="text-gray-500 dark:text-gray-400 mb-8">総合学術単語</p>
+            <h1 id="study-menu-title" class="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2"></h1>
+            <p id="study-menu-subtitle" class="text-gray-500 dark:text-gray-400 mb-8"></p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <button id="start-quiz-btn" class="btn w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md text-lg">全単語クイズ</button>
                 <button id="random-10-quiz-btn" class="btn w-full bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-6 rounded-lg shadow-md text-lg">ランダム10問クイズ</button>
@@ -46,8 +57,8 @@
                 <button id="read-texts-btn" class="btn w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg shadow-md text-lg" disabled>ランダムに文章を読む</button>
                 <button id="view-text-list-btn" class="btn w-full bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg shadow-md text-lg" disabled>文章一覧から選ぶ</button>
             </div>
-            <p id="review-info" class="text-xs text-gray-400 mt-2 hidden">`review_words.json`が見つからないため無効です。</p>
-            <p id="texts-info" class="text-xs text-gray-400 mt-2 hidden">`texts.json`が見つからないため無効です。</p>
+            <p id="review-info" class="text-xs text-gray-400 mt-2 hidden">`_review_words.json`が見つからないため無効です。</p>
+            <p id="texts-info" class="text-xs text-gray-400 mt-2 hidden">`_texts.json`が見つからないため無効です。</p>
             <p id="resume-text" class="text-sm text-gray-500 dark:text-gray-400 mt-6 hidden">
                 前回の学習データがあります。<a href="#" id="resume-quiz-btn" class="text-blue-600 dark:text-blue-400 hover:underline">ここから再開</a>
             </p>
@@ -56,7 +67,7 @@
         <div id="text-list-screen" class="hidden screen p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
             <div class="flex justify-between items-center mb-4">
                 <h2 class="text-2xl font-bold text-cyan-600 dark:text-cyan-400">文章一覧</h2>
-                <button id="back-to-start-from-text-list-btn" class="btn bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 font-bold py-2 px-4 rounded-lg">戻る</button>
+                <button id="back-to-study-menu-from-text-list-btn" class="btn back-to-study-menu bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 font-bold py-2 px-4 rounded-lg">戻る</button>
             </div>
             <div id="text-list-container" class="max-h-[60vh] overflow-y-auto pr-2 space-y-8">
                 <div>
@@ -89,7 +100,7 @@
         <div id="text-reader-screen" class="hidden screen p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
             <div class="flex justify-between items-center mb-4">
                 <h2 class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">難解な文章を読む</h2>
-                <button id="back-to-start-from-text-btn" class="btn bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 font-bold py-2 px-4 rounded-lg">戻る</button>
+                <button id="back-to-study-menu-from-text-btn" class="btn back-to-study-menu bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 font-bold py-2 px-4 rounded-lg">戻る</button>
             </div>
             <div id="text-display-container" class="space-y-4 max-h-[60vh] overflow-y-auto pr-2">
                 <div class="p-4 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
@@ -120,7 +131,7 @@
         <div id="word-list-screen" class="hidden screen p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
             <div class="flex justify-between items-center mb-4">
                 <h2 class="text-2xl font-bold text-blue-600 dark:text-blue-400">単語一覧・選択</h2>
-                <button id="back-to-start-btn" class="btn bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 font-bold py-2 px-4 rounded-lg">戻る</button>
+                <button id="back-to-study-menu-from-word-list-btn" class="btn back-to-study-menu bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 font-bold py-2 px-4 rounded-lg">戻る</button>
             </div>
             <input type="text" id="search-word-input" placeholder="検索..." class="w-full p-2 mb-4 border rounded-md bg-gray-50 dark:bg-gray-700 border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none">
             <div id="word-list-container" class="max-h-[55vh] overflow-y-auto pr-2">
@@ -138,8 +149,8 @@
         
         <div id="learning-screen" class="hidden screen">
             <header class="text-center mb-4 flex justify-between items-center">
-                <button id="back-to-start-btn-from-quiz" class="btn bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 font-bold py-1 px-3 rounded-lg text-sm">戻る</button>
-                <div class="flex-grow"><h1 id="learning-title" class="text-2xl md:text-3xl font-bold text-blue-600 dark:text-blue-400">ドイツ語単語学習</h1></div>
+                <button id="back-to-study-menu-from-quiz-btn" class="btn back-to-study-menu bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 font-bold py-1 px-3 rounded-lg text-sm">戻る</button>
+                <div class="flex-grow"><h1 id="learning-title" class="text-2xl md:text-3xl font-bold text-blue-600 dark:text-blue-400">単語学習</h1></div>
                 <div class="w-10"></div>
             </header>
             <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 my-4"><div id="progress-bar" class="bg-blue-600 h-2.5 rounded-full" style="width: 0%"></div></div>
@@ -148,7 +159,7 @@
                 <div id="flip-card" class="flip-card w-full h-72 md:h-80 perspective-[1000px]">
                     <div id="flip-card-inner" class="flip-card-inner relative w-full h-full text-center">
                         <div class="flip-card-front absolute w-full h-full bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 flex flex-col items-center justify-center p-6">
-                            <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">ドイツ語</p>
+                            <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">単語</p>
                             <h2 id="word-display" class="text-3xl md:text-4xl font-bold"></h2>
                         </div>
                         <div class="flip-card-back absolute w-full h-full bg-blue-50 dark:bg-gray-700 rounded-xl shadow-lg border border-gray-200 dark:border-gray-600 flex flex-col items-center justify-center p-6 overflow-y-auto">
@@ -187,7 +198,7 @@
             </div>
             <div class="mt-8 flex flex-col justify-center items-center gap-4">
                 <div class="w-full flex flex-col md:flex-row gap-4"><button id="restart-btn" class="btn w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md">もう一度学習する</button><button id="review-quiz-btn" class="btn w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg shadow-md hidden">苦手な単語を復習</button></div>
-                <div class="w-full flex flex-col md:flex-row gap-4"><button id="export-json-btn" class="btn w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg shadow-md hidden">苦手な単語をJSONで出力</button><button id="back-to-start-from-result-btn" class="btn w-full bg-gray-500 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg shadow-md">スタート画面へ</button></div>
+                <div class="w-full flex flex-col md:flex-row gap-4"><button id="export-json-btn" class="btn w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg shadow-md hidden">苦手な単語をJSONで出力</button><button id="back-to-study-menu-from-result-btn" class="btn back-to-study-menu w-full bg-gray-500 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg shadow-md">学習メニューへ</button></div>
             </div>
         </div>
     </div>
@@ -218,16 +229,27 @@
         }
 
         // --- DOM Elements ---
-        const screens = { start: document.getElementById('start-screen'), learning: document.getElementById('learning-screen'), result: document.getElementById('result-screen'), wordList: document.getElementById('word-list-screen'), textReader: document.getElementById('text-reader-screen'), textList: document.getElementById('text-list-screen') };
+        const screens = { 
+            mainMenu: document.getElementById('main-menu-screen'),
+            studyMenu: document.getElementById('study-menu-screen'),
+            learning: document.getElementById('learning-screen'), 
+            result: document.getElementById('result-screen'), 
+            wordList: document.getElementById('word-list-screen'), 
+            textReader: document.getElementById('text-reader-screen'), 
+            textList: document.getElementById('text-list-screen') 
+        };
         const japaneseDisplay = document.getElementById('japanese-display'), wordDisplay = document.getElementById('word-display'), checkMeaningBtn = document.getElementById('check-meaning-btn'), checkMeaningBtnContainer = document.getElementById('check-meaning-btn-container'), assessmentContainer = document.getElementById('assessment-container'), assessmentButtons = document.querySelectorAll('.assessment-btn'), flipCard = document.getElementById('flip-card'), progressText = document.getElementById('progress-text'), progressBar = document.getElementById('progress-bar'), learningTitle = document.getElementById('learning-title'), relatedWordsContainer = document.getElementById('related-words-container'), relatedWordsDisplay = document.getElementById('related-words-display');
-        const startQuizBtn = document.getElementById('start-quiz-btn'), startReviewQuizBtn = document.getElementById('start-review-quiz-btn'), random10QuizBtn = document.getElementById('random-10-quiz-btn'), viewListBtn = document.getElementById('view-list-btn'), backToStartBtn = document.getElementById('back-to-start-btn'), backToStartBtnFromQuiz = document.getElementById('back-to-start-btn-from-quiz'), backToStartFromResultBtn = document.getElementById('back-to-start-from-result-btn'), restartBtn = document.getElementById('restart-btn'), reviewQuizBtn = document.getElementById('review-quiz-btn'), resumeQuizBtn = document.getElementById('resume-quiz-btn'), resumeText = document.getElementById('resume-text'), exportJsonBtn = document.getElementById('export-json-btn'), reviewInfo = document.getElementById('review-info'), prevWordBtn = document.getElementById('prev-word-btn'), soundToggleBtn = document.getElementById('sound-toggle-btn'), soundOnIcon = document.getElementById('sound-on-icon'), soundOffIcon = document.getElementById('sound-off-icon'), startSelectedQuizBtn = document.getElementById('start-selected-quiz-btn'), selectedCount = document.getElementById('selected-count'), selectAllCheckbox = document.getElementById('select-all-checkbox');
+        const startQuizBtn = document.getElementById('start-quiz-btn'), startReviewQuizBtn = document.getElementById('start-review-quiz-btn'), random10QuizBtn = document.getElementById('random-10-quiz-btn'), viewListBtn = document.getElementById('view-list-btn'), restartBtn = document.getElementById('restart-btn'), reviewQuizBtn = document.getElementById('review-quiz-btn'), resumeQuizBtn = document.getElementById('resume-quiz-btn'), resumeText = document.getElementById('resume-text'), exportJsonBtn = document.getElementById('export-json-btn'), reviewInfo = document.getElementById('review-info'), prevWordBtn = document.getElementById('prev-word-btn'), soundToggleBtn = document.getElementById('sound-toggle-btn'), soundOnIcon = document.getElementById('sound-on-icon'), soundOffIcon = document.getElementById('sound-off-icon'), startSelectedQuizBtn = document.getElementById('start-selected-quiz-btn'), selectedCount = document.getElementById('selected-count'), selectAllCheckbox = document.getElementById('select-all-checkbox');
         const wordListTbody = document.getElementById('word-list-tbody'), searchWordInput = document.getElementById('search-word-input');
-        const readTextsBtn = document.getElementById('read-texts-btn'), textsInfo = document.getElementById('texts-info'), germanTextDisplay = document.getElementById('german-text-display'), japaneseTextContainer = document.getElementById('japanese-text-container'), toggleJapaneseBtn = document.getElementById('toggle-japanese-btn'), japaneseTextContent = document.getElementById('japanese-text-content'), japaneseTextDisplay = document.getElementById('japanese-text-display'), explanationContainer = document.getElementById('explanation-container'), toggleExplanationBtn = document.getElementById('toggle-explanation-btn'), explanationContent = document.getElementById('explanation-content'), explanationDisplay = document.getElementById('explanation-display'), nextTextBtn = document.getElementById('next-text-btn'), backToStartFromTextBtn = document.getElementById('back-to-start-from-text-btn'), viewTextListBtn = document.getElementById('view-text-list-btn'), textListContainer = document.getElementById('text-list-container'), backToStartFromTextListBtn = document.getElementById('back-to-start-from-text-list-btn'), toggleReadStatusBtn = document.getElementById('toggle-read-status-btn');
+        const readTextsBtn = document.getElementById('read-texts-btn'), textsInfo = document.getElementById('texts-info'), germanTextDisplay = document.getElementById('german-text-display'), japaneseTextContainer = document.getElementById('japanese-text-container'), toggleJapaneseBtn = document.getElementById('toggle-japanese-btn'), japaneseTextContent = document.getElementById('japanese-text-content'), japaneseTextDisplay = document.getElementById('japanese-text-display'), explanationContainer = document.getElementById('explanation-container'), toggleExplanationBtn = document.getElementById('toggle-explanation-btn'), explanationContent = document.getElementById('explanation-content'), explanationDisplay = document.getElementById('explanation-display'), nextTextBtn = document.getElementById('next-text-btn'), textListContainer = document.getElementById('text-list-container'), toggleReadStatusBtn = document.getElementById('toggle-read-status-btn');
+        const backToMainMenuBtn = document.getElementById('back-to-main-menu-btn');
 
         // --- State ---
-        const STORAGE_KEY = 'germanFlashcardProgress';
-        const SOUND_SETTING_KEY = 'germanFlashcardSound';
-        const TEXTS_READ_STATUS_KEY = 'germanTextsReadStatus';
+        const SOUND_SETTING_KEY = 'flashcardSound';
+        let currentLanguage = null;
+        const getStorageKey = () => `${currentLanguage}_flashcardProgress`;
+        const getTextsReadStatusKey = () => `${currentLanguage}_textsReadStatus`;
+
         let allWords = [], reviewWords = [], allTexts = [], words = [], selectedWords = [], currentIndex = 0, currentTextIndex = 0, stats = {}, currentMode = 'learning';
         let readTextStates = {};
 
@@ -236,15 +258,15 @@
         function showScreen(screenName) { Object.values(screens).forEach(screen => screen.classList.add('hidden')); screens[screenName].classList.remove('hidden'); }
 
         // --- Progress Management ---
-        function saveProgress() { if (currentMode === 'learning') { const progress = { words, currentIndex, stats }; localStorage.setItem(STORAGE_KEY, JSON.stringify(progress)); } }
-        function loadProgress() { const savedProgress = localStorage.getItem(STORAGE_KEY); if (savedProgress) { try { return JSON.parse(savedProgress); } catch (e) { console.error("Failed to parse progress:", e); localStorage.removeItem(STORAGE_KEY); return null; } } return null; }
-        function clearProgress() { localStorage.removeItem(STORAGE_KEY); }
+        function saveProgress() { if (currentMode === 'learning') { const progress = { words, currentIndex, stats }; localStorage.setItem(getStorageKey(), JSON.stringify(progress)); } }
+        function loadProgress() { const savedProgress = localStorage.getItem(getStorageKey()); if (savedProgress) { try { return JSON.parse(savedProgress); } catch (e) { console.error("Failed to parse progress:", e); localStorage.removeItem(getStorageKey()); return null; } } return null; }
+        function clearProgress() { localStorage.removeItem(getStorageKey()); }
 
         function saveReadTextStates() {
-            localStorage.setItem(TEXTS_READ_STATUS_KEY, JSON.stringify(readTextStates));
+            localStorage.setItem(getTextsReadStatusKey(), JSON.stringify(readTextStates));
         }
         function loadReadTextStates() {
-            const savedStates = localStorage.getItem(TEXTS_READ_STATUS_KEY);
+            const savedStates = localStorage.getItem(getTextsReadStatusKey());
             readTextStates = savedStates ? JSON.parse(savedStates) : {};
         }
         
@@ -318,6 +340,9 @@
             const unreadTbody = document.getElementById('unread-text-list-tbody');
             readTbody.innerHTML = '';
             unreadTbody.innerHTML = '';
+            const textHeader = readTbody.closest('table').querySelector('th:nth-child(2)');
+            if (textHeader) textHeader.textContent = currentLanguage === 'german' ? 'ドイツ語原文' : 'Original Text';
+
 
             allTexts.forEach((text, index) => {
                 const tr = document.createElement('tr');
@@ -364,7 +389,6 @@
             toggleJapaneseBtn.textContent = '日本語訳を表示';
             explanationContent.classList.add('hidden');
             toggleExplanationBtn.textContent = '文法解説を表示';
-            
             updateReadStatusButton(index);
         }
 
@@ -376,7 +400,7 @@
             const blob = new Blob([jsonString], { type: 'application/json' });
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
-            a.href = url; a.download = 'review_words.json';
+            a.href = url; a.download = `${currentLanguage}_review_words.json`;
             document.body.appendChild(a); a.click(); document.body.removeChild(a);
             URL.revokeObjectURL(url);
         }
@@ -384,44 +408,84 @@
             soundOnIcon.classList.toggle('hidden', !isSoundEnabled);
             soundOffIcon.classList.toggle('hidden', isSoundEnabled);
         }
+        
+        async function loadLanguageData(language) {
+            allWords = []; reviewWords = []; allTexts = [];
+            
+            reviewInfo.textContent = `\`${language}_review_words.json\`が見つからないため無効です。`;
+            textsInfo.textContent = `\`${language}_texts.json\`が見つからないため無効です。`;
 
-        // --- Initialization ---
-        async function initializeApp() {
+            try {
+                const wordsResponse = await fetch(`${language}_words.json`);
+                if (!wordsResponse.ok) throw new Error(`'${language}_words.json'が見つかりません。`);
+                allWords = await wordsResponse.json();
+
+                try {
+                    const reviewResponse = await fetch(`${language}_review_words.json`);
+                    if (reviewResponse.ok) reviewWords = await reviewResponse.json();
+                } catch (e) { /* ignore */ }
+                
+                try {
+                    const textsResponse = await fetch(`${language}_texts.json`);
+                    if (textsResponse.ok) allTexts = await textsResponse.json();
+                } catch (e) { /* ignore */ }
+
+            } catch (error) {
+                alert(`データファイルの読み込みに失敗しました: ${error.message}`);
+                return false;
+            }
+            return true;
+        }
+
+        function updateStudyMenu() {
+            startReviewQuizBtn.disabled = reviewWords.length === 0;
+            reviewInfo.classList.toggle('hidden', reviewWords.length > 0);
+            
+            readTextsBtn.disabled = allTexts.length === 0;
+            viewTextListBtn.disabled = allTexts.length === 0;
+            textsInfo.classList.toggle('hidden', allTexts.length > 0);
+
             loadReadTextStates();
+            const savedProgress = loadProgress();
+            resumeText.classList.toggle('hidden', !savedProgress);
+        }
+
+        async function selectLanguage(language) {
+            currentLanguage = language;
+            const titles = {
+                german: { title: 'ドイツ語学習', subtitle: '総合学術単語' },
+                english: { title: '英語学習', subtitle: 'Academic Vocabulary' }
+            };
+            document.getElementById('study-menu-title').textContent = titles[language].title;
+            document.getElementById('study-menu-subtitle').textContent = titles[language].subtitle;
+
+            const success = await loadLanguageData(language);
+            if(success) {
+                updateStudyMenu();
+                showScreen('studyMenu');
+            } else {
+                currentLanguage = null;
+            }
+        }
+        
+        function initializeApp() {
             const savedSoundSetting = localStorage.getItem(SOUND_SETTING_KEY);
             isSoundEnabled = savedSoundSetting === null ? true : savedSoundSetting === 'true';
             updateSoundIcon();
-            try {
-                const wordsResponse = await fetch('words.json');
-                if (!wordsResponse.ok) throw new Error(`words.jsonの読み込みに失敗`);
-                allWords = await wordsResponse.json();
-                try {
-                    const reviewResponse = await fetch('review_words.json');
-                    if (reviewResponse.ok) {
-                        reviewWords = await reviewResponse.json();
-                        startReviewQuizBtn.disabled = reviewWords.length === 0;
-                        reviewInfo.classList.toggle('hidden', reviewWords.length > 0);
-                    } else { reviewInfo.classList.remove('hidden'); startReviewQuizBtn.disabled = true; }
-                } catch (e) { reviewInfo.classList.remove('hidden'); startReviewQuizBtn.disabled = true;}
-                try {
-                    const textsResponse = await fetch('texts.json');
-                    if (textsResponse.ok) {
-                        allTexts = await textsResponse.json();
-                        readTextsBtn.disabled = allTexts.length === 0;
-                        viewTextListBtn.disabled = allTexts.length === 0;
-                        textsInfo.classList.toggle('hidden', allTexts.length > 0);
-                    } else { textsInfo.classList.remove('hidden'); readTextsBtn.disabled = true; viewTextListBtn.disabled = true;}
-                } catch (e) { textsInfo.classList.remove('hidden'); readTextsBtn.disabled = true; viewTextListBtn.disabled = true;}
-                showScreen('start');
-                const savedProgress = loadProgress();
-                resumeText.classList.toggle('hidden', !savedProgress);
-            } catch (error) {
-                console.error("初期化エラー:", error);
-                document.getElementById('app').innerHTML = `<p class="text-red-500 text-center font-bold">エラー: ${error.message}。<br>ファイルが存在するか確認してください。</p>`;
-            }
+            showScreen('mainMenu');
         }
 
         // --- Event Listeners ---
+        document.querySelectorAll('.lang-select-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => selectLanguage(e.target.dataset.lang));
+        });
+        
+        backToMainMenuBtn.addEventListener('click', () => showScreen('mainMenu'));
+
+        document.querySelectorAll('.back-to-study-menu').forEach(btn => {
+            btn.addEventListener('click', () => showScreen('studyMenu'));
+        });
+
         document.querySelectorAll('.btn').forEach(button => { button.addEventListener('click', () => { if (button.id !== 'check-meaning-btn' && button.id !== 'sound-toggle-btn') playSound(sounds.click); }); });
         startQuizBtn.addEventListener('click', () => { clearProgress(); startSession({wordList: allWords, title: "全単語クイズ", mode: 'learning'}); });
         random10QuizBtn.addEventListener('click', () => { const quizWords = [...allWords]; shuffleArray(quizWords); startSession({wordList: quizWords.slice(0, 10), title: "ランダム10問クイズ", mode: 'random_quiz'}); });
@@ -431,7 +495,7 @@
         readTextsBtn.addEventListener('click', () => { if (allTexts.length > 0) { shuffleArray(allTexts); currentTextIndex = 0; showText(currentTextIndex); showScreen('textReader'); } });
         viewTextListBtn.addEventListener('click', () => { displayTextList(); showScreen('textList'); });
         searchWordInput.addEventListener('input', (e) => displayWordList(e.target.value));
-        [backToStartBtn, backToStartBtnFromQuiz, backToStartFromResultBtn, backToStartFromTextBtn, backToStartFromTextListBtn].forEach(btn => btn.addEventListener('click', () => { showScreen('start'); initializeApp(); }));
+        
         checkMeaningBtn.addEventListener('click', () => { playSound(sounds.flip); flipCard.classList.add('flipped'); checkMeaningBtnContainer.classList.add('hidden'); assessmentContainer.classList.remove('hidden'); prevWordBtn.disabled = currentIndex === 0; });
         assessmentButtons.forEach(button => { button.addEventListener('click', (e) => { const status = e.target.dataset.status; stats[status].push(words[currentIndex]); currentIndex++; saveProgress(); flipCard.classList.remove('flipped'); setTimeout(prepareNextWord, 300); }); });
         prevWordBtn.addEventListener('click', () => {
