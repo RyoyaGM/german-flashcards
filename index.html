@@ -340,6 +340,14 @@
         }
 
         function showText(index) {
+            // ▼▼▼ ここを変更 ▼▼▼
+            // 表示された文章を「読了済み」として記録し、保存する
+            if (!readTextStates[index]) {
+                readTextStates[index] = true;
+                saveReadTextStates();
+            }
+            // ▲▲▲ 変更ここまで ▲▲▲
+
             const text = allTexts[index];
             germanTextDisplay.textContent = text.german;
             japaneseTextDisplay.textContent = text.japanese;
