@@ -1,0 +1,177 @@
+[
+  {
+    "word": "strange that",
+    "japanese": "〜とは奇妙なことだ",
+    "related": "逆説 (Paradox)"
+  },
+  {
+    "word": "unfortunately",
+    "japanese": "残念ながら",
+    "related": "逆説 (Paradox)"
+  },
+  {
+    "word": "puzzling",
+    "japanese": "不可解な、謎めいた",
+    "related": "逆説 (Paradox)"
+  },
+  {
+    "word": "remarkable",
+    "japanese": "注目すべき",
+    "related": "逆説 (Paradox)"
+  },
+  {
+    "word": "but",
+    "japanese": "しかし",
+    "related": "対比 (Contrast)"
+  },
+  {
+    "word": "however",
+    "japanese": "しかしながら",
+    "related": "対比 (Contrast)"
+  },
+  {
+    "word": "instead of",
+    "japanese": "〜の代わりに",
+    "related": "対比 (Contrast)"
+  },
+  {
+    "word": "rather than",
+    "japanese": "〜よりもむしろ",
+    "related": "対比 (Contrast)"
+  },
+  {
+    "word": "opposed to / by opposition to this",
+    "japanese": "〜とは対照的に",
+    "related": "対比 (Contrast)"
+  },
+  {
+    "word": "while / whereas",
+    "japanese": "〜である一方",
+    "related": "対比 (Contrast)"
+  },
+  {
+    "word": "At the same time",
+    "japanese": "同時に",
+    "related": "対比 (Contrast)"
+  },
+  {
+    "word": "not ... but ...",
+    "japanese": "〜ではなく〜",
+    "related": "対比 (Contrast)"
+  },
+  {
+    "word": "either ... or ...",
+    "japanese": "〜か〜か",
+    "related": "対比 (Contrast)"
+  },
+  {
+    "word": "except / except that",
+    "japanese": "〜を除いて",
+    "related": "対比 (Contrast)"
+  },
+  {
+    "word": "is different",
+    "japanese": "異なっている",
+    "related": "対比 (Contrast)"
+  },
+  {
+    "word": "on a different level",
+    "japanese": "異なるレベルで",
+    "related": "対比 (Contrast)"
+  },
+  {
+    "word": "At first sight",
+    "japanese": "一見したところ",
+    "related": "対比 (Contrast)"
+  },
+  {
+    "word": "Although / though",
+    "japanese": "〜だけれども",
+    "related": "譲歩 (Concession)"
+  },
+  {
+    "word": "yet",
+    "japanese": "それでも、しかし",
+    "related": "譲歩 (Concession)"
+  },
+  {
+    "word": "even / But even here",
+    "japanese": "〜でさえ",
+    "related": "譲歩 (Concession)"
+  },
+  {
+    "word": "no doubt",
+    "japanese": "疑いなく",
+    "related": "譲歩 (Concession)"
+  },
+  {
+    "word": "Be that as it may",
+    "japanese": "それはさておき、それはそうかもしれないが",
+    "related": "譲歩 (Concession)"
+  },
+  {
+    "word": "It must be conceded",
+    "japanese": "〜ということは認められなければならない",
+    "related": "譲歩 (Concession)"
+  },
+  {
+    "word": "at any rate",
+    "japanese": "少なくとも",
+    "related": "譲歩 (Concession)"
+  },
+  {
+    "word": "Assuming that",
+    "japanese": "〜だと仮定すると",
+    "related": "譲歩 (Concession)"
+  },
+  {
+    "word": "therefore",
+    "japanese": "それゆえに",
+    "related": "結論 (Conclusion)"
+  },
+  {
+    "word": "Thus",
+    "japanese": "このようにして、したがって",
+    "related": "結論 (Conclusion)"
+  },
+  {
+    "word": "Hence",
+    "japanese": "それゆえに",
+    "related": "結論 (Conclusion)"
+  },
+  {
+    "word": "so that",
+    "japanese": "その結果",
+    "related": "結論 (Conclusion)"
+  },
+  {
+    "word": "It will be seen that",
+    "japanese": "〜ということがわかるだろう",
+    "related": "結論 (Conclusion)"
+  },
+  {
+    "word": "this shows that",
+    "japanese": "このことは〜を示す",
+    "related": "結論 (Conclusion)"
+  },
+  {
+    "word": "If ..., then ...",
+    "japanese": "もし〜なら、そのとき〜",
+    "related": "結論 (Conclusion)"
+  },
+  {
+    "word": "That is to say",
+    "japanese": "すなわち",
+    "related": "結論 (Conclusion)"
+  },
+  {
+    "word": "All things considered",
+    "japanese": "あらゆることを考慮すると",
+    "related": "結論 (Conclusion)"
+  },
+  {
+    "word": "suffice",
+    "japanese": "十分である",
+    "related": "結論 (Conclusion)"
+  }
+]
